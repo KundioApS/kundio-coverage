@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -116,44 +116,44 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
@@ -161,36 +161,36 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { requireBusinessContext } from "@/lib/business-context";
 import { audit } from "@/lib/audit";
 &nbsp;
-export async function <span class="fstat-no" title="function not covered" >POST() {</span>
-  const cookieStore = <span class="cstat-no" title="statement not covered" >await cookies();</span>
-  const <span class="cstat-no" title="statement not covered" >supabase = createClient(cookieStore);</span>
+export async function POST() {
+  const cookieStore = await cookies();
+  const supabase = createClient(cookieStore);
 &nbsp;
-  const ctx = <span class="cstat-no" title="statement not covered" >await requireBusinessContext(supabase, cookieStore);</span>
-<span class="cstat-no" title="statement not covered" >  if (ctx instanceof Response) <span class="cstat-no" title="statement not covered" >return ctx;</span></span>
+  const ctx = await requireBusinessContext(supabase, cookieStore);
+  if (ctx instanceof Response) return ctx;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (ctx.role === "owner") {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json(</span>
+  if (ctx.role === "owner") {
+    return Response.json(
       { error: "Ejeren kan ikke forlade virksomheden. Overfør ejerskab først." },
       { status: 400 },
     );
   }
 &nbsp;
-  const <span class="cstat-no" title="statement not covered" >admin = createAdminClient();</span>
+  const admin = createAdminClient();
 &nbsp;
-  const { error } = <span class="cstat-no" title="statement not covered" >await admin</span>
+  const { error } = await admin
     .from("business_memberships")
     .delete()
     .eq("business_id", ctx.businessId)
     .eq("user_id", ctx.userId);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (error) {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json({ error: "Could not leave" }, { status: 500 });</span>
+  if (error) {
+    return Response.json({ error: "Could not leave" }, { status: 500 });
   }
 &nbsp;
   // Clear the active business cookie
-<span class="cstat-no" title="statement not covered" >  cookieStore.delete("el_active_business_id");</span>
+  cookieStore.delete("el_active_business_id");
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  await audit({</span>
+  await audit({
     businessId: ctx.businessId,
     actorType: "user",
     actorId: ctx.userId,
@@ -199,7 +199,7 @@ export async function <span class="fstat-no" title="function not covered" >POST(
     entityId: ctx.userId,
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return Response.json({ ok: true });</span>
+  return Response.json({ ok: true });
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -208,7 +208,7 @@ export async function <span class="fstat-no" title="function not covered" >POST(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

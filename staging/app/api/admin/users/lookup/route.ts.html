@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -108,37 +108,37 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,37 +148,37 @@ import { z } from "zod";
 import { requireAdmin } from "@/lib/admin-guard";
 import { createAdminClient } from "@/lib/supabase/admin";
 &nbsp;
-const querySchema = <span class="cstat-no" title="statement not covered" >z.object({</span>
+const querySchema = z.object({
   email: z.string().email(),
 });
 &nbsp;
-export async function <span class="fstat-no" title="function not covered" >GET(r</span>equest: NextRequest) {
-  const user = <span class="cstat-no" title="statement not covered" >await requireAdmin();</span>
-<span class="cstat-no" title="statement not covered" >  if (user instanceof Response) <span class="cstat-no" title="statement not covered" >return user;</span></span>
+export async function GET(request: NextRequest) {
+  const user = await requireAdmin();
+  if (user instanceof Response) return user;
 &nbsp;
-  const parsed = <span class="cstat-no" title="statement not covered" >querySchema.safeParse({</span>
+  const parsed = querySchema.safeParse({
     email: request.nextUrl.searchParams.get("email"),
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!parsed.success) {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json(</span>
+  if (!parsed.success) {
+    return Response.json(
       { error: "Gyldig e-mail er påkrævet" },
       { status: 422 },
     );
   }
 &nbsp;
-  const <span class="cstat-no" title="statement not covered" >admin = createAdminClient();</span>
-  const { data, error } = <span class="cstat-no" title="statement not covered" >await admin.auth.admin.listUsers();</span>
-<span class="cstat-no" title="statement not covered" >  if (error) {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json({ error: error.message }, { status: 500 });</span>
+  const admin = createAdminClient();
+  const { data, error } = await admin.auth.admin.listUsers();
+  if (error) {
+    return Response.json({ error: error.message }, { status: 500 });
   }
 &nbsp;
-  const email = <span class="cstat-no" title="statement not covered" >parsed.data.email.toLowerCase();</span>
-  const existingUser = <span class="cstat-no" title="statement not covered" >data.users.<span class="fstat-no" title="function not covered" >find(</span></span>
-    (candidate) =&gt; <span class="cstat-no" title="statement not covered" >candidate.email?.toLowerCase() === email,</span>
+  const email = parsed.data.email.toLowerCase();
+  const existingUser = data.users.find(
+    (candidate) =&gt; candidate.email?.toLowerCase() === email,
   );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return Response.json({</span>
+  return Response.json({
     exists: Boolean(existingUser),
     user_id: existingUser?.id ?? null,
   });
@@ -190,7 +190,7 @@ export async function <span class="fstat-no" title="function not covered" >GET(r
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

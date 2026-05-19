@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/44</span>
+                <span class='fraction'>33/44</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -327,8 +327,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -355,11 +355,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -398,8 +398,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -425,8 +425,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -461,7 +461,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -503,7 +503,7 @@
 import type { AdminV2LifecycleKey } from "@/lib/admin/lifecycle-key";
 import { daysUntil, fmtDate, fmtDateTime, formatDkk } from "../_lib/format";
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >LifecycleBanner({</span>
+export function LifecycleBanner({
   lifecycleKey,
   badgeKey,
   paidAt,
@@ -540,8 +540,8 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
   onGrantFree: () =&gt; void;
   onScrollToBilling: () =&gt; void;
 }) {
-<span class="cstat-no" title="statement not covered" >  if (lifecycleKey === "paid") {</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
+  if (lifecycleKey === "paid") {
+    return (
       &lt;div className="lifecycle lifecycle-paid"&gt;
         &lt;div className="lifecycle-icon"&gt;
           &lt;Check /&gt;
@@ -561,18 +561,18 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
             onClick={onOpenPortal}
           &gt;
             &lt;CreditCard /&gt;
-            {openingPortal ? "Åbner..." : "Stripe portal"}
+            {openingPortal ? <span class="branch-0 cbranch-no" title="branch not covered" >"Åbner..." : "</span>Stripe portal"}
           &lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (lifecycleKey === "temp_free") {</span>
-    const <span class="cstat-no" title="statement not covered" >days = daysUntil(accessExpiresAt);</span>
-    const urgent = <span class="cstat-no" title="statement not covered" >days !== null &amp;&amp; days &lt; 30;</span>
+  if (lifecycleKey === "temp_free") {
+    const days = daysUntil(accessExpiresAt);
+    const urgent = days !== null &amp;&amp; days &lt; 30;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return (</span>
+    return (
       &lt;div className="lifecycle lifecycle-temp"&gt;
         &lt;div className="lifecycle-icon"&gt;
           &lt;Gift /&gt;
@@ -586,12 +586,12 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
           &lt;p&gt;
             {accessExpiresAt
               ? `Adgang til ${fmtDateTime(accessExpiresAt)}${
-                  days !== null ? ` (${days} dage tilbage)` : ""
+                  days !== null ? ` (${days} dage tilbage)` : <span class="branch-1 cbranch-no" title="branch not covered" >""</span>
                 }. `
-              : "Adgang uden registreret udløbsdato. "}
-            {urgent || badgeKey === "expired"
+              : <span class="branch-1 cbranch-no" title="branch not covered" >"Adgang uden registreret udløbsdato. "}</span>
+            {urgent || <span class="branch-1 cbranch-no" title="branch not covered" >badgeKey === "expired"</span>
               ? "Konvertér til betalt eller forlæng nu."
-              : "Konvertér til betalt eller forlæng adgangen før udløb."}
+              : <span class="branch-1 cbranch-no" title="branch not covered" >"Konvertér til betalt eller forlæng adgangen før udløb."}</span>
           &lt;/p&gt;
         &lt;/div&gt;
         &lt;div className="lifecycle-actions"&gt;
@@ -604,15 +604,15 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
             disabled={!canSendPaymentLink || generatingLink}
             onClick={onConvertToPaid}
           &gt;
-            &lt;CreditCard /&gt; {generatingLink ? "Sender..." : "Konvertér"}
+            &lt;CreditCard /&gt; {generatingLink ? <span class="branch-0 cbranch-no" title="branch not covered" >"Sender..." : "</span>Konvertér"}
           &lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (lifecycleKey === "internal") {</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
+  if (lifecycleKey === "internal") {
+    return (
       &lt;div className="lifecycle lifecycle-internal"&gt;
         &lt;div className="lifecycle-icon"&gt;
           &lt;Shield /&gt;
@@ -631,15 +631,15 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
             disabled={!canSendPaymentLink || generatingLink}
             onClick={onConvertToPaid}
           &gt;
-            {generatingLink ? "Sender..." : "Konvertér til betalt"}
+            {generatingLink ? "Sender..." : <span class="branch-1 cbranch-no" title="branch not covered" >"Konvertér til betalt"}</span>
           &lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (lifecycleKey === "pending_payment") {</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
+  if (lifecycleKey === "pending_payment") {
+    return (
       &lt;div className="lifecycle lifecycle-pending"&gt;
         &lt;div className="lifecycle-icon"&gt;
           &lt;Clock /&gt;
@@ -647,7 +647,7 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
         &lt;div className="lifecycle-text"&gt;
           &lt;b&gt;Afventer betaling&lt;/b&gt;
           &lt;p&gt;
-            Betalingslink sendt til {inviteEmail ?? "kunden"}. Aftalt pris:{" "}
+            Betalingslink sendt til {inviteEmail ?? <span class="branch-1 cbranch-no" title="branch not covered" >"kunden"}.</span> Aftalt pris:{" "}
             {formatDkk(agreedPriceDkk)}/md. Stripe-abonnement aktiveres når
             kunden betaler.
           &lt;/p&gt;
@@ -659,7 +659,7 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
             disabled={!canSendPaymentLink || generatingLink}
             onClick={onGeneratePaymentLink}
           &gt;
-            &lt;Send /&gt; {generatingLink ? "Sender..." : "Gensend link"}
+            &lt;Send /&gt; {generatingLink ? "Sender..." : <span class="branch-1 cbranch-no" title="branch not covered" >"Gensend link"}</span>
           &lt;/button&gt;
           &lt;button
             className="btn btn-sm btn-primary"
@@ -667,14 +667,14 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
             disabled={grantingFree}
             onClick={onGrantFree}
           &gt;
-            &lt;Gift /&gt; {grantingFree ? "Aktiverer..." : "Aktivér gratis"}
+            &lt;Gift /&gt; {grantingFree ? "Aktiverer..." : <span class="branch-1 cbranch-no" title="branch not covered" >"Aktivér gratis"}</span>
           &lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="lifecycle lifecycle-draft"&gt;
       &lt;div className="lifecycle-icon"&gt;
         &lt;FileText /&gt;
@@ -696,7 +696,7 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
           disabled={!canSendPaymentLink || generatingLink}
           onClick={onGeneratePaymentLink}
         &gt;
-          &lt;CreditCard /&gt; {generatingLink ? "Sender..." : "Send betalingslink"}
+          &lt;CreditCard /&gt; {generatingLink ? "Sender..." : <span class="branch-1 cbranch-no" title="branch not covered" >"Send betalingslink"}</span>
         &lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -709,7 +709,7 @@ export function <span class="fstat-no" title="function not covered" >LifecycleBa
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">92.85% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>13/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -115,40 +115,40 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,43 +162,43 @@ import { z } from "zod";
 import { requireAdmin } from "@/lib/admin-guard";
 import { getAuditLogExportJsonl } from "@/lib/admin/audit-log";
 &nbsp;
-const querySchema = <span class="cstat-no" title="statement not covered" >z.object({</span>
+const querySchema = z.object({
   namespace: z.enum(["all", "business", "billing", "twilio", "auth", "reviews"]).optional(),
   outcome: z.enum(["all", "success", "error", "denied"]).optional(),
   q: z.string().max(120).optional().nullable(),
 });
 &nbsp;
-export async function <span class="fstat-no" title="function not covered" >GET(r</span>equest: NextRequest) {
-  const user = <span class="cstat-no" title="statement not covered" >await requireAdmin();</span>
-<span class="cstat-no" title="statement not covered" >  if (user instanceof Response) <span class="cstat-no" title="statement not covered" >return user;</span></span>
+export async function GET(request: NextRequest) {
+  const user = await requireAdmin();
+  if (user instanceof Response) return user;
 &nbsp;
-  const parsed = <span class="cstat-no" title="statement not covered" >querySchema.safeParse({</span>
+  const parsed = querySchema.safeParse({
     namespace: request.nextUrl.searchParams.get("namespace") ?? undefined,
     outcome: request.nextUrl.searchParams.get("outcome") ?? undefined,
     q: request.nextUrl.searchParams.get("q") ?? undefined,
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!parsed.success) {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json({ error: "Ugyldigt filter" }, { status: 422 });</span>
+  if (!parsed.success) {
+    return Response.json({ error: "Ugyldigt filter" }, { status: 422 });
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  try {</span>
-    const jsonl = <span class="cstat-no" title="statement not covered" >await getAuditLogExportJsonl({</span>
+  try {
+    const jsonl = await getAuditLogExportJsonl({
       namespace: parsed.data.namespace ?? "all",
       outcome: parsed.data.outcome,
       q: parsed.data.q,
     });
-<span class="cstat-no" title="statement not covered" >    return new Response(jsonl, {</span>
+    return new Response(jsonl, {
       headers: {
         "Content-Type": "application/x-ndjson; charset=utf-8",
         "Content-Disposition": 'attachment; filename="admin-audit-log.jsonl"',
       },
     });
   } catch (err) {
-<span class="cstat-no" title="statement not covered" >    return Response.json(</span>
+    return Response.json(
       {
         error:
-          err instanceof Error ? err.message : "Kunne ikke eksportere audit-log.",
+          err instanceof Error ? err.message : <span class="branch-1 cbranch-no" title="branch not covered" >"Kunne ikke eksportere audit-log.",</span>
       },
       { status: 500 },
     );
@@ -211,7 +211,7 @@ export async function <span class="fstat-no" title="function not covered" >GET(r
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

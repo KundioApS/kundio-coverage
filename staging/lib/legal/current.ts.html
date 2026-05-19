@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -154,19 +154,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -194,14 +188,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -210,7 +210,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -230,13 +230,13 @@ export interface LegalDocumentConfig {
   pdfPath?: string;
 }
 &nbsp;
-export const LEGAL_COMPANY = <span class="cstat-no" title="statement not covered" >{</span>
+export const LEGAL_COMPANY = {
   brandName: "Kundio",
   legalName: "Kundio ApS",
   contactEmail: "support@kundio.dk",
 };
 &nbsp;
-export const LEGAL_DOCUMENTS: Record&lt;LegalDocumentKey, LegalDocumentConfig&gt; = <span class="cstat-no" title="statement not covered" >{</span>
+export const LEGAL_DOCUMENTS: Record&lt;LegalDocumentKey, LegalDocumentConfig&gt; = {
   terms: {
     key: "terms",
     title: "Betingelser",
@@ -270,14 +270,14 @@ export const LEGAL_DOCUMENTS: Record&lt;LegalDocumentKey, LegalDocumentConfig&gt
   },
 };
 &nbsp;
-export const LEGAL_NAV_ITEMS = <span class="cstat-no" title="statement not covered" >[</span>
+export const LEGAL_NAV_ITEMS = [
   LEGAL_DOCUMENTS.terms,
   LEGAL_DOCUMENTS.privacy,
   LEGAL_DOCUMENTS.dpa,
 ];
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >formatLegalDate(d</span>ate: string): string {
-<span class="cstat-no" title="statement not covered" >  return new Intl.DateTimeFormat("da-DK", {</span>
+export function formatLegalDate(date: string): string {
+  return new Intl.DateTimeFormat("da-DK", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -285,8 +285,8 @@ export function <span class="fstat-no" title="function not covered" >formatLegal
   }).format(new Date(`${date}T00:00:00Z`));
 }
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >buildLegalMetadata(d</span>ocument: LegalDocumentConfig): Metadata {
-<span class="cstat-no" title="statement not covered" >  return {</span>
+export function buildLegalMetadata(document: LegalDocumentConfig): Metadata {
+  return {
     title: `${document.title} | Kundio`,
     description: document.description,
   };
@@ -298,7 +298,7 @@ export function <span class="fstat-no" title="function not covered" >buildLegalM
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

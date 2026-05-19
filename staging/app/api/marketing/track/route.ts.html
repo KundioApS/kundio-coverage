@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,7 +112,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,38 +126,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { type NextRequest, NextResponse } from "next/server";
 import { checkRateLimit, RateLimitPolicies } from "@/lib/rate-limit-db";
 import { trackEvent, type EventType } from "@/lib/analytics/tracker";
 &nbsp;
-const ALLOWED_EVENTS: EventType[] = <span class="cstat-no" title="statement not covered" >[</span>
+const ALLOWED_EVENTS: EventType[] = [
   "demo_step_viewed",
   "demo_step_completed",
   "demo_completed",
@@ -169,34 +169,34 @@ interface TrackBody {
   metadata?: Record&lt;string, unknown&gt;;
 }
 &nbsp;
-export async function <span class="fstat-no" title="function not covered" >POST(r</span>eq: NextRequest) {
+export async function POST(req: NextRequest) {
   const ip =
-<span class="cstat-no" title="statement not covered" >    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??</span>
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
     req.headers.get("x-real-ip") ??
     "unknown";
-  const rl = <span class="cstat-no" title="statement not covered" >await checkRateLimit(ip, RateLimitPolicies.MARKETING_TRACK);</span>
-<span class="cstat-no" title="statement not covered" >  if (!rl.allowed) {</span>
-<span class="cstat-no" title="statement not covered" >    return NextResponse.json({ error: "For mange forsøg. Prøv igen senere." }, { status: 429 });</span>
+  const rl = await checkRateLimit(ip, RateLimitPolicies.MARKETING_TRACK);
+  if (!rl.allowed) {
+    return NextResponse.json({ error: "For mange forsøg. Prøv igen senere." }, { status: 429 });
   }
 &nbsp;
-  let body: TrackBody = <span class="cstat-no" title="statement not covered" >{};</span>
-<span class="cstat-no" title="statement not covered" >  try {</span>
-<span class="cstat-no" title="statement not covered" >    body = (await req.json()) as TrackBody;</span>
+  let body: TrackBody = {};
+  try {
+    body = (await req.json()) as TrackBody;
   } catch {
-<span class="cstat-no" title="statement not covered" >    return NextResponse.json({ error: "Invalid body" }, { status: 400 });</span>
+    return NextResponse.json({ error: "Invalid body" }, { status: 400 });
   }
 &nbsp;
-  const eventType = <span class="cstat-no" title="statement not covered" >body.eventType as EventType | undefined;</span>
-<span class="cstat-no" title="statement not covered" >  if (!eventType || !ALLOWED_EVENTS.includes(eventType)) {</span>
-<span class="cstat-no" title="statement not covered" >    return NextResponse.json({ error: "Invalid event type" }, { status: 400 });</span>
+  const eventType = body.eventType as EventType | undefined;
+  if (!eventType || !ALLOWED_EVENTS.includes(eventType)) {
+    return NextResponse.json({ error: "Invalid event type" }, { status: 400 });
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  await trackEvent(null, eventType, "demo", undefined, {</span>
+  await trackEvent(null, eventType, "demo", undefined, {
     ...body.metadata,
     source: "interactive_demo",
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return NextResponse.json({ ok: true }, { status: 200 });</span>
+  return NextResponse.json({ ok: true }, { status: 200 });
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -205,7 +205,7 @@ export async function <span class="fstat-no" title="function not covered" >POST(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

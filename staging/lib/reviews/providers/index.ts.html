@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -97,24 +97,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -125,24 +125,24 @@ import { facebookReviewProvider } from "./facebook";
 import { googleReviewProvider } from "./google";
 import { createUnsupportedReviewProvider } from "./unsupported";
 &nbsp;
-const providers = <span class="cstat-no" title="statement not covered" >new Map&lt;ReviewProviderId, ReviewProvider&gt;([</span>
+const providers = new Map&lt;ReviewProviderId, ReviewProvider&gt;([
   ["google_business_profile", googleReviewProvider],
   ["facebook", facebookReviewProvider],
 ]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >for (const entry of REVIEW_PROVIDER_CATALOG) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!providers.has(entry.id)) {</span>
-<span class="cstat-no" title="statement not covered" >    providers.set(entry.id, createUnsupportedReviewProvider(entry.id));</span>
+for (const entry of REVIEW_PROVIDER_CATALOG) {
+  if (!providers.has(entry.id)) {
+    providers.set(entry.id, createUnsupportedReviewProvider(entry.id));
   }
 }
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >getReviewProvider(i</span>d: ReviewProviderId): ReviewProvider | null {
-<span class="cstat-no" title="statement not covered" >  return providers.get(id) ?? null;</span>
+export function getReviewProvider(id: ReviewProviderId): ReviewProvider | null {
+  return providers.get(id) ?? null;
 }
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >listReviewProviders(): ReviewProvider[] {</span>
-<span class="cstat-no" title="statement not covered" >  return REVIEW_PROVIDER_CATALOG.<span class="fstat-no" title="function not covered" >map((e</span>ntry) =&gt; <span class="cstat-no" title="statement not covered" >providers.get(entry.id))</span>.<span class="fstat-no" title="function not covered" >filter(</span></span>
-    (provider): provider is ReviewProvider =&gt; <span class="cstat-no" title="statement not covered" >Boolean(provider),</span>
+export function listReviewProviders(): ReviewProvider[] {
+  return REVIEW_PROVIDER_CATALOG.map((entry) =&gt; providers.get(entry.id)).filter(
+    (provider): provider is ReviewProvider =&gt; Boolean(provider),
   );
 }
 &nbsp;
@@ -154,7 +154,7 @@ export { getReviewProviderSummaries };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

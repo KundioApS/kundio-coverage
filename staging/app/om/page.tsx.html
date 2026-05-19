@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -205,13 +205,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -229,7 +229,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -237,7 +237,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -286,7 +286,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -313,7 +313,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -340,13 +340,13 @@ import { CtaBlock } from "@/components/landing/sections/cta-block";
 import { LogoCloud } from "@/components/landing/sections/logo-cloud";
 import { SectionHead } from "@/components/landing/sections/section-head";
 &nbsp;
-export const metadata: Metadata = <span class="cstat-no" title="statement not covered" >{</span>
+export const metadata: Metadata = {
   title: "Om Kundio — bygget til danske servicevirksomheder",
   description:
     "Vi bygger Kundio for at give servicevirksomheder den respons-tid, der vinder kunden — uden at hyre flere disponenter.",
 };
 &nbsp;
-const VALUES = <span class="cstat-no" title="statement not covered" >[</span>
+const VALUES = [
   {
     title: "Kvalificering, ikke salg",
     body:
@@ -364,15 +364,15 @@ const VALUES = <span class="cstat-no" title="statement not covered" >[</span>
   },
 ];
 &nbsp;
-const TEAM = <span class="cstat-no" title="statement not covered" >[</span>
+const TEAM = [
   { initials: "MS", name: "Marcus Sand", role: "Stifter &amp; teknik" },
   { initials: "AL", name: "Anders Lykke", role: "Produkt &amp; design" },
   { initials: "EJ", name: "Emilie Juhl", role: "Customer success" },
   { initials: "JK", name: "Jonas Kjær", role: "AI &amp; ML" },
 ];
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >AboutPage() {</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+export default function AboutPage() {
+  return (
     &lt;MarketingLayout&gt;
       &lt;PageHero
         kicker="Om Kundio"
@@ -420,8 +420,8 @@ export default function <span class="fstat-no" title="function not covered" >Abo
             sub="Når vi er i tvivl om en feature, vender vi tilbage til disse."
           /&gt;
           &lt;div className="kl-values-grid"&gt;
-            {VALUES.<span class="fstat-no" title="function not covered" >map((v</span>, i) =&gt; (
-<span class="cstat-no" title="statement not covered" >              &lt;div className="kl-value" key={v.title}&gt;</span>
+            {VALUES.map((v, i) =&gt; (
+              &lt;div className="kl-value" key={v.title}&gt;
                 &lt;div className="kl-value-num"&gt;
                   {String(i + 1).padStart(2, "0")}
                 &lt;/div&gt;
@@ -447,8 +447,8 @@ export default function <span class="fstat-no" title="function not covered" >Abo
             sub="Vi vokser med vilje langsomt. Det betyder, at I altid taler med en, der kender produktet og kender jer."
           /&gt;
           &lt;div className="kl-team-grid"&gt;
-            {TEAM.<span class="fstat-no" title="function not covered" >map((t</span>) =&gt; (
-<span class="cstat-no" title="statement not covered" >              &lt;div className="kl-team-card" key={t.name}&gt;</span>
+            {TEAM.map((t) =&gt; (
+              &lt;div className="kl-team-card" key={t.name}&gt;
                 &lt;div className="kl-team-avatar"&gt;{t.initials}&lt;/div&gt;
                 &lt;div className="kl-team-name"&gt;{t.name}&lt;/div&gt;
                 &lt;div className="kl-team-role"&gt;{t.role}&lt;/div&gt;
@@ -475,7 +475,7 @@ export default function <span class="fstat-no" title="function not covered" >Abo
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

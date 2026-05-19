@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">55.55% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/45</span>
+                <span class='fraction'>25/45</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -170,7 +170,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -200,7 +200,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -246,12 +246,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -272,7 +272,7 @@ import type { AdminV2LifecycleKey } from "@/lib/admin/lifecycle-key";
 &nbsp;
 type ChecklistState = "ok" | "warn" | "todo";
 &nbsp;
-const TWILIO_LABELS: Record&lt;string, string&gt; = <span class="cstat-no" title="statement not covered" >{</span>
+const TWILIO_LABELS: Record&lt;string, string&gt; = {
   pending: "Afventer",
   provisioning: "Provisionerer",
   partially_provisioned: "Delvist provisioneret",
@@ -280,7 +280,7 @@ const TWILIO_LABELS: Record&lt;string, string&gt; = <span class="cstat-no" title
   failed: "Fejlet",
 };
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >StatusChecklist({</span>
+export function StatusChecklist({
   phoneNumber,
   address,
   ownerExists,
@@ -302,62 +302,62 @@ export function <span class="fstat-no" title="function not covered" >StatusCheck
     label: string;
     state: ChecklistState;
     sub: string;
-  }&gt; = <span class="cstat-no" title="statement not covered" >[</span>
+  }&gt; = [
     {
       key: "info",
       label: "Virksomhedsinfo udfyldt",
-      state: phoneNumber &amp;&amp; address ? "ok" : "todo",
-      sub: phoneNumber &amp;&amp; address ? "Komplet" : "Mangler kontaktdata",
+      state: phoneNumber &amp;&amp; address ? "ok" : <span class="branch-1 cbranch-no" title="branch not covered" >"todo",</span>
+      sub: phoneNumber &amp;&amp; address ? "Komplet" : <span class="branch-1 cbranch-no" title="branch not covered" >"Mangler kontaktdata",</span>
     },
     {
       key: "owner",
       label: "Ejerkonto",
-      state: ownerCompleted ? "ok" : ownerExists ? "warn" : "todo",
+      state: ownerCompleted ? <span class="branch-0 cbranch-no" title="branch not covered" >"ok" : o</span>wnerExists ? "warn" : <span class="branch-1 cbranch-no" title="branch not covered" >"todo",</span>
       sub: ownerCompleted
-        ? "Konto færdiggjort"
+        ? <span class="branch-0 cbranch-no" title="branch not covered" >"Konto færdiggjort"</span>
         : ownerExists
           ? "Eksisterer - ikke færdig"
-          : "Ikke inviteret",
+          : <span class="branch-1 cbranch-no" title="branch not covered" >"Ikke inviteret",</span>
     },
     {
       key: "billing",
       label: "Betaling",
       state:
         lifecycleKey === "paid"
-          ? "ok"
+          ? <span class="branch-0 cbranch-no" title="branch not covered" >"ok"</span>
           : lifecycleKey === "internal" || lifecycleKey === "temp_free"
             ? "warn"
-            : "todo",
+            : <span class="branch-1 cbranch-no" title="branch not covered" >"todo",</span>
       sub:
         lifecycleKey === "paid"
-          ? "Stripe aktiv"
+          ? <span class="branch-0 cbranch-no" title="branch not covered" >"Stripe aktiv"</span>
           : lifecycleKey === "temp_free"
             ? "Midlertidig gratis"
-            : lifecycleKey === "internal"
+            : <span class="branch-1 cbranch-no" title="branch not covered" >lifecycleKey === "internal"</span>
               ? "Intern"
               : "Ikke konfigureret",
     },
     {
       key: "twilio",
       label: "Twilio telefonlinje",
-      state: twilioStatus === "live" ? "ok" : twilioStatus === "pending" ? "todo" : "warn",
+      state: twilioStatus === "live" ? <span class="branch-0 cbranch-no" title="branch not covered" >"ok" : t</span>wilioStatus === "pending" ? <span class="branch-0 cbranch-no" title="branch not covered" >"todo" : "</span>warn",
       sub:
         twilioStatus === "live"
-          ? `Live - ${twilioMode ?? "test"}`
-          : TWILIO_LABELS[twilioStatus ?? "pending"] ?? twilioStatus ?? "Afventer",
+          ? <span class="branch-0 cbranch-no" title="branch not covered" >`Live - ${twilioMode ?? "test"}`</span>
+          : TWILIO_LABELS[twilioStatus ?? "pending"] ?? <span class="branch-1 cbranch-no" title="branch not covered" >twilioStatus ?? <span class="branch-2 cbranch-no" title="branch not covered" >"</span>Afventer",</span>
     },
   ];
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="card side-card"&gt;
       &lt;h4&gt;Konto-helbred&lt;/h4&gt;
       &lt;div className="checklist"&gt;
-        {items.<span class="fstat-no" title="function not covered" >map((i</span>tem) =&gt; (
-<span class="cstat-no" title="statement not covered" >          &lt;div key={item.key} className="chk-item"&gt;</span>
+        {items.map((item) =&gt; (
+          &lt;div key={item.key} className="chk-item"&gt;
             &lt;div className={`chk-icon chk-icon-${item.state}`}&gt;
               {item.state === "ok" &amp;&amp; &lt;Check /&gt;}
               {item.state === "warn" &amp;&amp; &lt;AlertTriangle /&gt;}
-              {item.state === "todo" &amp;&amp; &lt;Clock /&gt;}
+              {item.state === "todo" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Clock /&gt;}</span>
             &lt;/div&gt;
             &lt;div className="chk-text"&gt;
               &lt;b&gt;{item.label}&lt;/b&gt;
@@ -376,7 +376,7 @@ export function <span class="fstat-no" title="function not covered" >StatusCheck
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

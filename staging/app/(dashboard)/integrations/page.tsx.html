@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">91.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>11/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -205,7 +205,8 @@
 <a name='L140'></a><a href='#L140'>140</a>
 <a name='L141'></a><a href='#L141'>141</a>
 <a name='L142'></a><a href='#L142'>142</a>
-<a name='L143'></a><a href='#L143'>143</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -215,17 +216,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -356,18 +358,19 @@ import { createReviewRepository } from "@/lib/reviews/repository";
 import { ReviewIntegrationsSection } from "@/components/dashboard/review-integrations-section";
 import { GuidedEmptyState } from "@/components/dashboard/guided-empty-state";
 &nbsp;
-export default async function <span class="fstat-no" title="function not covered" >IntegrationsPage() {</span>
-  const { user, ctx } = <span class="cstat-no" title="statement not covered" >await getServerContext();</span>
-<span class="cstat-no" title="statement not covered" >  if (!user) <span class="cstat-no" title="statement not covered" >redirect("/auth/login");</span></span>
+export default async function IntegrationsPage() {
+  const { user, ctx } = await getServerContext();
+  if (!user) redirect("/auth/login");
 &nbsp;
-  const appUrl =
-<span class="cstat-no" title="statement not covered" >    process.env.NEXT_PUBLIC_APP_URL ?? "https://your-app.vercel.app";</span>
-  const reviewManagementEnabled = <span class="cstat-no" title="statement not covered" >await isReviewManagementEnabled();</span>
-  const reviewIntegrations = <span class="cstat-no" title="statement not covered" >reviewManagementEnabled &amp;&amp; ctx</span>
+  const appUrl = (
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://your-app.vercel.app"
+  ).replace(/\/$/, "");
+  const reviewManagementEnabled = await isReviewManagementEnabled();
+  const reviewIntegrations = reviewManagementEnabled &amp;&amp; ctx
     ? await createReviewRepository().listIntegrations(ctx.businessId)
     : [];
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="max-w-3xl mx-auto p-6 space-y-8"&gt;
       &lt;div&gt;
         &lt;h1 className="text-xl font-semibold text-[#0F172A]"&gt;Integrationer&lt;/h1&gt;
@@ -413,7 +416,7 @@ export default async function <span class="fstat-no" title="function not covered
             &lt;/div&gt;
           &lt;/&gt;
         ) : (
-          &lt;GuidedEmptyState
+<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;GuidedEmptyState</span>
             compact
             align="left"
             icon={Building2}
@@ -496,7 +499,7 @@ export default async function <span class="fstat-no" title="function not covered
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

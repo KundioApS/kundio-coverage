@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -148,8 +148,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -166,35 +166,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -225,9 +225,9 @@ import { authorizeWidgetOrigin } from "@/lib/widget/origin-authorization";
 &nbsp;
 // Public endpoint — widget-origin authorization required.
 // Returns widget config and whether the subscription is active.
-export async function <span class="fstat-no" title="function not covered" >OPTIONS(r</span>equest: NextRequest) {
-  const origin = <span class="cstat-no" title="statement not covered" >request.headers.get("origin");</span>
-<span class="cstat-no" title="statement not covered" >  return new Response(null, {</span>
+export async function OPTIONS(request: NextRequest) {
+  const origin = request.headers.get("origin");
+  return new Response(null, {
     status: 204,
     headers: origin
       ? {
@@ -240,13 +240,13 @@ export async function <span class="fstat-no" title="function not covered" >OPTIO
   });
 }
 &nbsp;
-export async function <span class="fstat-no" title="function not covered" >GET(</span>
+export async function GET(
   request: NextRequest,
   { params }: { params: Promise&lt;{ businessId: string }&gt; }
 ) {
-  const { businessId } = <span class="cstat-no" title="statement not covered" >await params;</span>
+  const { businessId } = await params;
 &nbsp;
-  const authorization = <span class="cstat-no" title="statement not covered" >await authorizeWidgetOrigin({</span>
+  const authorization = await authorizeWidgetOrigin({
     businessId,
     embedOrigin:
       request.nextUrl.searchParams.get("embedOrigin") ??
@@ -254,25 +254,25 @@ export async function <span class="fstat-no" title="function not covered" >GET(<
     referer: request.headers.get("referer"),
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!authorization.authorized || !authorization.origin) {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json({ error: "Widget not available" }, { status: 403 });</span>
+  if (!authorization.authorized || !authorization.origin) {
+    return Response.json({ error: "Widget not available" }, { status: 403 });
   }
 &nbsp;
-  const <span class="cstat-no" title="statement not covered" >admin = createAdminClient();</span>
+  const admin = createAdminClient();
 &nbsp;
-  const configResult = <span class="cstat-no" title="statement not covered" >await admin</span>
+  const configResult = await admin
     .from("widget_configs")
     .select("*")
     .eq("business_id", businessId)
     .single();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (configResult.error || !configResult.data) {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json({ error: "Widget not found" }, { status: 404 });</span>
+  if (configResult.error || !configResult.data) {
+    return Response.json({ error: "Widget not found" }, { status: 404 });
   }
 &nbsp;
-  const config = <span class="cstat-no" title="statement not covered" >configResult.data;</span>
+  const config = configResult.data;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return Response.json(</span>
+  return Response.json(
     {
       id: config.id,
       business_id: config.business_id,
@@ -304,7 +304,7 @@ export async function <span class="fstat-no" title="function not covered" >GET(<
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-18T22:39:20.275Z
+                at 2026-05-19T15:47:19.809Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>
