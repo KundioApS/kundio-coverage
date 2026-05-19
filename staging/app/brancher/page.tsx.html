@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -147,21 +147,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,7 +173,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -221,14 +221,14 @@ import { SectionHead } from "@/components/landing/sections/section-head";
 import { KlArrow } from "@/components/landing/sections/icons";
 import { INDUSTRIES } from "@/lib/marketing/industries";
 &nbsp;
-export const metadata: Metadata = <span class="cstat-no" title="statement not covered" >{</span>
+export const metadata: Metadata = {
   title: "Brancher — Kundio",
   description:
     "Specifikke kvalificeringsflows for VVS, elektriker, rengøring og byggeri. Se, hvordan Kundio tilpasses jeres branche.",
 };
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >IndustriesPage() {</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+export default function IndustriesPage() {
+  return (
     &lt;MarketingLayout&gt;
       &lt;PageHero
         kicker="Brancher"
@@ -253,8 +253,8 @@ export default function <span class="fstat-no" title="function not covered" >Ind
             sub="Hver branche har sit eget kvalificeringsflow, sin egen sample-samtale og sine egne stats. Vi tuner det sammen med jer i opsætningen."
           /&gt;
           &lt;div className="kl-card-grid"&gt;
-            {INDUSTRIES.<span class="fstat-no" title="function not covered" >map((i</span>ndustry) =&gt; (
-<span class="cstat-no" title="statement not covered" >              &lt;Link</span>
+            {INDUSTRIES.map((industry) =&gt; (
+              &lt;Link
                 key={industry.slug}
                 href={`/brancher/${industry.slug}`}
                 className="kl-industry-card"
@@ -292,7 +292,7 @@ export default function <span class="fstat-no" title="function not covered" >Ind
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T15:47:19.809Z
+                at 2026-05-19T22:25:09.290Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

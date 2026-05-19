@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -145,7 +145,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,7 +175,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -193,7 +193,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -218,7 +218,7 @@ type Testimonial = {
   initials: string;
 };
 &nbsp;
-const DEFAULT_TESTIMONIALS: Testimonial[] = <span class="cstat-no" title="statement not covered" >[</span>
+const DEFAULT_TESTIMONIALS: Testimonial[] = [
   {
     quote:
       "Vi plejede at miste henvendelserne efter lukketid. Kundio skriver tilbage på få sekunder, og kl. 7 har jeg en kvalificeret liste klar.",
@@ -247,8 +247,8 @@ type Props = {
   heading?: boolean;
 };
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >TestimonialsRow({</span> items = <span class="branch-0 cbranch-no" title="branch not covered" >DEFAULT_TESTIMONIALS, h</span>eading = <span class="branch-0 cbranch-no" title="branch not covered" >true }: Props) {</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+export function TestimonialsRow({ items = DEFAULT_TESTIMONIALS, heading = true }: Props) {
+  return (
     &lt;section className="kl-section"&gt;
       &lt;div className="kl-container"&gt;
         {heading &amp;&amp; (
@@ -265,8 +265,8 @@ export function <span class="fstat-no" title="function not covered" >Testimonial
           /&gt;
         )}
         &lt;div className="kl-testimonials-row"&gt;
-          {items.<span class="fstat-no" title="function not covered" >map((t</span>) =&gt; (
-<span class="cstat-no" title="statement not covered" >            &lt;div className="kl-testimonial-mini" key={t.name}&gt;</span>
+          {items.map((t) =&gt; (
+            &lt;div className="kl-testimonial-mini" key={t.name}&gt;
               &lt;div className="kl-testimonial-mini-quote"&gt;&amp;ldquo;{t.quote}&amp;rdquo;&lt;/div&gt;
               &lt;div className="kl-testimonial-mini-attr"&gt;
                 &lt;div className="kl-testimonial-mini-avatar"&gt;{t.initials}&lt;/div&gt;
@@ -289,7 +289,7 @@ export function <span class="fstat-no" title="function not covered" >Testimonial
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T15:47:19.809Z
+                at 2026-05-19T22:25:09.290Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

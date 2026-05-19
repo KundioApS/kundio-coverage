@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -111,25 +111,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -138,8 +127,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -151,26 +151,26 @@
 } from "@/lib/email/newsletters/subscriptions";
 import { SubscriptionsView } from "./subscriptions-client";
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >load() {</span>
-<span class="cstat-no" title="statement not covered" >  try {</span>
-    const [rows, counts] = <span class="cstat-no" title="statement not covered" >await Promise.all([</span>
+async function load() {
+  try {
+    const [rows, counts] = await Promise.all([
       listSubscriptions({ limit: 200 }),
       getSubscriptionCounts(),
     ]);
-<span class="cstat-no" title="statement not covered" >    return { rows, counts, error: null as string | null };</span>
+    return { rows, counts, error: null as string | null };
   } catch (err) {
-<span class="cstat-no" title="statement not covered" >    return {</span>
+    return {
       rows: null,
       counts: null,
-      error: err instanceof Error ? err.message : "Ukendt fejl",
+      error: err instanceof Error ? err.message : <span class="branch-1 cbranch-no" title="branch not covered" >"Ukendt fejl",</span>
     };
   }
 }
 &nbsp;
-export default async function <span class="fstat-no" title="function not covered" >SubscriptionsPage() {</span>
-  const result = <span class="cstat-no" title="statement not covered" >await load();</span>
-<span class="cstat-no" title="statement not covered" >  if (result.error || !result.rows || !result.counts) {</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
+export default async function SubscriptionsPage() {
+  const result = await load();
+  if (result.error || !result.rows || !result.counts) {
+    return (
       &lt;div className="email-content email-content-narrow"&gt;
         &lt;div className="email-empty-panel"&gt;
           &lt;h2&gt;Kunne ikke hente abonnenter&lt;/h2&gt;
@@ -180,7 +180,7 @@ export default async function <span class="fstat-no" title="function not covered
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="email-content"&gt;
       &lt;SubscriptionsView initial={result.rows} counts={result.counts} /&gt;
     &lt;/div&gt;
@@ -193,7 +193,7 @@ export default async function <span class="fstat-no" title="function not covered
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T15:47:19.809Z
+                at 2026-05-19T22:25:09.290Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

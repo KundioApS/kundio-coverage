@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -319,13 +319,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -336,7 +336,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -370,7 +370,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -387,7 +387,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -479,7 +479,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -567,13 +567,13 @@ import { CtaBlock } from "@/components/landing/sections/cta-block";
 import { TrustStrip } from "@/components/landing/sections/trust-strip";
 import { COMPANY } from "@/lib/marketing/nav";
 &nbsp;
-export const metadata: Metadata = <span class="cstat-no" title="statement not covered" >{</span>
+export const metadata: Metadata = {
   title: "Sikkerhed &amp; data — Kundio",
   description:
     "Sådan opbevarer, beskytter og håndterer Kundio jeres data. EU-hostet, GDPR-compliant, klar til IT-revision.",
 };
 &nbsp;
-const SECTIONS = <span class="cstat-no" title="statement not covered" >[</span>
+const SECTIONS = [
   { id: "datalokation", label: "Datalokation" },
   { id: "kryptering", label: "Kryptering" },
   { id: "adgang", label: "Adgangsstyring" },
@@ -584,7 +584,7 @@ const SECTIONS = <span class="cstat-no" title="statement not covered" >[</span>
   { id: "kontakt", label: "Sikkerhedskontakt" },
 ];
 &nbsp;
-const SUB_PROCESSORS = <span class="cstat-no" title="statement not covered" >[</span>
+const SUB_PROCESSORS = [
   {
     name: "Supabase",
     purpose: "Database, auth og realtime",
@@ -617,8 +617,8 @@ const SUB_PROCESSORS = <span class="cstat-no" title="statement not covered" >[</
   },
 ];
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >SecurityPage() {</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+export default function SecurityPage() {
+  return (
     &lt;MarketingLayout&gt;
       &lt;PageHero
         kicker="Sikkerhed &amp; data"
@@ -634,8 +634,8 @@ export default function <span class="fstat-no" title="function not covered" >Sec
           &lt;div className="kl-toc-layout"&gt;
             &lt;aside className="kl-page-toc" aria-label="Indholdsfortegnelse"&gt;
               &lt;div className="kl-page-toc-heading"&gt;På denne side&lt;/div&gt;
-              {SECTIONS.<span class="fstat-no" title="function not covered" >map((s</span>) =&gt; (
-<span class="cstat-no" title="statement not covered" >                &lt;a key={s.id} href={`#${s.id}`}&gt;</span>
+              {SECTIONS.map((s) =&gt; (
+                &lt;a key={s.id} href={`#${s.id}`}&gt;
                   {s.label}
                 &lt;/a&gt;
               ))}
@@ -726,8 +726,8 @@ export default function <span class="fstat-no" title="function not covered" >Sec
                   før, hvis vi tilføjer nye.
                 &lt;/p&gt;
                 &lt;ul&gt;
-                  {SUB_PROCESSORS.<span class="fstat-no" title="function not covered" >map((p</span>) =&gt; (
-<span class="cstat-no" title="statement not covered" >                    &lt;li key={p.name}&gt;</span>
+                  {SUB_PROCESSORS.map((p) =&gt; (
+                    &lt;li key={p.name}&gt;
                       &lt;strong&gt;{p.name}&lt;/strong&gt; — {p.purpose}.{" "}
                       &lt;em style={{ color: "var(--kl-ink-3)", fontStyle: "normal" }}&gt;
                         {p.location}
@@ -814,7 +814,7 @@ export default function <span class="fstat-no" title="function not covered" >Sec
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T15:47:19.809Z
+                at 2026-05-19T22:25:09.290Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
