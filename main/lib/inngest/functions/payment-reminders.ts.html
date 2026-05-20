@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -99,29 +99,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { inngest } from "@/lib/inngest/client";
 import {
@@ -129,29 +129,29 @@ import {
   sweepPaymentReminders,
 } from "@/lib/payments/payment-reminders";
 &nbsp;
-export const sendPaymentReminderFunction = <span class="cstat-no" title="statement not covered" >inngest.createFunction(</span>
+export const sendPaymentReminderFunction = inngest.createFunction(
   {
     id: "send-payment-reminder",
     triggers: [{ event: "billing/payment-reminder.requested" }],
   },
-<span class="fstat-no" title="function not covered" >  async ({</span> event }) =&gt; {
+  async ({ event }) =&gt; {
     const businessId =
-<span class="cstat-no" title="statement not covered" >      typeof event.data.businessId === "string" ? event.data.businessId : null;</span>
+      typeof event.data.businessId === "string" ? event.data.businessId : null;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!businessId) {</span>
-<span class="cstat-no" title="statement not covered" >      return { skipped: true, reason: "missing_business_id" };</span>
+    if (!businessId) {
+      return { skipped: true, reason: "missing_business_id" };
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return sendPaymentReminderForBusiness(businessId);</span>
+    return sendPaymentReminderForBusiness(businessId);
   },
 );
 &nbsp;
-export const sweepPaymentRemindersFunction = <span class="cstat-no" title="statement not covered" >inngest.createFunction(</span>
+export const sweepPaymentRemindersFunction = inngest.createFunction(
   {
     id: "sweep-payment-reminders",
     triggers: [{ cron: "0 * * * *" }],
   },
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  async () =&gt; s</span>weepPaymentReminders(),</span>
+  async () =&gt; sweepPaymentReminders(),
 );
 &nbsp;</pre></td></tr></table></pre>
 
@@ -160,7 +160,7 @@ export const sweepPaymentRemindersFunction = <span class="cstat-no" title="state
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

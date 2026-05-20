@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -99,9 +99,7 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -113,34 +111,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { type NextRequest, NextResponse } from "next/server";
 import { checkRateLimit, RateLimitPolicies } from "@/lib/rate-limit-db";
+import { getRateLimitKey } from "@/lib/request-ip";
 import { trackEvent } from "@/lib/analytics/tracker";
 &nbsp;
 interface DemoLeadBody {
@@ -149,33 +146,30 @@ interface DemoLeadBody {
   company?: string;
 }
 &nbsp;
-export async function <span class="fstat-no" title="function not covered" >POST(r</span>eq: NextRequest) {
-  const ip =
-<span class="cstat-no" title="statement not covered" >    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??</span>
-    req.headers.get("x-real-ip") ??
-    "unknown";
-  const rl = <span class="cstat-no" title="statement not covered" >await checkRateLimit(ip, RateLimitPolicies.MARKETING_DEMO);</span>
-<span class="cstat-no" title="statement not covered" >  if (!rl.allowed) {</span>
-<span class="cstat-no" title="statement not covered" >    return NextResponse.json({ error: "For mange forsøg. Prøv igen senere." }, { status: 429 });</span>
+export async function POST(req: NextRequest) {
+  const ip = getRateLimitKey(req);
+  const rl = await checkRateLimit(ip, RateLimitPolicies.MARKETING_DEMO);
+  if (!rl.allowed) {
+    return NextResponse.json({ error: "For mange forsøg. Prøv igen senere." }, { status: 429 });
   }
 &nbsp;
-  let body: DemoLeadBody = <span class="cstat-no" title="statement not covered" >{};</span>
-<span class="cstat-no" title="statement not covered" >  try {</span>
-<span class="cstat-no" title="statement not covered" >    body = (await req.json()) as DemoLeadBody;</span>
+  let body: DemoLeadBody = {};
+  try {
+    body = (await req.json()) as DemoLeadBody;
   } catch {
     // Malformed body — still record what we can
   }
 &nbsp;
-  const { name, email, company } = <span class="cstat-no" title="statement not covered" >body;</span>
+  const { name, email, company } = body;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  await trackEvent(null, "demo_started", "demo_lead", undefined, {</span>
+  await trackEvent(null, "demo_started", "demo_lead", undefined, {
     name: name ?? null,
     email: email ?? null,
     company: company ?? null,
     source: "interactive_demo",
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return NextResponse.json({ ok: true }, { status: 200 });</span>
+  return NextResponse.json({ ok: true }, { status: 200 });
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -184,7 +178,7 @@ export async function <span class="fstat-no" title="function not covered" >POST(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

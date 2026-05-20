@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">46.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>7/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>1/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>1/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">58.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>7/12</span>
             </div>
         
             
@@ -107,7 +107,7 @@
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -122,36 +122,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >"use client";</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use client";
 &nbsp;
 import { useCallback, useEffect, useState } from "react";
 import type { TourScene } from "./types";
@@ -165,16 +165,16 @@ export interface TourState {
   back: () =&gt; void;
 }
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >useTour(s</span>cenes: TourScene[], onComplete: () =&gt; void): TourState {
-  const [sceneIdx, <span class="cstat-no" title="statement not covered" >setSceneIdx] = useState(0);</span>
+export function useTour(scenes: TourScene[], onComplete: () =&gt; void): TourState {
+  const [sceneIdx, setSceneIdx] = useState(0);
 &nbsp;
-  const scene = <span class="cstat-no" title="statement not covered" >scenes[sceneIdx] ?? null;</span>
+  const scene = scenes[sceneIdx] ?? <span class="branch-1 cbranch-no" title="branch not covered" >null;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span></span>
+<span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    scene?.onEnter?.();</span>
   }, [sceneIdx]); // eslint-disable-line react-hooks/exhaustive-deps
 &nbsp;
-  const <span class="cstat-no" title="statement not covered" >advance = <span class="fstat-no" title="function not covered" >useCallback(() =&gt; {</span></span>
+  const advance = <span class="fstat-no" title="function not covered" >useCallback(() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    if (sceneIdx &lt; scenes.length - 1) {</span>
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      setSceneIdx((i</span>) =&gt; <span class="cstat-no" title="statement not covered" >i + 1);</span></span>
     } else {
@@ -182,11 +182,11 @@ export function <span class="fstat-no" title="function not covered" >useTour(s</
     }
   }, [sceneIdx, scenes.length, onComplete]);
 &nbsp;
-  const <span class="cstat-no" title="statement not covered" >back = <span class="fstat-no" title="function not covered" >useCallback(() =&gt; {</span></span>
+  const back = <span class="fstat-no" title="function not covered" >useCallback(() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    if (sceneIdx &gt; 0) <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >setSceneIdx((i</span>) =&gt; <span class="cstat-no" title="statement not covered" >i - 1);</span></span></span>
   }, [sceneIdx]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return {</span>
+  return {
     scene,
     sceneIdx,
     total: scenes.length,
@@ -202,7 +202,7 @@ export function <span class="fstat-no" title="function not covered" >useTour(s</
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

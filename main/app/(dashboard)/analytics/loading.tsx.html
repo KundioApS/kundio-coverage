@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">63.63% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>7/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">57.14% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>4/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">70% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>7/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -215,7 +215,7 @@
 <a name='L150'></a><a href='#L150'>150</a>
 <a name='L151'></a><a href='#L151'>151</a>
 <a name='L152'></a><a href='#L152'>152</a>
-<a name='L153'></a><a href='#L153'>153</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L153'></a><a href='#L153'>153</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -257,18 +257,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -283,7 +283,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -321,7 +321,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -367,7 +367,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >"use client";</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use client";
 &nbsp;
 import React from "react";
 import { motion, useReducedMotion } from "motion/react";
@@ -408,19 +408,19 @@ function <span class="fstat-no" title="function not covered" >SkeletonChartCard(
   );
 }
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >AnalyticsLoading() {</span>
-  const <span class="cstat-no" title="statement not covered" >rm = useReducedMotion() ?? false;</span>
+export default function AnalyticsLoading() {
+  const rm = useReducedMotion() ?? <span class="branch-1 cbranch-no" title="branch not covered" >false;</span>
 &nbsp;
-  function <span class="fstat-no" title="function not covered" >fi(d</span>elay: number) {
-<span class="cstat-no" title="statement not covered" >    if (rm) <span class="cstat-no" title="statement not covered" >return { initial: false as const, animate: { opacity: 1 } };</span></span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+  function fi(delay: number) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (rm) <span class="cstat-no" title="statement not covered" >return { initial: false as const, animate: { opacity: 1 } };</span>
+    return {
       initial: { opacity: 0, y: 6 } as const,
       animate: { opacity: 1, y: 0 },
       transition: { duration: 0.18, ease: "easeOut" as const, delay },
     };
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="min-h-full"&gt;
       &lt;div className="max-w-[1240px] mx-auto px-7 pt-7 pb-24 flex flex-col gap-5"&gt;
         {/* Heading */}
@@ -434,8 +434,8 @@ export default function <span class="fstat-no" title="function not covered" >Ana
           className="grid grid-cols-2 sm:grid-cols-4 gap-3"
           {...fi(0.04)}
         &gt;
-          {Array.from({ length: 8 }).<span class="fstat-no" title="function not covered" >map((_</span>, i) =&gt; (
-<span class="cstat-no" title="statement not covered" >            &lt;SkeletonCard key={i}&gt;</span>
+          {Array.from({ length: 8 }).map((_, i) =&gt; (
+            &lt;SkeletonCard key={i}&gt;
               &lt;div className="px-4 py-4"&gt;
                 &lt;Bone className="h-2.5 w-24 mb-3" /&gt;
                 &lt;Bone className="h-8 w-16" /&gt;
@@ -472,8 +472,8 @@ export default function <span class="fstat-no" title="function not covered" >Ana
               &lt;/div&gt;
               {/* Legend pills */}
               &lt;div className="flex justify-center gap-4"&gt;
-                {Array.from({ length: 3 }).<span class="fstat-no" title="function not covered" >map((_</span>, i) =&gt; (
-<span class="cstat-no" title="statement not covered" >                  &lt;Bone key={i} className="h-3" style={{ width: 48 + i * 12 }} /&gt;</span>
+                {Array.from({ length: 3 }).map((_, i) =&gt; (
+                  &lt;Bone key={i} className="h-3" style={{ width: 48 + i * 12 }} /&gt;
                 ))}
               &lt;/div&gt;
             &lt;/div&gt;
@@ -526,7 +526,7 @@ export default function <span class="fstat-no" title="function not covered" >Ana
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

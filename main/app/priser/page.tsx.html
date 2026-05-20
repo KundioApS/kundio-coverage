@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -192,19 +192,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -215,13 +209,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -257,7 +251,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -311,13 +311,13 @@ import { FaqList } from "@/components/landing/sections/faq-list";
 import { TrustStrip } from "@/components/landing/sections/trust-strip";
 import { FAQ_PRICING } from "@/lib/marketing/faq";
 &nbsp;
-export const metadata: Metadata = <span class="cstat-no" title="statement not covered" >{</span>
+export const metadata: Metadata = {
   title: "Priser — Kundio",
   description:
     "Fast månedspris baseret på volumen — ikke pr. bruger. Se hvad de tre planer indeholder, og hvad der typisk er rigtigt for jer.",
 };
 &nbsp;
-const COMPARE_ROWS: { feature: string; starter: string; business: string; enterprise: string }[] = <span class="cstat-no" title="statement not covered" >[</span>
+const COMPARE_ROWS: { feature: string; starter: string; business: string; enterprise: string }[] = [
   { feature: "Chatbot på hjemmesiden", starter: "Inkluderet", business: "Inkluderet", enterprise: "Inkluderet" },
   { feature: "AI-kvalificering via SMS", starter: "Inkluderet", business: "Inkluderet", enterprise: "Inkluderet" },
   { feature: "Kvalificerede henvendelser / md.", starter: "ca. 150", business: "ca. 600", enterprise: "Ubegrænset" },
@@ -333,8 +333,8 @@ const COMPARE_ROWS: { feature: string; starter: string; business: string; enterp
   { feature: "Single Sign-On (SSO)", starter: "—", business: "—", enterprise: "Inkluderet" },
 ];
 &nbsp;
-export default function <span class="fstat-no" title="function not covered" >PricingPage() {</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+export default function PricingPage() {
+  return (
     &lt;MarketingLayout&gt;
       &lt;PageHero
         kicker="Priser"
@@ -375,8 +375,8 @@ export default function <span class="fstat-no" title="function not covered" >Pri
                 &lt;/tr&gt;
               &lt;/thead&gt;
               &lt;tbody&gt;
-                {COMPARE_ROWS.<span class="fstat-no" title="function not covered" >map((r</span>ow) =&gt; (
-<span class="cstat-no" title="statement not covered" >                  &lt;tr key={row.feature}&gt;</span>
+                {COMPARE_ROWS.map((row) =&gt; (
+                  &lt;tr key={row.feature}&gt;
                     &lt;td className="kl-compare-feat"&gt;{row.feature}&lt;/td&gt;
                     &lt;td className={row.starter === "—" ? "kl-compare-no" : ""}&gt;
                       {row.starter}
@@ -384,7 +384,7 @@ export default function <span class="fstat-no" title="function not covered" >Pri
                     &lt;td className={row.business === "—" ? "kl-compare-no" : ""}&gt;
                       {row.business}
                     &lt;/td&gt;
-                    &lt;td className={row.enterprise === "—" ? "kl-compare-no" : ""}&gt;
+                    &lt;td className={row.enterprise === "—" ? <span class="branch-0 cbranch-no" title="branch not covered" >"kl-compare-no" : "</span>"}&gt;
                       {row.enterprise}
                     &lt;/td&gt;
                   &lt;/tr&gt;
@@ -427,7 +427,7 @@ export default function <span class="fstat-no" title="function not covered" >Pri
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

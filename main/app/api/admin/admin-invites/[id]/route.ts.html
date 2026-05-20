@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -123,41 +123,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -165,49 +163,51 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { requireAdmin } from "@/lib/admin-guard";
 import { audit } from "@/lib/audit";
 import { createAdminClient } from "@/lib/supabase/admin";
 &nbsp;
-export async function <span class="fstat-no" title="function not covered" >DELETE(</span>
+export async function DELETE(
   _request: Request,
   { params }: { params: Promise&lt;{ id: string }&gt; },
 ) {
-  const user = <span class="cstat-no" title="statement not covered" >await requireAdmin();</span>
-<span class="cstat-no" title="statement not covered" >  if (user instanceof Response) <span class="cstat-no" title="statement not covered" >return user;</span></span>
+  const user = await requireAdmin();
+  if (user instanceof Response) return user;
 &nbsp;
-  const { id } = <span class="cstat-no" title="statement not covered" >await params;</span>
-  const <span class="cstat-no" title="statement not covered" >admin = createAdminClient();</span>
-  const { data: invite, error: inviteError } = <span class="cstat-no" title="statement not covered" >await admin</span>
+  const { id } = await params;
+  const admin = createAdminClient();
+  const { data: invite, error: inviteError } = await admin
     .from("admin_invites")
     .select("id, email, name, status")
     .eq("id", id)
     .single();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (inviteError || !invite) {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json({ error: "Invitation ikke fundet" }, { status: 404 });</span>
+  if (inviteError || !invite) {
+    return Response.json({ error: "Invitation ikke fundet" }, { status: 404 });
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (invite.status !== "pending") {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json(</span>
+  if (invite.status !== "pending") {
+    return Response.json(
       { error: "Kun afventende invitationer kan tilbagekaldes." },
       { status: 409 },
     );
   }
 &nbsp;
-  const revokedAt = <span class="cstat-no" title="statement not covered" >new Date().toISOString();</span>
-  const { error: updateError } = <span class="cstat-no" title="statement not covered" >await admin</span>
+  const revokedAt = new Date().toISOString();
+  const { error: updateError } = await admin
     .from("admin_invites")
     .update({ status: "revoked", revoked_at: revokedAt })
     .eq("id", invite.id);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (updateError) {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json({ error: updateError.message }, { status: 500 });</span>
+  if (updateError) {
+    return Response.json({ error: updateError.message }, { status: 500 });
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  await audit({</span>
+  await audit({
     businessId: null,
     actorType: "admin",
     actorId: user.id,
@@ -217,7 +217,7 @@ export async function <span class="fstat-no" title="function not covered" >DELET
     details: { email: invite.email, name: invite.name, revoked_at: revokedAt },
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return Response.json({ ok: true });</span>
+  return Response.json({ ok: true });
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -226,7 +226,7 @@ export async function <span class="fstat-no" title="function not covered" >DELET
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

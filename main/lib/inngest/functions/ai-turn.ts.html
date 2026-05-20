@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">93.33% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>14/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -99,28 +99,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -131,28 +131,28 @@
 import { inngest } from "@/lib/inngest/client";
 import { runAiTurn } from "@/lib/ai/runtime/turn-worker";
 &nbsp;
-export const runAiTurnFunction = <span class="cstat-no" title="statement not covered" >inngest.createFunction(</span>
+export const runAiTurnFunction = inngest.createFunction(
   {
     id: "run-ai-turn",
     triggers: [{ event: "ai/turn.requested" }],
   },
-<span class="fstat-no" title="function not covered" >  async ({</span> event }) =&gt; {
-    const conversationId = <span class="cstat-no" title="statement not covered" >typeof event.data.conversationId === "string" ? event.data.conversationId : null;</span>
-    const businessId = <span class="cstat-no" title="statement not covered" >typeof event.data.businessId === "string" ? event.data.businessId : null;</span>
+  async ({ event }) =&gt; {
+    const conversationId = typeof event.data.conversationId === "string" ? event.data.conversationId : <span class="branch-1 cbranch-no" title="branch not covered" >null;</span>
+    const businessId = typeof event.data.businessId === "string" ? event.data.businessId : null;
     const inboundMessageId =
-<span class="cstat-no" title="statement not covered" >      typeof event.data.inboundMessageId === "string" ? event.data.inboundMessageId : null;</span>
+      typeof event.data.inboundMessageId === "string" ? event.data.inboundMessageId : null;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!conversationId || !businessId || !inboundMessageId) {</span>
-<span class="cstat-no" title="statement not covered" >      return { skipped: true, reason: "invalid_payload" };</span>
+    if (!conversationId || !businessId || !inboundMessageId) {
+      return { skipped: true, reason: "invalid_payload" };
     }
 &nbsp;
-    const <span class="cstat-no" title="statement not covered" >repository = createSupabaseConversationRepository();</span>
-    const business = <span class="cstat-no" title="statement not covered" >await repository.getBusinessProfile({ businessId });</span>
-<span class="cstat-no" title="statement not covered" >    if (!business || !business.aiEnabled) {</span>
-<span class="cstat-no" title="statement not covered" >      return { skipped: true, reason: "business_not_found_or_ai_disabled" };</span>
+    const repository = createSupabaseConversationRepository();
+    const business = await repository.getBusinessProfile({ businessId });
+    if (!business || !business.aiEnabled) {
+      return { skipped: true, reason: "business_not_found_or_ai_disabled" };
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return runAiTurn({</span>
+    return runAiTurn({
       conversationId,
       businessId,
       inboundMessageId,
@@ -166,7 +166,7 @@ export const runAiTurnFunction = <span class="cstat-no" title="statement not cov
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

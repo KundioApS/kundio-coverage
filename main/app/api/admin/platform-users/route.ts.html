@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">92.85% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>13/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -121,7 +121,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -129,32 +129,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -163,7 +163,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -174,40 +174,40 @@ import { z } from "zod";
 import { requireAdmin } from "@/lib/admin-guard";
 import { getAdminPlatformUsersPageData } from "@/lib/admin/users";
 &nbsp;
-const querySchema = <span class="cstat-no" title="statement not covered" >z.object({</span>
+const querySchema = z.object({
   page: z.coerce.number().int().positive().optional(),
   per_page: z.coerce.number().int().positive().optional(),
   invites_page: z.coerce.number().int().positive().optional(),
   invites_per_page: z.coerce.number().int().positive().optional(),
 });
 &nbsp;
-export async function <span class="fstat-no" title="function not covered" >GET(r</span>equest: NextRequest) {
-  const user = <span class="cstat-no" title="statement not covered" >await requireAdmin();</span>
-<span class="cstat-no" title="statement not covered" >  if (user instanceof Response) <span class="cstat-no" title="statement not covered" >return user;</span></span>
+export async function GET(request: NextRequest) {
+  const user = await requireAdmin();
+  if (user instanceof Response) return user;
 &nbsp;
-  const parsed = <span class="cstat-no" title="statement not covered" >querySchema.safeParse({</span>
+  const parsed = querySchema.safeParse({
     page: request.nextUrl.searchParams.get("page") ?? undefined,
     per_page: request.nextUrl.searchParams.get("per_page") ?? undefined,
     invites_page: request.nextUrl.searchParams.get("invites_page") ?? undefined,
     invites_per_page: request.nextUrl.searchParams.get("invites_per_page") ?? undefined,
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!parsed.success) {</span>
-<span class="cstat-no" title="statement not covered" >    return Response.json(</span>
+  if (!parsed.success) {
+    return Response.json(
       { error: "Ugyldig paginering", issues: parsed.error.flatten().fieldErrors },
       { status: 422 },
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  try {</span>
-    const data = <span class="cstat-no" title="statement not covered" >await getAdminPlatformUsersPageData({</span>
+  try {
+    const data = await getAdminPlatformUsersPageData({
       page: parsed.data.page,
       perPage: parsed.data.per_page,
       invitesPage: parsed.data.invites_page,
       invitesPerPage: parsed.data.invites_per_page,
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return Response.json({</span>
+    return Response.json({
       data: {
         users: data.platformUsers,
         pending_invites: data.platformInvites,
@@ -216,8 +216,8 @@ export async function <span class="fstat-no" title="function not covered" >GET(r
       },
     });
   } catch (err) {
-<span class="cstat-no" title="statement not covered" >    return Response.json(</span>
-      { error: err instanceof Error ? err.message : "Kunne ikke hente platformbrugere." },
+    return Response.json(
+      { error: err instanceof Error ? err.message : <span class="branch-1 cbranch-no" title="branch not covered" >"Kunne ikke hente platformbrugere." },</span>
       { status: 500 },
     );
   }
@@ -229,7 +229,7 @@ export async function <span class="fstat-no" title="function not covered" >GET(r
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

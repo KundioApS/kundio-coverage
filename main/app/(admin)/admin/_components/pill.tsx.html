@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>12/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -122,7 +122,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -130,15 +130,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -147,10 +139,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -159,12 +147,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">99x</span>
+<span class="cline-any cline-yes">99x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">171x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">171x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -176,7 +176,7 @@
 const PILL_META: Record&lt;
   AdminV2LifecycleKey,
   { short: string; pillClass: string; dot?: boolean }
-&gt; = <span class="cstat-no" title="statement not covered" >{</span>
+&gt; = {
   paid: { short: "Betalt", pillClass: "pill-paid", dot: true },
   temp_free: { short: "Gratis", pillClass: "pill-temp" },
   internal: { short: "Intern", pillClass: "pill-internal" },
@@ -184,7 +184,7 @@ const PILL_META: Record&lt;
   draft: { short: "Kladde", pillClass: "pill-draft" },
 };
 &nbsp;
-const TWILIO_META: Record&lt;string, { label: string; pillClass: string; dot?: boolean }&gt; = <span class="cstat-no" title="statement not covered" >{</span>
+const TWILIO_META: Record&lt;string, { label: string; pillClass: string; dot?: boolean }&gt; = {
   pending: { label: "Afventer", pillClass: "pill-neutral" },
   provisioning: { label: "Provisionerer", pillClass: "pill-pending" },
   partially_provisioned: { label: "Delvist provisioneret", pillClass: "pill-pending" },
@@ -192,7 +192,7 @@ const TWILIO_META: Record&lt;string, { label: string; pillClass: string; dot?: b
   failed: { label: "Fejlet", pillClass: "pill-failed" },
 };
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >Pill({</span>
+export function Pill({
   kind,
   label,
   dot,
@@ -201,10 +201,10 @@ export function <span class="fstat-no" title="function not covered" >Pill({</spa
   label?: string;
   dot?: boolean;
 }) {
-  const meta = <span class="cstat-no" title="statement not covered" >PILL_META[kind];</span>
-  const showDot = <span class="cstat-no" title="statement not covered" >dot ?? meta.dot;</span>
+  const meta = PILL_META[kind];
+  const showDot = dot ?? meta.dot;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;span className={`pill ${meta.pillClass}`}&gt;
       {showDot &amp;&amp; &lt;span className="pill-dot" /&gt;}
       {label ?? meta.short}
@@ -212,13 +212,13 @@ export function <span class="fstat-no" title="function not covered" >Pill({</spa
   );
 }
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >TwilioPill({</span> status }: { status: string | null | undefined }) {
-  const meta = <span class="cstat-no" title="statement not covered" >TWILIO_META[status ?? "pending"] ?? {</span>
-    label: status ?? "Afventer",
+export function TwilioPill({ status }: { status: string | null | undefined }) {
+  const meta = TWILIO_META[status ?? <span class="branch-1 cbranch-no" title="branch not covered" >"pending"] ?? {</span>
+    label: status ?? <span class="branch-1 cbranch-no" title="branch not covered" >"Afventer",</span>
     pillClass: "pill-neutral",
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;span className={`pill ${meta.pillClass}`}&gt;
       {meta.dot &amp;&amp; &lt;span className="pill-dot" /&gt;}
       Twilio: {meta.label}
@@ -232,7 +232,7 @@ export function <span class="fstat-no" title="function not covered" >TwilioPill(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

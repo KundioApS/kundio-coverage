@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">77.77% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>7/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>1/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -130,19 +130,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -182,27 +182,27 @@ import { SendStatusPanel } from "../send-status-panel";
 &nbsp;
 type Ctx = { params: Promise&lt;{ id: string }&gt; };
 &nbsp;
-export default async function <span class="fstat-no" title="function not covered" >EditNewsletterPage({</span> params }: Ctx) {
-  const { id } = <span class="cstat-no" title="statement not covered" >await params;</span>
-  const [row, counts, sends, templates] = <span class="cstat-no" title="statement not covered" >await Promise.all([</span>
+export default async function EditNewsletterPage({ params }: Ctx) {
+  const { id } = await params;
+  const [row, counts, sends, templates] = await Promise.all([
     getNewsletter(id),
     getSubscriptionCounts(),
     listNewsletterSends(id),
     listTemplates({ templateType: "newsletter", includeArchived: false }),
   ]);
-<span class="cstat-no" title="statement not covered" >  if (!row) <span class="cstat-no" title="statement not covered" >notFound();</span></span>
+  if (!row) notFound();
 &nbsp;
-  const latestSend = <span class="cstat-no" title="statement not covered" >sends[0] ?? null;</span>
-  const activeTemplates = <span class="cstat-no" title="statement not covered" >templates.<span class="fstat-no" title="function not covered" >filter((t</span>emplate) =&gt; <span class="cstat-no" title="statement not covered" >template.isActive);</span></span>
+  const latestSend = sends[0] ?? null;
+  const activeTemplates = templates.<span class="fstat-no" title="function not covered" >filter((t</span>emplate) =&gt; <span class="cstat-no" title="statement not covered" >template.isActive);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="email-content"&gt;
       &lt;NewsletterEditor
         initial={{
           id: row.id,
           title: row.title,
           subject: row.subject,
-          preheader: row.preheader ?? "",
+          preheader: row.preheader ?? <span class="branch-1 cbranch-no" title="branch not covered" >"",</span>
           bodyMarkdown: row.bodyMarkdown,
           status: row.status,
           subscribedCount: counts.subscribed,
@@ -217,7 +217,7 @@ export default async function <span class="fstat-no" title="function not covered
         }))}
       /&gt;
       {latestSend ? (
-        &lt;SendStatusPanel newsletterId={row.id} initialSend={latestSend} /&gt;
+<span class="branch-0 cbranch-no" title="branch not covered" >        &lt;SendStatusPanel newsletterId={row.id} initialSend={latestSend} /&gt;</span>
       ) : null}
     &lt;/div&gt;
   );
@@ -229,7 +229,7 @@ export default async function <span class="fstat-no" title="function not covered
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../../../../prettify.js"></script>
         <script>

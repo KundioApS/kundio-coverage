@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -240,7 +240,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -277,8 +277,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -347,21 +347,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">81x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -400,8 +400,8 @@ interface LegalPageProps {
   content: LegalDocumentContent;
 }
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >LegalPage({</span> document, content }: LegalPageProps) {
-<span class="cstat-no" title="statement not covered" >  return (</span>
+export function LegalPage({ document, content }: LegalPageProps) {
+  return (
     &lt;div className="min-h-screen bg-[#F8FAFC] text-[#020617]"&gt;
       &lt;header className="border-b border-slate-200/80 bg-white/90 backdrop-blur-md"&gt;
         &lt;div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5"&gt;
@@ -437,9 +437,9 @@ export function <span class="fstat-no" title="function not covered" >LegalPage({
 &nbsp;
       &lt;main className="mx-auto max-w-4xl px-5 py-12 sm:py-16"&gt;
         &lt;nav className="mb-6 flex flex-wrap gap-2"&gt;
-          {LEGAL_NAV_ITEMS.<span class="fstat-no" title="function not covered" >map((i</span>tem) =&gt; {
-            const isActive = <span class="cstat-no" title="statement not covered" >item.key === document.key;</span>
-<span class="cstat-no" title="statement not covered" >            return (</span>
+          {LEGAL_NAV_ITEMS.map((item) =&gt; {
+            const isActive = item.key === document.key;
+            return (
               &lt;Link
                 key={item.key}
                 href={item.href}
@@ -507,22 +507,22 @@ export function <span class="fstat-no" title="function not covered" >LegalPage({
 &nbsp;
           &lt;section className="px-6 py-8 sm:px-8 sm:py-10"&gt;
             &lt;div className="space-y-10"&gt;
-              {content.sections.<span class="fstat-no" title="function not covered" >map((s</span>ection) =&gt; (
-<span class="cstat-no" title="statement not covered" >                &lt;section key={section.title} className="space-y-4"&gt;</span>
+              {content.sections.map((section) =&gt; (
+                &lt;section key={section.title} className="space-y-4"&gt;
                   &lt;div&gt;
                     &lt;h2 className="text-xl font-semibold text-[#0F172A]"&gt;{section.title}&lt;/h2&gt;
                   &lt;/div&gt;
 &nbsp;
                   &lt;div className="space-y-4 text-sm leading-7 text-slate-600 sm:text-base"&gt;
-                    {section.paragraphs.<span class="fstat-no" title="function not covered" >map((p</span>aragraph) =&gt; (
-<span class="cstat-no" title="statement not covered" >                      &lt;p key={paragraph}&gt;{paragraph}&lt;/p&gt;</span>
+                    {section.paragraphs.map((paragraph) =&gt; (
+                      &lt;p key={paragraph}&gt;{paragraph}&lt;/p&gt;
                     ))}
                   &lt;/div&gt;
 &nbsp;
                   {section.bullets &amp;&amp; (
                     &lt;ul className="space-y-2 text-sm leading-7 text-slate-600 sm:text-base"&gt;
-                      {section.bullets.<span class="fstat-no" title="function not covered" >map((b</span>ullet) =&gt; (
-<span class="cstat-no" title="statement not covered" >                        &lt;li key={bullet} className="flex gap-3"&gt;</span>
+                      {section.bullets.map((bullet) =&gt; (
+                        &lt;li key={bullet} className="flex gap-3"&gt;
                           &lt;span className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400" /&gt;
                           &lt;span&gt;{bullet}&lt;/span&gt;
                         &lt;/li&gt;
@@ -553,7 +553,7 @@ export function <span class="fstat-no" title="function not covered" >LegalPage({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

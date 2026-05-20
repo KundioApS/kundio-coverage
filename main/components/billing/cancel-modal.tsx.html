@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">55.55% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>5/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>2/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>4/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -217,20 +217,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">32x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -344,19 +344,19 @@ interface CancelModalProps {
   loading?: boolean;
 }
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >CancelModal({</span>
+export function CancelModal({
   open,
   periodEnd,
-  hasAdminAccess = <span class="branch-0 cbranch-no" title="branch not covered" >false,</span>
+  hasAdminAccess = false,
   onClose,
   onConfirm,
   loading,
 }: CancelModalProps) {
-<span class="cstat-no" title="statement not covered" >  if (!open) <span class="cstat-no" title="statement not covered" >return null;</span></span>
+  if (!open) return null;
 &nbsp;
-  const displayDate = <span class="cstat-no" title="statement not covered" >periodEnd ?? "slutningen af din faktureringsperiode";</span>
+  const displayDate = periodEnd ?? "slutningen af din faktureringsperiode";
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div
       className="fixed inset-0 z-50 grid place-items-center p-4"
       style={{ background: "rgba(26,23,18,0.45)", backdropFilter: "blur(3px)" }}
@@ -365,7 +365,7 @@ export function <span class="fstat-no" title="function not covered" >CancelModal
       &lt;div
         className="w-full max-w-[480px] rounded-[14px] overflow-hidden border border-border shadow-[0_20px_60px_-20px_rgba(2,6,23,0.2),0_2px_6px_rgba(2,6,23,0.06)]"
         style={{ background: "var(--card)" }}
-<span class="fstat-no" title="function not covered" >        onClick={(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >e.stopPropagation()}</span>
+        onClick={(e) =&gt; e.stopPropagation()}
         role="dialog"
         aria-modal="true"
         aria-labelledby="cancel-modal-title"
@@ -475,7 +475,7 @@ export function <span class="fstat-no" title="function not covered" >CancelModal
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

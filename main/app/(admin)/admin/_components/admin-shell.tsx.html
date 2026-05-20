@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">4.76% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/21</span>
+                <span class='fraction'>7/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">10% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>1/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.14% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/14</span>
+                <span class='fraction'>7/14</span>
             </div>
         
             
@@ -129,7 +129,7 @@
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
 <a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -151,26 +151,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -210,24 +210,24 @@ type AdminShellProps = {
   children: React.ReactNode;
 };
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >AdminShell({</span>
+export function AdminShell({
   userEmail,
   businessCount,
   twilioAttentionCount,
-  emailCenterEnabled = <span class="branch-0 cbranch-no" title="branch not covered" >false,</span>
+  emailCenterEnabled = false,
   children,
 }: AdminShellProps) {
-  const [mobileOpen, <span class="cstat-no" title="statement not covered" >setMobileOpen] = useState(false);</span>
-  const <span class="cstat-no" title="statement not covered" >pathname = usePathname();</span>
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 &nbsp;
-  const <span class="cstat-no" title="statement not covered" >close = <span class="fstat-no" title="function not covered" >useCallback(() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etMobileOpen(false),</span> []);</span>
+  const close = <span class="fstat-no" title="function not covered" >useCallback(() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etMobileOpen(false),</span> []);
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span></span>
+<span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span>
     const timeoutId = <span class="cstat-no" title="statement not covered" >window.<span class="fstat-no" title="function not covered" >setTimeout(() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etMobileOpen(false),</span> 0);</span>
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    return () =&gt; <span class="cstat-no" title="statement not covered" >w</span>indow.clearTimeout(timeoutId);</span></span>
   }, [pathname]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span></span>
+<span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    if (!mobileOpen) <span class="cstat-no" title="statement not covered" >return;</span></span>
     function <span class="fstat-no" title="function not covered" >onKey(e</span>: KeyboardEvent) {
 <span class="cstat-no" title="statement not covered" >      if (e.key === "Escape") <span class="cstat-no" title="statement not covered" >setMobileOpen(false);</span></span>
@@ -236,7 +236,7 @@ export function <span class="fstat-no" title="function not covered" >AdminShell(
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    return () =&gt; <span class="cstat-no" title="statement not covered" >w</span>indow.removeEventListener("keydown", onKey);</span></span>
   }, [mobileOpen]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;&gt;
       &lt;Sidebar
         userEmail={userEmail}
@@ -247,7 +247,7 @@ export function <span class="fstat-no" title="function not covered" >AdminShell(
         onClose={close}
       /&gt;
       {mobileOpen &amp;&amp; (
-        &lt;button
+<span class="branch-1 cbranch-no" title="branch not covered" >        &lt;button</span>
           type="button"
           className="sb-backdrop"
           aria-label="Luk menu"
@@ -268,7 +268,7 @@ export function <span class="fstat-no" title="function not covered" >AdminShell(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

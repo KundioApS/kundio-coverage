@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>4/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -111,20 +111,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -134,8 +129,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { getIronSession } from "iron-session";
 import { cookies } from "next/headers";
@@ -147,32 +147,32 @@ import { ironSessionOptions, type AdminSessionData } from "@/lib/admin-session";
  *
  * Destroys the admin Iron Session cookie and returns 200.
  */
-export async function <span class="fstat-no" title="function not covered" >POST(r</span>equest: Request) {
-  const cookieStore = <span class="cstat-no" title="statement not covered" >await cookies();</span>
-  const session = <span class="cstat-no" title="statement not covered" >await getIronSession&lt;AdminSessionData&gt;(</span>
+export async function POST(request: Request) {
+  const cookieStore = await cookies();
+  const session = await getIronSession&lt;AdminSessionData&gt;(
     cookieStore,
     ironSessionOptions,
   );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (session.adminId) {</span>
-    const <span class="cstat-no" title="statement not covered" >auditContext = auditContextFromRequest(request);</span>
-<span class="cstat-no" title="statement not covered" >    await audit({</span>
+  if (session.adminId) {
+    const auditContext = auditContextFromRequest(request);
+    await audit({
       businessId: null,
       actorType: "admin",
       actorId: session.adminId,
-      actorEmail: session.email ?? null,
+      actorEmail: session.email ?? <span class="branch-1 cbranch-no" title="branch not covered" >null,</span>
       actorRole: "admin",
       action: "admin.logout",
       entityType: "admin_session",
       entityId: session.adminId,
       ipAddress: auditContext.ipAddress,
       userAgent: auditContext.userAgent,
-      details: { email: session.email ?? null },
+      details: { email: session.email ?? <span class="branch-1 cbranch-no" title="branch not covered" >null },</span>
     });
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  session.destroy();</span>
-<span class="cstat-no" title="statement not covered" >  return Response.json({ ok: true });</span>
+  session.destroy();
+  return Response.json({ ok: true });
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -181,7 +181,7 @@ export async function <span class="fstat-no" title="function not covered" >POST(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

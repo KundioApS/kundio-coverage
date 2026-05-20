@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -168,7 +168,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,7 +180,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -193,8 +193,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -204,17 +204,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -260,7 +260,7 @@ export { buildTimelineEvents } from "@/lib/leads/timeline";
 const TYPE_CONFIG: Record&lt;
   TimelineEvent["type"],
   { dot: string; labelColor: string }
-&gt; = <span class="cstat-no" title="statement not covered" >{</span>
+&gt; = {
   inbound:             { dot: "bg-sky-500",     labelColor: "text-sky-700"     },
   outbound_ai:         { dot: "bg-violet-400",  labelColor: "text-violet-700"  },
   outbound_human:      { dot: "bg-slate-400",   labelColor: "text-slate-600"   },
@@ -271,8 +271,8 @@ const TYPE_CONFIG: Record&lt;
   status_change:       { dot: "bg-slate-300",   labelColor: "text-slate-500"   },
 };
 &nbsp;
-function <span class="fstat-no" title="function not covered" >formatTime(d</span>ateStr: string): string {
-<span class="cstat-no" title="statement not covered" >  return new Date(dateStr).toLocaleString("da-DK", {</span>
+function formatTime(dateStr: string): string {
+  return new Date(dateStr).toLocaleString("da-DK", {
     day: "numeric",
     month: "short",
     hour: "2-digit",
@@ -284,9 +284,9 @@ interface LeadTimelineProps {
   events: TimelineEvent[];
 }
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >LeadTimeline({</span> events }: LeadTimelineProps) {
-<span class="cstat-no" title="statement not covered" >  if (events.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
+export function LeadTimeline({ events }: LeadTimelineProps) {
+  if (events.length === 0) {
+    return (
       &lt;div className="px-5 py-4"&gt;
         &lt;p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-2"&gt;
           Tidslinje
@@ -296,17 +296,17 @@ export function <span class="fstat-no" title="function not covered" >LeadTimelin
     );
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="px-5 py-4"&gt;
       &lt;p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 mb-3"&gt;
         Tidslinje
       &lt;/p&gt;
       &lt;ol className="space-y-3"&gt;
-        {events.<span class="fstat-no" title="function not covered" >map((e</span>vent, idx) =&gt; {
-          const cfg = <span class="cstat-no" title="statement not covered" >TYPE_CONFIG[event.type];</span>
-          const isLast = <span class="cstat-no" title="statement not covered" >idx === events.length - 1;</span>
+        {events.map((event, idx) =&gt; {
+          const cfg = TYPE_CONFIG[event.type];
+          const isLast = idx === events.length - 1;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >          return (</span>
+          return (
             &lt;li key={event.id} className="flex gap-3"&gt;
               {/* Gutter: dot + connector line */}
               &lt;div className="flex flex-col items-center flex-shrink-0 w-4 mt-0.5"&gt;
@@ -346,7 +346,7 @@ export function <span class="fstat-no" title="function not covered" >LeadTimelin
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

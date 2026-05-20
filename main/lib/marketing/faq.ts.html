@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -169,7 +169,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -196,7 +196,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -219,7 +219,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -242,7 +242,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -261,7 +261,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -271,7 +271,7 @@
 &nbsp;
 export type FaqGroup = { heading: string; items: FaqItem[] };
 &nbsp;
-export const FAQ_GENERAL: FaqItem[] = <span class="cstat-no" title="statement not covered" >[</span>
+export const FAQ_GENERAL: FaqItem[] = [
   {
     q: "Forsøger AI'en at sælge eller bare at kvalificere?",
     a: "Kvalificere. Kundio er bevidst ikke en automatisk booking-robot. Den indsamler nødvendige informationer og sender derefter kunden videre til dig og dit team. Virksomheden er altid i kontrol.",
@@ -298,7 +298,7 @@ export const FAQ_GENERAL: FaqItem[] = <span class="cstat-no" title="statement no
   },
 ];
 &nbsp;
-export const FAQ_TECH: FaqItem[] = <span class="cstat-no" title="statement not covered" >[</span>
+export const FAQ_TECH: FaqItem[] = [
   {
     q: "Hvilket SMS-nummer sender Kundio fra?",
     a: "Som udgangspunkt afsender vi fra et dansk nummer leveret af Kundio. Hvis I har et eksisterende firmanummer hos Twilio eller en SMS-udbyder, kan vi koble på det i stedet — så kunden ser jeres velkendte afsender.",
@@ -321,7 +321,7 @@ export const FAQ_TECH: FaqItem[] = <span class="cstat-no" title="statement not c
   },
 ];
 &nbsp;
-export const FAQ_PRICING: FaqItem[] = <span class="cstat-no" title="statement not covered" >[</span>
+export const FAQ_PRICING: FaqItem[] = [
   {
     q: "Hvordan prissættes Kundio?",
     a: "Fast månedspris baseret på forventet volumen af kvalificerede henvendelser og SMS'er. Ingen pris pr. bruger — alle i teamet kan logge ind. I får et tilbud baseret på jeres faktiske trafik.",
@@ -344,7 +344,7 @@ export const FAQ_PRICING: FaqItem[] = <span class="cstat-no" title="statement no
   },
 ];
 &nbsp;
-export const FAQ_SECURITY: FaqItem[] = <span class="cstat-no" title="statement not covered" >[</span>
+export const FAQ_SECURITY: FaqItem[] = [
   {
     q: "Hvor opbevares vores data?",
     a: "Inden for EU. Databasen kører hos Supabase i Frankfurt, hostet på AWS-infrastruktur i eu-central-1. Ingen data forlader EU.",
@@ -363,7 +363,7 @@ export const FAQ_SECURITY: FaqItem[] = <span class="cstat-no" title="statement n
   },
 ];
 &nbsp;
-export const FAQ_GROUPS: FaqGroup[] = <span class="cstat-no" title="statement not covered" >[</span>
+export const FAQ_GROUPS: FaqGroup[] = [
   { heading: "Generelt", items: FAQ_GENERAL },
   { heading: "Teknik &amp; integration", items: FAQ_TECH },
   { heading: "Pris &amp; vilkår", items: FAQ_PRICING },
@@ -376,7 +376,7 @@ export const FAQ_GROUPS: FaqGroup[] = <span class="cstat-no" title="statement no
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

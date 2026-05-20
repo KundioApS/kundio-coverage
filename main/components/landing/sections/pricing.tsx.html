@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -187,7 +187,7 @@
 <a name='L122'></a><a href='#L122'>122</a>
 <a name='L123'></a><a href='#L123'>123</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -243,7 +243,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -270,7 +270,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -281,7 +281,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -293,7 +293,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">48x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -309,7 +309,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { KlTickLg } from "./icons";
 &nbsp;
-const TIERS = <span class="cstat-no" title="statement not covered" >[</span>
+const TIERS = [
   {
     name: "Starter",
     desc: "Til virksomheder med én afdeling, der vil fange og kvalificere henvendelser fra hjemmesiden.",
@@ -364,8 +364,8 @@ const TIERS = <span class="cstat-no" title="statement not covered" >[</span>
   },
 ] as const;
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >Pricing() {</span>
-<span class="cstat-no" title="statement not covered" >  return (</span>
+export function Pricing() {
+  return (
     &lt;section className="kl-section" id="pricing"&gt;
       &lt;div className="kl-container"&gt;
         &lt;div
@@ -391,8 +391,8 @@ export function <span class="fstat-no" title="function not covered" >Pricing() {
         &lt;/div&gt;
 &nbsp;
         &lt;div className="kl-pricing-grid"&gt;
-          {TIERS.<span class="fstat-no" title="function not covered" >map((t</span>ier) =&gt; (
-<span class="cstat-no" title="statement not covered" >            &lt;div</span>
+          {TIERS.map((tier) =&gt; (
+            &lt;div
               key={tier.name}
               className={`kl-price-card ${tier.featured ? "featured" : ""}`}
             &gt;
@@ -402,8 +402,8 @@ export function <span class="fstat-no" title="function not covered" >Pricing() {
               &lt;div
                 className={`kl-usage-block ${tier.featured ? "dark" : ""}`}
               &gt;
-                {tier.usage.<span class="fstat-no" title="function not covered" >map(([</span>k, v]) =&gt; (
-<span class="cstat-no" title="statement not covered" >                  &lt;div className="kl-usage-row" key={k}&gt;</span>
+                {tier.usage.map(([k, v]) =&gt; (
+                  &lt;div className="kl-usage-row" key={k}&gt;
                     &lt;span className="kl-usage-k"&gt;{k}&lt;/span&gt;
                     &lt;span className="kl-usage-v"&gt;{v}&lt;/span&gt;
                   &lt;/div&gt;
@@ -414,8 +414,8 @@ export function <span class="fstat-no" title="function not covered" >Pricing() {
               &lt;/a&gt;
               &lt;div className="kl-price-divider" /&gt;
               &lt;ul className="kl-price-features"&gt;
-                {tier.features.<span class="fstat-no" title="function not covered" >map((f</span>) =&gt; (
-<span class="cstat-no" title="statement not covered" >                  &lt;li key={f}&gt;</span>
+                {tier.features.map((f) =&gt; (
+                  &lt;li key={f}&gt;
                     &lt;KlTickLg /&gt; {f}
                   &lt;/li&gt;
                 ))}
@@ -436,7 +436,7 @@ export function <span class="fstat-no" title="function not covered" >Pricing() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

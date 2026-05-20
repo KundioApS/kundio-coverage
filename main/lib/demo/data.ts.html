@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -148,7 +148,7 @@
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,8 +162,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -203,7 +203,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -212,14 +212,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -228,10 +228,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export type DemoMsg = { role: "them" | "ai"; text: string; t: string };
 &nbsp;
-export const DEMO_LEAD = <span class="cstat-no" title="statement not covered" >{</span>
+export const DEMO_LEAD = {
   id: "demo-lead-001",
   name: "Lise Knudsen",
   phone: "+45 28 55 01 42",
@@ -244,9 +244,9 @@ export const DEMO_LEAD = <span class="cstat-no" title="statement not covered" >{
   businessName: "Hansen VVS",
 } as const;
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >buildDemoScript(n</span>ame: string, service: string): DemoMsg[] {
-  const firstName = <span class="cstat-no" title="statement not covered" >name.split(" ")[0] ?? name;</span>
-<span class="cstat-no" title="statement not covered" >  return [</span>
+export function buildDemoScript(name: string, service: string): DemoMsg[] {
+  const firstName = name.split(" ")[0] ?? <span class="branch-1 cbranch-no" title="branch not covered" >name;</span>
+  return [
     {
       role: "them",
       text: `Hej — vi overvejer at renovere vores ${service.toLowerCase()} og vil gerne have et tilbud.`,
@@ -286,7 +286,7 @@ export function <span class="fstat-no" title="function not covered" >buildDemoSc
   ];
 }
 &nbsp;
-export const DEMO_PIPELINE_STAGES = <span class="cstat-no" title="statement not covered" >[</span>
+export const DEMO_PIPELINE_STAGES = [
   { id: "nye", label: "Ny", color: "var(--el-brand)" },
   { id: "kvalificerede", label: "Kvalificeret", color: "#5A8A6E" },
   { id: "klar", label: "Klar", color: "#C8983A" },
@@ -295,14 +295,14 @@ export const DEMO_PIPELINE_STAGES = <span class="cstat-no" title="statement not 
 &nbsp;
 export type DemoPipelineStageId = (typeof DEMO_PIPELINE_STAGES)[number]["id"];
 &nbsp;
-export const DEMO_METRICS = <span class="cstat-no" title="statement not covered" >{</span>
+export const DEMO_METRICS = {
   leads: 47,
   conversionPct: 62,
   aiReplyPct: 78,
   avgResponseMin: 2,
 } as const;
 &nbsp;
-export const DEMO_STEPS = <span class="cstat-no" title="statement not covered" >[</span>
+export const DEMO_STEPS = [
   { id: 1, label: "Start" },
   { id: 2, label: "Widget" },
   { id: 3, label: "Indbakke" },
@@ -311,7 +311,7 @@ export const DEMO_STEPS = <span class="cstat-no" title="statement not covered" >
   { id: 6, label: "Resultater" },
 ] as const;
 &nbsp;
-export const TOTAL_DEMO_STEPS = <span class="cstat-no" title="statement not covered" >DEMO_STEPS.length;</span>
+export const TOTAL_DEMO_STEPS = DEMO_STEPS.length;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -319,7 +319,7 @@ export const TOTAL_DEMO_STEPS = <span class="cstat-no" title="statement not cove
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:24:01.709Z
+                at 2026-05-20T22:12:37.067Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
