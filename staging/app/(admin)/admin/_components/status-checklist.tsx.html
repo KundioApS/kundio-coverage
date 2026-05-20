@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">55.55% </span>
+                <span class="strong">93.33% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>25/45</span>
+                <span class='fraction'>42/45</span>
             </div>
         
             
@@ -170,7 +170,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -200,7 +200,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">42x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -246,12 +246,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">42x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">168x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -306,44 +306,44 @@ export function StatusChecklist({
     {
       key: "info",
       label: "Virksomhedsinfo udfyldt",
-      state: phoneNumber &amp;&amp; address ? "ok" : <span class="branch-1 cbranch-no" title="branch not covered" >"todo",</span>
-      sub: phoneNumber &amp;&amp; address ? "Komplet" : <span class="branch-1 cbranch-no" title="branch not covered" >"Mangler kontaktdata",</span>
+      state: phoneNumber &amp;&amp; address ? "ok" : "todo",
+      sub: phoneNumber &amp;&amp; address ? "Komplet" : "Mangler kontaktdata",
     },
     {
       key: "owner",
       label: "Ejerkonto",
-      state: ownerCompleted ? <span class="branch-0 cbranch-no" title="branch not covered" >"ok" : o</span>wnerExists ? "warn" : <span class="branch-1 cbranch-no" title="branch not covered" >"todo",</span>
+      state: ownerCompleted ? "ok" : ownerExists ? "warn" : "todo",
       sub: ownerCompleted
-        ? <span class="branch-0 cbranch-no" title="branch not covered" >"Konto færdiggjort"</span>
+        ? "Konto færdiggjort"
         : ownerExists
           ? "Eksisterer - ikke færdig"
-          : <span class="branch-1 cbranch-no" title="branch not covered" >"Ikke inviteret",</span>
+          : "Ikke inviteret",
     },
     {
       key: "billing",
       label: "Betaling",
       state:
         lifecycleKey === "paid"
-          ? <span class="branch-0 cbranch-no" title="branch not covered" >"ok"</span>
+          ? "ok"
           : lifecycleKey === "internal" || lifecycleKey === "temp_free"
             ? "warn"
-            : <span class="branch-1 cbranch-no" title="branch not covered" >"todo",</span>
+            : "todo",
       sub:
         lifecycleKey === "paid"
-          ? <span class="branch-0 cbranch-no" title="branch not covered" >"Stripe aktiv"</span>
+          ? "Stripe aktiv"
           : lifecycleKey === "temp_free"
             ? "Midlertidig gratis"
-            : <span class="branch-1 cbranch-no" title="branch not covered" >lifecycleKey === "internal"</span>
+            : lifecycleKey === "internal"
               ? "Intern"
               : "Ikke konfigureret",
     },
     {
       key: "twilio",
       label: "Twilio telefonlinje",
-      state: twilioStatus === "live" ? <span class="branch-0 cbranch-no" title="branch not covered" >"ok" : t</span>wilioStatus === "pending" ? <span class="branch-0 cbranch-no" title="branch not covered" >"todo" : "</span>warn",
+      state: twilioStatus === "live" ? "ok" : twilioStatus === "pending" ? "todo" : "warn",
       sub:
         twilioStatus === "live"
-          ? <span class="branch-0 cbranch-no" title="branch not covered" >`Live - ${twilioMode ?? "test"}`</span>
+          ? `Live - ${twilioMode ?? <span class="branch-1 cbranch-no" title="branch not covered" >"test"}`</span>
           : TWILIO_LABELS[twilioStatus ?? "pending"] ?? <span class="branch-1 cbranch-no" title="branch not covered" >twilioStatus ?? <span class="branch-2 cbranch-no" title="branch not covered" >"</span>Afventer",</span>
     },
   ];
@@ -357,7 +357,7 @@ export function StatusChecklist({
             &lt;div className={`chk-icon chk-icon-${item.state}`}&gt;
               {item.state === "ok" &amp;&amp; &lt;Check /&gt;}
               {item.state === "warn" &amp;&amp; &lt;AlertTriangle /&gt;}
-              {item.state === "todo" &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Clock /&gt;}</span>
+              {item.state === "todo" &amp;&amp; &lt;Clock /&gt;}
             &lt;/div&gt;
             &lt;div className="chk-text"&gt;
               &lt;b&gt;{item.label}&lt;/b&gt;
@@ -376,7 +376,7 @@ export function StatusChecklist({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:25:09.290Z
+                at 2026-05-20T00:05:35.640Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

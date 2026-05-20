@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35.71% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/14</span>
+                <span class='fraction'>12/14</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">45.45% </span>
+                <span class="strong">90.9% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/11</span>
+                <span class='fraction'>10/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -123,7 +123,7 @@
 <a name='L58'></a><a href='#L58'>58</a>
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<a name='L61'></a><a href='#L61'>61</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -140,19 +140,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -170,13 +171,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -201,18 +201,18 @@ export function Modal({
   footer?: ReactNode;
   onClose: () =&gt; void;
 }) {
-<span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span>
+  useEffect(() =&gt; {
     function <span class="fstat-no" title="function not covered" >onKeyDown(e</span>vent: KeyboardEvent) {
 <span class="cstat-no" title="statement not covered" >      if (event.key === "Escape") <span class="cstat-no" title="statement not covered" >onClose();</span></span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    window.addEventListener("keydown", onKeyDown);</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    return () =&gt; <span class="cstat-no" title="statement not covered" >w</span>indow.removeEventListener("keydown", onKeyDown);</span></span>
+    window.addEventListener("keydown", onKeyDown);
+    return () =&gt; window.removeEventListener("keydown", onKeyDown);
   }, [onClose]);
 &nbsp;
   return (
     &lt;div className="modal-bg" onClick={onClose}&gt;
-      &lt;div className="modal" <span class="fstat-no" title="function not covered" >onClick={(e</span>vent) =&gt; <span class="cstat-no" title="statement not covered" >event.stopPropagation()}</span>&gt;
+      &lt;div className="modal" onClick={(event) =&gt; event.stopPropagation()}&gt;
         &lt;div className="modal-hd"&gt;
           &lt;h2&gt;{title}&lt;/h2&gt;
           {description &amp;&amp; &lt;p&gt;{description}&lt;/p&gt;}
@@ -231,9 +231,9 @@ export function Toast({
   msg: string;
   onDone: () =&gt; void;
 }) {
-<span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span>
-    const timeout = <span class="cstat-no" title="statement not covered" >window.setTimeout(onDone, 2400);</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    return () =&gt; <span class="cstat-no" title="statement not covered" >w</span>indow.clearTimeout(timeout);</span></span>
+  useEffect(() =&gt; {
+    const timeout = window.setTimeout(onDone, 2400);
+    return () =&gt; window.clearTimeout(timeout);
   }, [msg, onDone]);
 &nbsp;
   return (
@@ -250,7 +250,7 @@ export function Toast({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-19T22:25:09.290Z
+                at 2026-05-20T00:05:35.640Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
