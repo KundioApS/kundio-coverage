@@ -168,35 +168,7 @@
 <a name='L103'></a><a href='#L103'>103</a>
 <a name='L104'></a><a href='#L104'>104</a>
 <a name='L105'></a><a href='#L105'>105</a>
-<a name='L106'></a><a href='#L106'>106</a>
-<a name='L107'></a><a href='#L107'>107</a>
-<a name='L108'></a><a href='#L108'>108</a>
-<a name='L109'></a><a href='#L109'>109</a>
-<a name='L110'></a><a href='#L110'>110</a>
-<a name='L111'></a><a href='#L111'>111</a>
-<a name='L112'></a><a href='#L112'>112</a>
-<a name='L113'></a><a href='#L113'>113</a>
-<a name='L114'></a><a href='#L114'>114</a>
-<a name='L115'></a><a href='#L115'>115</a>
-<a name='L116'></a><a href='#L116'>116</a>
-<a name='L117'></a><a href='#L117'>117</a>
-<a name='L118'></a><a href='#L118'>118</a>
-<a name='L119'></a><a href='#L119'>119</a>
-<a name='L120'></a><a href='#L120'>120</a>
-<a name='L121'></a><a href='#L121'>121</a>
-<a name='L122'></a><a href='#L122'>122</a>
-<a name='L123'></a><a href='#L123'>123</a>
-<a name='L124'></a><a href='#L124'>124</a>
-<a name='L125'></a><a href='#L125'>125</a>
-<a name='L126'></a><a href='#L126'>126</a>
-<a name='L127'></a><a href='#L127'>127</a>
-<a name='L128'></a><a href='#L128'>128</a>
-<a name='L129'></a><a href='#L129'>129</a>
-<a name='L130'></a><a href='#L130'>130</a>
-<a name='L131'></a><a href='#L131'>131</a>
-<a name='L132'></a><a href='#L132'>132</a>
-<a name='L133'></a><a href='#L133'>133</a>
-<a name='L134'></a><a href='#L134'>134</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L106'></a><a href='#L106'>106</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -301,35 +273,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FileText, Mail, Newspaper, PenLine, ShieldCheck, Sparkles } from "lucide-react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FileText, Newspaper, PenLine, Sparkles } from "lucide-react";
 import Link from "next/link";
 import type { EmailTemplate } from "@/lib/email/templates/service";
 import { listTemplates } from "@/lib/email/templates/service";
@@ -399,13 +343,11 @@ export default async function TemplatesPage() {
         &lt;div className="email-hero-copy"&gt;
           &lt;div className="email-eyebrow"&gt;
             &lt;FileText /&gt;
-            Template library
+            Skabelonbibliotek
           &lt;/div&gt;
           &lt;h1&gt;Skabeloner&lt;/h1&gt;
           &lt;p&gt;
-            Build reusable email starting points for customer emails and
-            newsletter drafts. Templates never send on their own; dispatch still
-            happens through the compose and newsletter flows.
+            Byg genbrugeligt emailindhold til kundeemails og nyhedsbreve.
           &lt;/p&gt;
           &lt;div className="email-hero-actions"&gt;
             &lt;Link href="/admin/emails/templates/new" className="btn btn-brand"&gt;
@@ -422,40 +364,14 @@ export default async function TemplatesPage() {
             &lt;/Link&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-        &lt;aside className="email-hero-panel"&gt;
-          &lt;div&gt;
-            &lt;h2&gt;Template safety&lt;/h2&gt;
-            &lt;p&gt;Saved templates are content assets, not active send jobs.&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;ul className="email-status-list"&gt;
-            &lt;li className="email-status-item"&gt;
-              &lt;span className="email-status-icon"&gt;
-                &lt;ShieldCheck /&gt;
-              &lt;/span&gt;
-              &lt;span&gt;
-                &lt;b&gt;Sanitized Markdown preview&lt;/b&gt;
-                &lt;span&gt;Preview uses the same renderer and sandboxed iframe.&lt;/span&gt;
-              &lt;/span&gt;
-            &lt;/li&gt;
-            &lt;li className="email-status-item"&gt;
-              &lt;span className="email-status-icon"&gt;
-                &lt;Mail /&gt;
-              &lt;/span&gt;
-              &lt;span&gt;
-                &lt;b&gt;Active templates only&lt;/b&gt;
-                &lt;span&gt;Compose surfaces ignore archived template rows.&lt;/span&gt;
-              &lt;/span&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/aside&gt;
       &lt;/section&gt;
 &nbsp;
-      &lt;section className="email-metric-grid" aria-label="Template metrics"&gt;
+      &lt;section className="email-metric-grid" aria-label="Skabelonmålinger"&gt;
         &lt;MetricCard label="Alle skabeloner" value={result.data.length} meta="Aktive, inaktive og arkiverede" /&gt;
-        &lt;MetricCard label="Aktive" value={active} meta="Kan vælges i relevante flows" /&gt;
-        &lt;MetricCard label="Kundeemail" value={adminTemplates} meta="Bruges af one-off compose" /&gt;
-        &lt;MetricCard label="Nyhedsbrev" value={newsletterTemplates || <span class="branch-1 cbranch-no" title="branch not covered" >"—"} m</span>eta={newsletterTemplates ? "Kan anvendes som draft-start" : <span class="branch-1 cbranch-no" title="branch not covered" >"Ingen endnu"} /&gt;</span>
-        &lt;MetricCard label="Arkiverede" value={archived || <span class="branch-1 cbranch-no" title="branch not covered" >"—"} m</span>eta={archived ? "Skjult fra compose" : <span class="branch-1 cbranch-no" title="branch not covered" >"Ingen arkiverede"} /&gt;</span>
+        &lt;MetricCard label="Aktive" value={active} meta="Kan vælges i relevante arbejdsgange" /&gt;
+        &lt;MetricCard label="Kundeemail" value={adminTemplates} meta="Kan bruges i kundeemails" /&gt;
+        &lt;MetricCard label="Nyhedsbrev" value={newsletterTemplates || <span class="branch-1 cbranch-no" title="branch not covered" >"—"} m</span>eta={newsletterTemplates ? "Kan bruges til nyhedsbreve" : <span class="branch-1 cbranch-no" title="branch not covered" >"Ingen endnu"} /&gt;</span>
+        &lt;MetricCard label="Arkiverede" value={archived || <span class="branch-1 cbranch-no" title="branch not covered" >"—"} m</span>eta={archived ? "Skjult fra valg" : <span class="branch-1 cbranch-no" title="branch not covered" >"Ingen arkiverede"} /&gt;</span>
       &lt;/section&gt;
 &nbsp;
       &lt;TemplatesList initial={result.data} /&gt;
@@ -469,7 +385,7 @@ export default async function TemplatesPage() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T00:05:35.640Z
+                at 2026-05-20T22:16:01.099Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

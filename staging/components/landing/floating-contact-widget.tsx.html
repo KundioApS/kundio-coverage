@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/20</span>
+                <span class='fraction'>20/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35% </span>
+                <span class="strong">90% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>7/20</span>
+                <span class='fraction'>18/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.28% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">41.17% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/17</span>
+                <span class='fraction'>17/17</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -145,26 +145,21 @@
 <a name='L80'></a><a href='#L80'>80</a>
 <a name='L81'></a><a href='#L81'>81</a>
 <a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -173,22 +168,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -236,41 +236,41 @@ export function FloatingContactWidget({ businessId }: { businessId: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [hasOpened, setHasOpened] = useState(false);
 &nbsp;
-<span class="fstat-no" title="function not covered" >  useEffect(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    if (!isOpen) <span class="cstat-no" title="statement not covered" >return;</span></span>
+  useEffect(() =&gt; {
+    if (!isOpen) return;
 &nbsp;
-    const <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >handleKeyDown = (e</span>vent: KeyboardEvent) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      if (event.key === "Escape") {</span>
-<span class="cstat-no" title="statement not covered" >        setIsOpen(false);</span>
+    const handleKeyDown = (event: KeyboardEvent) =&gt; {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (event.key === "Escape") {
+        setIsOpen(false);
       }
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    window.addEventListener("keydown", handleKeyDown);</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    return () =&gt; <span class="cstat-no" title="statement not covered" >w</span>indow.removeEventListener("keydown", handleKeyDown);</span></span>
+    window.addEventListener("keydown", handleKeyDown);
+    return () =&gt; window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 &nbsp;
   const embedOrigin =
-    typeof window !== "undefined" ? <span class="branch-0 cbranch-no" title="branch not covered" >window.location.origin : "</span>";
+    typeof window !== "undefined" ? window.location.origin : "";
   const widgetUrl = `/widget?businessId=${encodeURIComponent(businessId)}${
-    embedOrigin ? <span class="branch-0 cbranch-no" title="branch not covered" >`&amp;embedOrigin=${encodeURIComponent(embedOrigin)}` : "</span>"
+    embedOrigin ? `&amp;embedOrigin=${encodeURIComponent(embedOrigin)}` : ""
   }`;
 &nbsp;
-  function <span class="fstat-no" title="function not covered" >handleToggle() {</span>
-<span class="cstat-no" title="statement not covered" >    if (!isOpen) {</span>
-<span class="cstat-no" title="statement not covered" >      setHasOpened(true);</span>
+  function handleToggle() {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!isOpen) {
+      setHasOpened(true);
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    setIsOpen((c</span>urrent) =&gt; <span class="cstat-no" title="statement not covered" >!current);</span></span>
+    setIsOpen((current) =&gt; !current);
   }
 &nbsp;
   return (
     &lt;&gt;
       {isOpen &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >        &lt;button</span>
+        &lt;button
           type="button"
           aria-label="Luk kontaktwidget"
           className="fixed inset-0 z-40 bg-slate-950/20"
-<span class="fstat-no" title="function not covered" >          onClick={() =&gt; <span class="cstat-no" title="statement not covered" >s</span>etIsOpen(false)}</span>
+          onClick={() =&gt; setIsOpen(false)}
         /&gt;
       )}
 &nbsp;
@@ -278,7 +278,7 @@ export function FloatingContactWidget({ businessId }: { businessId: string }) {
         &lt;div
           className={`overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl transition-all duration-200 ${
             isOpen
-              ? <span class="branch-0 cbranch-no" title="branch not covered" >"pointer-events-auto translate-y-0 opacity-100"</span>
+              ? "pointer-events-auto translate-y-0 opacity-100"
               : "pointer-events-none translate-y-2 opacity-0"
           }`}
           style={{
@@ -287,7 +287,7 @@ export function FloatingContactWidget({ businessId }: { businessId: string }) {
           }}
         &gt;
           {hasOpened &amp;&amp; (
-<span class="branch-1 cbranch-no" title="branch not covered" >            &lt;iframe</span>
+            &lt;iframe
               src={widgetUrl}
               title="Kundio kontaktwidget"
               loading="lazy"
@@ -298,12 +298,12 @@ export function FloatingContactWidget({ businessId }: { businessId: string }) {
 &nbsp;
         &lt;button
           type="button"
-          aria-label={isOpen ? <span class="branch-0 cbranch-no" title="branch not covered" >"Luk kontaktwidget" : "</span>Åbn kontaktwidget"}
+          aria-label={isOpen ? "Luk kontaktwidget" : "Åbn kontaktwidget"}
           aria-expanded={isOpen}
           onClick={handleToggle}
           className="flex h-14 w-14 items-center justify-center rounded-full bg-[#0369A1] text-white shadow-lg shadow-sky-200 transition-all hover:-translate-y-0.5 hover:bg-[#0284C7] cursor-pointer"
         &gt;
-          {isOpen ? <span class="branch-0 cbranch-no" title="branch not covered" >&lt;X className="h-5 w-5" /&gt; : &lt;M</span>essageSquare className="h-5 w-5" /&gt;}
+          {isOpen ? &lt;X className="h-5 w-5" /&gt; : &lt;MessageSquare className="h-5 w-5" /&gt;}
         &lt;/button&gt;
       &lt;/div&gt;
     &lt;/&gt;
@@ -316,7 +316,7 @@ export function FloatingContactWidget({ businessId }: { businessId: string }) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T00:05:35.640Z
+                at 2026-05-20T22:16:01.099Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
