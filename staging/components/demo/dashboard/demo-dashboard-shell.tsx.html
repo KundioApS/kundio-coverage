@@ -264,17 +264,8 @@
 <a name='L199'></a><a href='#L199'>199</a>
 <a name='L200'></a><a href='#L200'>200</a>
 <a name='L201'></a><a href='#L201'>201</a>
-<a name='L202'></a><a href='#L202'>202</a>
-<a name='L203'></a><a href='#L203'>203</a>
-<a name='L204'></a><a href='#L204'>204</a>
-<a name='L205'></a><a href='#L205'>205</a>
-<a name='L206'></a><a href='#L206'>206</a>
-<a name='L207'></a><a href='#L207'>207</a>
-<a name='L208'></a><a href='#L208'>208</a>
-<a name='L209'></a><a href='#L209'>209</a>
-<a name='L210'></a><a href='#L210'>210</a>
-<a name='L211'></a><a href='#L211'>211</a>
-<a name='L212'></a><a href='#L212'>212</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L202'></a><a href='#L202'>202</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -376,17 +367,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -494,6 +474,7 @@ import {
   Plug,
   Settings,
   CreditCard,
+  Search,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { BrandLogo } from "@/components/shared/brand-logo";
@@ -553,19 +534,19 @@ export function DemoDashboardShell({
   const crumb = CRUMB[activePath];
 &nbsp;
   return (
-    &lt;div className="flex h-full min-h-0 overflow-hidden bg-[var(--el-surface-raised,#f7f5f0)]"&gt;
+    &lt;div className="flex h-full min-h-0 overflow-hidden bg-[var(--bg-raised)]"&gt;
       {/* Sidebar */}
-      &lt;aside className="flex h-full w-[220px] shrink-0 flex-col overflow-hidden border-r border-border bg-card"&gt;
+      &lt;aside className="flex h-full w-[220px] shrink-0 flex-col overflow-hidden border-r border-[var(--border)] bg-[var(--bg-raised)]"&gt;
         &lt;div className="flex items-center gap-2.5 px-4 pt-4 pb-3.5"&gt;
           &lt;BrandLogo height={24} alt="Kundio" priority /&gt;
         &lt;/div&gt;
 &nbsp;
         {/* Business switcher */}
-        &lt;div className="mx-2.5 mb-2 flex items-center gap-2 rounded-[10px] bg-[var(--el-surface-warm,#f1eee8)] px-2.5 py-2"&gt;
-          &lt;div className="grid size-[26px] shrink-0 place-items-center rounded-md bg-gradient-to-br from-[#3a3a33] to-[#6b6455] text-[10px] font-bold text-white"&gt;
+        &lt;div className="mx-2.5 mb-2 flex items-center gap-2 rounded-[10px] bg-[var(--bg)] px-2.5 py-2"&gt;
+          &lt;div className="grid size-[26px] shrink-0 place-items-center rounded-md bg-[var(--ink-800)] text-[10px] font-bold text-[var(--ink-50)]"&gt;
             HV
           &lt;/div&gt;
-          &lt;span className="overflow-hidden text-[13px] font-medium text-ellipsis whitespace-nowrap text-foreground"&gt;
+          &lt;span className="overflow-hidden text-[13px] font-medium text-ellipsis whitespace-nowrap text-[var(--fg)]"&gt;
             Hansen VVS
           &lt;/span&gt;
         &lt;/div&gt;
@@ -593,12 +574,12 @@ export function DemoDashboardShell({
         &lt;div className="flex-1" /&gt;
 &nbsp;
         {/* User footer */}
-        &lt;div className="flex items-center gap-2.5 border-t border-border px-3 py-2.5"&gt;
-          &lt;div className="relative grid size-[30px] shrink-0 place-items-center rounded-full bg-gradient-to-br from-[#3a3834] to-[#6b6862] text-[11px] font-bold text-white"&gt;
+        &lt;div className="flex items-center gap-2.5 border-t border-[var(--border)] px-3 py-2.5"&gt;
+          &lt;div className="relative grid size-[30px] shrink-0 place-items-center rounded-full bg-[var(--ink-600)] text-[11px] font-bold text-[var(--ink-50)]"&gt;
             MK
-            &lt;span className="absolute right-0 bottom-0 size-2.5 rounded-full border-2 border-card bg-[#22c55e]" /&gt;
+            &lt;span className="absolute right-0 bottom-0 size-2.5 rounded-full border-2 border-[var(--bg-raised)] bg-[var(--success)]" /&gt;
           &lt;/div&gt;
-          &lt;span className="overflow-hidden text-[12.5px] text-ellipsis whitespace-nowrap text-muted-foreground"&gt;
+          &lt;span className="overflow-hidden text-[12.5px] text-ellipsis whitespace-nowrap text-[var(--fg-muted)]"&gt;
             demo@kundio.dk
           &lt;/span&gt;
         &lt;/div&gt;
@@ -607,30 +588,19 @@ export function DemoDashboardShell({
       {/* Main */}
       &lt;div className="flex min-w-0 flex-1 flex-col overflow-hidden"&gt;
         {/* Topbar */}
-        &lt;div className="flex shrink-0 items-center gap-2 border-b border-border bg-card/90 px-4 py-2.5 backdrop-blur sm:px-6"&gt;
-          &lt;div className="flex items-center gap-2 font-mono text-[11px] tracking-[0.1em] text-muted-foreground uppercase"&gt;
+        &lt;div className="flex shrink-0 items-center gap-2 border-b border-[var(--border)] bg-[var(--bg-raised)] px-4 py-2.5 backdrop-blur sm:px-6"&gt;
+          &lt;div className="flex items-center gap-2 font-mono text-[11px] tracking-[0.08em] text-[var(--fg-muted)] uppercase"&gt;
             &lt;span className="opacity-60"&gt;{crumb.section}&lt;/span&gt;
             &lt;span className="opacity-40"&gt;/&lt;/span&gt;
-            &lt;span className="text-foreground/80"&gt;{crumb.label}&lt;/span&gt;
+            &lt;span className="text-[var(--fg)]"&gt;{crumb.label}&lt;/span&gt;
           &lt;/div&gt;
 &nbsp;
-          &lt;div className="ml-auto flex min-w-[160px] items-center gap-1.5 rounded-md border border-border bg-[var(--el-surface-warm,#f1eee8)] px-3 py-1.5 text-[12.5px] text-muted-foreground"&gt;
-            &lt;svg
-              width="13"
-              height="13"
-              viewBox="0 0 16 16"
-              fill="none"
-              className="shrink-0 opacity-50"
+          &lt;div className="ml-auto flex min-w-[160px] items-center gap-1.5 rounded-md border border-[var(--border)] bg-[var(--bg)] px-3 py-1.5 text-[12.5px] text-[var(--fg-muted)]"&gt;
+            &lt;Search
+              className="size-3.5 shrink-0 opacity-50"
+              strokeWidth={1.5}
               aria-hidden="true"
-            &gt;
-              &lt;circle cx="6.5" cy="6.5" r="5" stroke="currentColor" strokeWidth="1.5" /&gt;
-              &lt;path
-                d="M10.5 10.5L14 14"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              /&gt;
-            &lt;/svg&gt;
+            /&gt;
             Søg…
           &lt;/div&gt;
         &lt;/div&gt;
@@ -654,7 +624,7 @@ function SectionLabel({
   return (
     &lt;div
       className={cn(
-        "px-5 pt-3 pb-1.5 font-mono text-[10px] tracking-[0.14em] text-muted-foreground uppercase",
+        "px-5 pt-3 pb-1.5 font-mono text-[10px] tracking-[0.08em] text-[var(--fg-muted)] uppercase",
         className,
       )}
     &gt;
@@ -676,19 +646,19 @@ function NavItem({ icon: Icon, label, active, muted }: NavItemProps) {
       &lt;div
         className={cn(
           "relative flex items-center gap-3 rounded-lg px-3 py-2 text-[13.5px] font-medium",
-          active &amp;&amp; "bg-[var(--el-surface-warm,#f1eee8)] text-foreground",
-          !active &amp;&amp; !muted &amp;&amp; "text-foreground/75",
-          muted &amp;&amp; "text-muted-foreground",
+          active &amp;&amp; "bg-[var(--bg)] text-[var(--fg)]",
+          !active &amp;&amp; !muted &amp;&amp; "text-[var(--fg-muted)]",
+          muted &amp;&amp; "text-[var(--fg-subtle)]",
         )}
       &gt;
         {active ? (
-          &lt;span className="absolute top-2 -left-2.5 bottom-2 w-0.5 rounded-r-sm bg-[var(--el-brand)]" /&gt;
+          &lt;span className="absolute top-2 -left-2.5 bottom-2 w-0.5 rounded-r-sm bg-[var(--lime-500)]" /&gt;
         ) : null}
         &lt;Icon
           strokeWidth={1.5}
           className={cn(
             "size-[18px] shrink-0",
-            active ? "text-[var(--el-brand)]" : "text-muted-foreground",
+            active ? "text-[var(--lime-700)]" : "text-[var(--fg-subtle)]",
           )}
         /&gt;
         {label}
@@ -703,7 +673,7 @@ function NavItem({ icon: Icon, label, active, muted }: NavItemProps) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T22:23:46.087Z
+                at 2026-05-21T00:49:43.333Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

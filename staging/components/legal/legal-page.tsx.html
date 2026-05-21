@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>0/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -240,7 +240,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -277,8 +277,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -347,21 +347,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">81x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -400,16 +400,16 @@ interface LegalPageProps {
   content: LegalDocumentContent;
 }
 &nbsp;
-export function LegalPage({ document, content }: LegalPageProps) {
-  return (
-    &lt;div className="min-h-screen bg-[#F8FAFC] text-[#020617]"&gt;
+export function <span class="fstat-no" title="function not covered" >LegalPage({</span> document, content }: LegalPageProps) {
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;div className="min-h-screen bg-[#FFFFFF] text-[#11110d]"&gt;
       &lt;header className="border-b border-slate-200/80 bg-white/90 backdrop-blur-md"&gt;
         &lt;div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5"&gt;
           &lt;Link href="/" className="flex items-center gap-2.5"&gt;
             &lt;div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#0369A1] shadow-sm"&gt;
               &lt;Zap className="h-4 w-4 text-white" strokeWidth={2.5} /&gt;
             &lt;/div&gt;
-            &lt;span className="font-bold tracking-tight text-[#0F172A]"&gt;Kundio&lt;/span&gt;
+            &lt;span className="font-bold tracking-tight text-[#11110d]"&gt;Kundio&lt;/span&gt;
           &lt;/Link&gt;
 &nbsp;
           &lt;div className="flex items-center gap-3"&gt;
@@ -417,7 +417,7 @@ export function LegalPage({ document, content }: LegalPageProps) {
               &lt;a
                 href={document.pdfPath}
                 download
-                className="hidden items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-900 sm:inline-flex"
+                className="hidden items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-[#11110d] transition-colors hover:bg-white hover:text-[#11110d] sm:inline-flex"
               &gt;
                 &lt;Download className="h-3.5 w-3.5" /&gt;
                 Hent PDF
@@ -426,7 +426,7 @@ export function LegalPage({ document, content }: LegalPageProps) {
 &nbsp;
             &lt;Link
               href="/"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 transition-colors hover:text-slate-900"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-[#11110d] transition-colors hover:text-[#11110d]"
             &gt;
               &lt;ArrowLeft className="h-3.5 w-3.5" /&gt;
               Tilbage
@@ -437,16 +437,16 @@ export function LegalPage({ document, content }: LegalPageProps) {
 &nbsp;
       &lt;main className="mx-auto max-w-4xl px-5 py-12 sm:py-16"&gt;
         &lt;nav className="mb-6 flex flex-wrap gap-2"&gt;
-          {LEGAL_NAV_ITEMS.map((item) =&gt; {
-            const isActive = item.key === document.key;
-            return (
+          {LEGAL_NAV_ITEMS.<span class="fstat-no" title="function not covered" >map((i</span>tem) =&gt; {
+            const isActive = <span class="cstat-no" title="statement not covered" >item.key === document.key;</span>
+<span class="cstat-no" title="statement not covered" >            return (</span>
               &lt;Link
                 key={item.key}
                 href={item.href}
                 className={`inline-flex rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                   isActive
                     ? "border-sky-200 bg-sky-50 text-sky-700"
-                    : "border-slate-200 bg-white text-slate-500 hover:border-slate-300 hover:text-slate-700"
+                    : "border-slate-200 bg-white text-[#11110d] hover:border-slate-300 hover:text-[#11110d]"
                 }`}
                 aria-current={isActive ? "page" : undefined}
               &gt;
@@ -462,11 +462,11 @@ export function LegalPage({ document, content }: LegalPageProps) {
               Juridisk udkast
             &lt;/div&gt;
 &nbsp;
-            &lt;h1 className="mt-4 text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl"&gt;
+            &lt;h1 className="mt-4 text-3xl font-bold tracking-tight text-[#11110d] sm:text-4xl"&gt;
               {document.title}
             &lt;/h1&gt;
 &nbsp;
-            &lt;p className="mt-4 max-w-2xl text-sm leading-7 text-slate-500 sm:text-base"&gt;
+            &lt;p className="mt-4 max-w-2xl text-sm leading-7 text-[#11110d] sm:text-base"&gt;
               {content.summary}
             &lt;/p&gt;
 &nbsp;
@@ -475,24 +475,24 @@ export function LegalPage({ document, content }: LegalPageProps) {
             &lt;/div&gt;
 &nbsp;
             &lt;div className="mt-6 grid gap-3 sm:grid-cols-3"&gt;
-              &lt;div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4"&gt;
-                &lt;p className="text-xs font-medium uppercase tracking-[0.14em] text-slate-500"&gt;
+              &lt;div className="rounded-2xl border border-slate-200 bg-white px-4 py-4"&gt;
+                &lt;p className="text-xs font-medium uppercase tracking-[0.14em] text-[#11110d]"&gt;
                   Version
                 &lt;/p&gt;
-                &lt;p className="mt-2 text-sm font-semibold text-slate-900"&gt;
+                &lt;p className="mt-2 text-sm font-semibold text-[#11110d]"&gt;
                   {document.version}
                 &lt;/p&gt;
               &lt;/div&gt;
-              &lt;div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4"&gt;
-                &lt;p className="text-xs font-medium uppercase tracking-[0.14em] text-slate-500"&gt;
+              &lt;div className="rounded-2xl border border-slate-200 bg-white px-4 py-4"&gt;
+                &lt;p className="text-xs font-medium uppercase tracking-[0.14em] text-[#11110d]"&gt;
                   Træder i kraft
                 &lt;/p&gt;
-                &lt;p className="mt-2 text-sm font-semibold text-slate-900"&gt;
+                &lt;p className="mt-2 text-sm font-semibold text-[#11110d]"&gt;
                   {formatLegalDate(document.effectiveDate)}
                 &lt;/p&gt;
               &lt;/div&gt;
-              &lt;div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4"&gt;
-                &lt;p className="text-xs font-medium uppercase tracking-[0.14em] text-slate-500"&gt;
+              &lt;div className="rounded-2xl border border-slate-200 bg-white px-4 py-4"&gt;
+                &lt;p className="text-xs font-medium uppercase tracking-[0.14em] text-[#11110d]"&gt;
                   Kontakt
                 &lt;/p&gt;
                 &lt;a
@@ -507,22 +507,22 @@ export function LegalPage({ document, content }: LegalPageProps) {
 &nbsp;
           &lt;section className="px-6 py-8 sm:px-8 sm:py-10"&gt;
             &lt;div className="space-y-10"&gt;
-              {content.sections.map((section) =&gt; (
-                &lt;section key={section.title} className="space-y-4"&gt;
+              {content.sections.<span class="fstat-no" title="function not covered" >map((s</span>ection) =&gt; (
+<span class="cstat-no" title="statement not covered" >                &lt;section key={section.title} className="space-y-4"&gt;</span>
                   &lt;div&gt;
-                    &lt;h2 className="text-xl font-semibold text-[#0F172A]"&gt;{section.title}&lt;/h2&gt;
+                    &lt;h2 className="text-xl font-semibold text-[#11110d]"&gt;{section.title}&lt;/h2&gt;
                   &lt;/div&gt;
 &nbsp;
-                  &lt;div className="space-y-4 text-sm leading-7 text-slate-600 sm:text-base"&gt;
-                    {section.paragraphs.map((paragraph) =&gt; (
-                      &lt;p key={paragraph}&gt;{paragraph}&lt;/p&gt;
+                  &lt;div className="space-y-4 text-sm leading-7 text-[#11110d] sm:text-base"&gt;
+                    {section.paragraphs.<span class="fstat-no" title="function not covered" >map((p</span>aragraph) =&gt; (
+<span class="cstat-no" title="statement not covered" >                      &lt;p key={paragraph}&gt;{paragraph}&lt;/p&gt;</span>
                     ))}
                   &lt;/div&gt;
 &nbsp;
                   {section.bullets &amp;&amp; (
-                    &lt;ul className="space-y-2 text-sm leading-7 text-slate-600 sm:text-base"&gt;
-                      {section.bullets.map((bullet) =&gt; (
-                        &lt;li key={bullet} className="flex gap-3"&gt;
+                    &lt;ul className="space-y-2 text-sm leading-7 text-[#11110d] sm:text-base"&gt;
+                      {section.bullets.<span class="fstat-no" title="function not covered" >map((b</span>ullet) =&gt; (
+<span class="cstat-no" title="statement not covered" >                        &lt;li key={bullet} className="flex gap-3"&gt;</span>
                           &lt;span className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400" /&gt;
                           &lt;span&gt;{bullet}&lt;/span&gt;
                         &lt;/li&gt;
@@ -533,7 +533,7 @@ export function LegalPage({ document, content }: LegalPageProps) {
               ))}
             &lt;/div&gt;
 &nbsp;
-            &lt;div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm leading-6 text-slate-500"&gt;
+            &lt;div className="mt-12 rounded-2xl border border-slate-200 bg-white px-4 py-4 text-sm leading-6 text-[#11110d]"&gt;
               &lt;p&gt;
                 Dette dokument er et praktisk udkast til launch. Gennemgå alle markerede
                 virksomhedsoplysninger, udfyld de manglende felter, og få teksten juridisk
@@ -553,7 +553,7 @@ export function LegalPage({ document, content }: LegalPageProps) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T22:23:46.087Z
+                at 2026-05-21T00:49:43.333Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

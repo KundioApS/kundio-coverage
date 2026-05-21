@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -109,14 +109,8 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a>
-<a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -145,6 +139,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -160,59 +155,46 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export function Testimonial() {
-  return (
-    &lt;section className="kl-testimonial"&gt;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export function <span class="fstat-no" title="function not covered" >Testimonial() {</span>
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;section className="py-24"&gt;
       &lt;div className="kl-container"&gt;
-        &lt;div className="kl-testimonial-card"&gt;
+        &lt;div className="grid grid-cols-1 items-center gap-6 rounded-brand-lg border border-brand-line bg-brand-bg px-6 py-8 md:gap-8 md:px-16 md:py-14 lg:grid-cols-[1.6fr_1fr] lg:gap-14"&gt;
           &lt;div&gt;
-            &lt;div className="kl-testimonial-quote"&gt;
+            &lt;div className="mb-7 font-[var(--kl-font-display)] text-[clamp(28px,3vw,38px)] leading-[1.25] tracking-[-0.015em] text-brand-ink"&gt;
+              &lt;span className="mr-1 text-brand-accent"&gt;&amp;ldquo;&lt;/span&gt;
               Vi plejede at miste henvendelserne efter lukketid — folk ventede ikke
               til næste morgen. Kundio skriver tilbage på få sekunder, og kl. 7
               har jeg en kvalificeret liste af opkald klar.
             &lt;/div&gt;
-            &lt;div className="kl-testimonial-person"&gt;
-              &lt;div className="kl-testimonial-avatar"&gt;TH&lt;/div&gt;
+            &lt;div className="flex items-center gap-3.5"&gt;
+              &lt;div className="grid size-12 place-items-center rounded-full bg-brand-accent-tint-2 font-medium text-brand-accent-ink"&gt;
+                TH
+              &lt;/div&gt;
               &lt;div&gt;
-                &lt;div className="kl-testimonial-name"&gt;Thomas Hansen&lt;/div&gt;
-                &lt;div className="kl-testimonial-role"&gt;
+                &lt;div className="text-[15px] font-medium text-brand-ink"&gt;Thomas Hansen&lt;/div&gt;
+                &lt;div className="text-[13px] text-brand-ink"&gt;
                   Indehaver · Hansen VVS ApS, København
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-          &lt;div className="kl-testimonial-stats"&gt;
-            &lt;div&gt;
-              &lt;div className="kl-tstat-num"&gt;
-                +41&lt;span className="kl-unit"&gt;%&lt;/span&gt;
+          &lt;div className="flex flex-col gap-6 border-t border-brand-line pt-7 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-14"&gt;
+            {[
+              { num: "+41", unit: "%", label: "bookede opgaver fra hjemmeside-trafik" },
+              { num: "22", unit: "t", label: "sparet telefontid for disponenten hver uge" },
+              { num: "4,9", unit: "/5", label: "kundetilfredshed efter udført opgave" },
+            ].<span class="fstat-no" title="function not covered" >map((s</span>tat) =&gt; (
+<span class="cstat-no" title="statement not covered" >              &lt;div key={stat.label}&gt;</span>
+                &lt;div className="font-[var(--kl-font-display)] text-[44px] leading-none tracking-[-0.02em] text-brand-ink"&gt;
+                  {stat.num}
+                  &lt;span className="ml-0.5 font-[var(--kl-font-sans)] text-[20px] text-brand-accent"&gt;
+                    {stat.unit}
+                  &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div className="mt-1.5 text-[13px] text-brand-ink"&gt;{stat.label}&lt;/div&gt;
               &lt;/div&gt;
-              &lt;div className="kl-tstat-label"&gt;
-                bookede opgaver fra hjemmeside-trafik
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-              &lt;div className="kl-tstat-num"&gt;
-                22&lt;span className="kl-unit"&gt;t&lt;/span&gt;
-              &lt;/div&gt;
-              &lt;div className="kl-tstat-label"&gt;
-                sparet telefontid for disponenten hver uge
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div&gt;
-              &lt;div className="kl-tstat-num"&gt;
-                4,9&lt;span className="kl-unit"&gt;/5&lt;/span&gt;
-              &lt;/div&gt;
-              &lt;div className="kl-tstat-label"&gt;
-                kundetilfredshed efter udført opgave
-              &lt;/div&gt;
-            &lt;/div&gt;
+            ))}
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -226,7 +208,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T22:23:46.087Z
+                at 2026-05-21T00:49:43.333Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.12% </span>
+                <span class="strong">79.41% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>25/32</span>
+                <span class='fraction'>27/34</span>
             </div>
         
             
@@ -181,19 +181,12 @@
 <a name='L116'></a><a href='#L116'>116</a>
 <a name='L117'></a><a href='#L117'>117</a>
 <a name='L118'></a><a href='#L118'>118</a>
-<a name='L119'></a><a href='#L119'>119</a>
-<a name='L120'></a><a href='#L120'>120</a>
-<a name='L121'></a><a href='#L121'>121</a>
-<a name='L122'></a><a href='#L122'>122</a>
-<a name='L123'></a><a href='#L123'>123</a>
-<a name='L124'></a><a href='#L124'>124</a>
-<a name='L125'></a><a href='#L125'>125</a>
-<a name='L126'></a><a href='#L126'>126</a>
-<a name='L127'></a><a href='#L127'>127</a>
-<a name='L128'></a><a href='#L128'>128</a>
-<a name='L129'></a><a href='#L129'>129</a>
-<a name='L130'></a><a href='#L130'>130</a>
-<a name='L131'></a><a href='#L131'>131</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L119'></a><a href='#L119'>119</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -219,20 +212,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -303,10 +283,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -327,7 +303,12 @@
 &nbsp;
 import { Suspense, useEffect, useState, useRef } from "react";
 import { useSearchParams } from "next/navigation";
-import { Loader2, Zap } from "lucide-react";
+import { Loader2 } from "lucide-react";
+import {
+  KundioAuthHeader,
+  KundioAuthShell,
+  KundioBadge,
+} from "@/components/landing/public-ui";
 &nbsp;
 const POLL_INTERVAL_MS = 2_000;
 const POLL_TIMEOUT_MS = 120_000;
@@ -344,34 +325,21 @@ export default function PaymentSuccessPage() {
 &nbsp;
 function Shell({ children }: { children: React.ReactNode }) {
   return (
-    &lt;div className="min-h-screen bg-[#F8FAFC] flex items-center justify-center px-4"&gt;
-      &lt;div className="w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"&gt;
-        &lt;div className="mb-8 flex items-center gap-2.5"&gt;
-          &lt;div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#0369A1] shadow-sm"&gt;
-            &lt;Zap className="h-4 w-4 text-white" strokeWidth={2.5} /&gt;
-          &lt;/div&gt;
-          &lt;span className="font-bold tracking-tight text-[#0F172A]"&gt;
-            Kundio
-          &lt;/span&gt;
-        &lt;/div&gt;
-        {children}
-      &lt;/div&gt;
-    &lt;/div&gt;
+    &lt;KundioAuthShell cardClassName="max-w-lg"&gt;{children}&lt;/KundioAuthShell&gt;
   );
 }
 &nbsp;
 function <span class="fstat-no" title="function not covered" >LoadingState() {</span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;&gt;
-      &lt;div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-sky-100 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700"&gt;
+      &lt;KundioBadge tone="loading" className="mb-4"&gt;
         &lt;Loader2 className="h-3.5 w-3.5 animate-spin" /&gt;
         Bekræfter betaling...
-      &lt;/div&gt;
-      &lt;h1 className="text-2xl font-bold text-[#0F172A] mb-2"&gt;Et øjeblik...&lt;/h1&gt;
-      &lt;p className="text-sm leading-relaxed text-slate-500"&gt;
+      &lt;/KundioBadge&gt;
+      &lt;KundioAuthHeader title="Et øjeblik..."&gt;
         Vi bekræfter din betaling og klargører din konto. Du bliver automatisk
         sendt videre om et øjeblik.
-      &lt;/p&gt;
+      &lt;/KundioAuthHeader&gt;
     &lt;/&gt;
   );
 }
@@ -434,22 +402,18 @@ function PaymentSuccessContent() {
 &nbsp;
   return (
     &lt;&gt;
-      &lt;div className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-sky-100 bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700"&gt;
+      &lt;KundioBadge tone={status === "polling" ? "loading" : "success"} className="mb-4"&gt;
         &lt;Loader2 className="h-3.5 w-3.5 animate-spin" /&gt;
         {status === "polling"
           ? "Bekræfter betaling..."
           : "Klar! Du sendes videre..."}
-      &lt;/div&gt;
+      &lt;/KundioBadge&gt;
 &nbsp;
-      &lt;h1 className="text-2xl font-bold text-[#0F172A] mb-2"&gt;
-        {status === "polling" ? "Et øjeblik..." : "Din konto er klar!"}
-      &lt;/h1&gt;
-&nbsp;
-      &lt;p className="text-sm leading-relaxed text-slate-500"&gt;
+      &lt;KundioAuthHeader title={status === "polling" ? "Et øjeblik..." : "Din konto er klar"}&gt;
         {status === "polling"
           ? "Vi bekræfter din betaling og klargører din konto. Du bliver automatisk sendt videre om et øjeblik."
           : "Du sendes videre til kontoopsætning nu."}
-      &lt;/p&gt;
+      &lt;/KundioAuthHeader&gt;
     &lt;/&gt;
   );
 }
@@ -460,7 +424,7 @@ function PaymentSuccessContent() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T22:23:46.087Z
+                at 2026-05-21T00:49:43.333Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

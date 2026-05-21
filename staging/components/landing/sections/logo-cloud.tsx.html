@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -88,7 +88,14 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -97,13 +104,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -119,17 +133,24 @@ type Props = {
   heading?: string;
 };
 &nbsp;
-export function LogoCloud({
-  heading = "Brugt af servicevirksomheder over hele Danmark",
+export function <span class="fstat-no" title="function not covered" >LogoCloud({</span>
+  heading = <span class="branch-0 cbranch-no" title="branch not covered" >"Brugt af servicevirksomheder over hele Danmark",</span>
 }: Props) {
-  return (
-    &lt;section className="kl-logos-section"&gt;
+<span class="cstat-no" title="statement not covered" >  return (</span>
+    &lt;section className="py-[clamp(32px,5vw,56px)]"&gt;
       &lt;div className="kl-container"&gt;
-        &lt;div className="kl-logos-head"&gt;{heading}&lt;/div&gt;
-        &lt;div className="kl-logos-row"&gt;
-          {CUSTOMER_LOGOS.map((l) =&gt; (
-            &lt;div className="kl-logo-text" key={l.name}&gt;
-              &lt;span className="kl-logo-text-mark"&gt;{l.mark}&lt;/span&gt;
+        &lt;div className="mb-7 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-brand-ink"&gt;
+          {heading}
+        &lt;/div&gt;
+        &lt;div className="grid grid-cols-2 items-center gap-2.5 md:grid-cols-4 md:gap-[18px] lg:grid-cols-8"&gt;
+          {CUSTOMER_LOGOS.<span class="fstat-no" title="function not covered" >map((l</span>) =&gt; (
+<span class="cstat-no" title="statement not covered" >            &lt;div</span>
+              key={l.name}
+              className="flex items-center gap-2 rounded-brand-sm border border-brand-line bg-brand-bg px-3.5 py-3 text-[13px] font-medium tracking-[-0.01em] text-brand-ink transition-colors duration-200 hover:border-brand-line-strong"
+            &gt;
+              &lt;span className="inline-flex size-[22px] items-center justify-center rounded-[6px] bg-brand-ink font-mono text-[10px] font-medium text-brand-bg"&gt;
+                {l.mark}
+              &lt;/span&gt;
               {l.name}
             &lt;/div&gt;
           ))}
@@ -145,7 +166,7 @@ export function LogoCloud({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T22:23:46.087Z
+                at 2026-05-21T00:49:43.333Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

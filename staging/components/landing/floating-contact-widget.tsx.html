@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>18/20</span>
+                <span class='fraction'>16/20</span>
             </div>
         
             
@@ -141,20 +141,16 @@
 <a name='L76'></a><a href='#L76'>76</a>
 <a name='L77'></a><a href='#L77'>77</a>
 <a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<a name='L79'></a><a href='#L79'>79</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
@@ -168,8 +164,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -181,7 +177,7 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,10 +185,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -250,9 +242,9 @@ export function FloatingContactWidget({ businessId }: { businessId: string }) {
   }, [isOpen]);
 &nbsp;
   const embedOrigin =
-    typeof window !== "undefined" ? window.location.origin : "";
+    typeof window !== "undefined" ? window.location.origin : <span class="branch-1 cbranch-no" title="branch not covered" >"";</span>
   const widgetUrl = `/widget?businessId=${encodeURIComponent(businessId)}${
-    embedOrigin ? `&amp;embedOrigin=${encodeURIComponent(embedOrigin)}` : ""
+    embedOrigin ? `&amp;embedOrigin=${encodeURIComponent(embedOrigin)}` : <span class="branch-1 cbranch-no" title="branch not covered" >""</span>
   }`;
 &nbsp;
   function handleToggle() {
@@ -269,29 +261,25 @@ export function FloatingContactWidget({ businessId }: { businessId: string }) {
         &lt;button
           type="button"
           aria-label="Luk kontaktwidget"
-          className="fixed inset-0 z-40 bg-slate-950/20"
+          className="fixed inset-0 z-40 bg-[rgba(14,15,12,0.24)]"
           onClick={() =&gt; setIsOpen(false)}
         /&gt;
       )}
 &nbsp;
-      &lt;div className="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-3 sm:bottom-6 sm:right-6"&gt;
+      &lt;div className="fixed right-4 bottom-4 z-50 flex flex-col items-end gap-3 sm:right-6 sm:bottom-6"&gt;
         &lt;div
-          className={`overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl transition-all duration-200 ${
+          className={`h-[min(540px,calc(100vh-7rem))] w-[min(360px,calc(100vw-2rem))] overflow-hidden rounded-[var(--r-xl)] border border-[var(--border)] bg-[var(--bg-raised)] shadow-[var(--shadow-lg)] transition-all duration-[var(--dur-base)] ${
             isOpen
               ? "pointer-events-auto translate-y-0 opacity-100"
               : "pointer-events-none translate-y-2 opacity-0"
           }`}
-          style={{
-            width: "min(360px, calc(100vw - 2rem))",
-            height: "min(540px, calc(100vh - 7rem))",
-          }}
         &gt;
           {hasOpened &amp;&amp; (
             &lt;iframe
               src={widgetUrl}
               title="Kundio kontaktwidget"
               loading="lazy"
-              className="h-full w-full border-0 bg-white"
+              className="h-full w-full border-0 bg-[var(--bg-raised)]"
             /&gt;
           )}
         &lt;/div&gt;
@@ -301,7 +289,7 @@ export function FloatingContactWidget({ businessId }: { businessId: string }) {
           aria-label={isOpen ? "Luk kontaktwidget" : "Åbn kontaktwidget"}
           aria-expanded={isOpen}
           onClick={handleToggle}
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#0369A1] text-white shadow-lg shadow-sky-200 transition-all hover:-translate-y-0.5 hover:bg-[#0284C7] cursor-pointer"
+          className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-[var(--ink-900)] text-[var(--ink-50)] shadow-[var(--shadow-md)] transition-[transform,background,box-shadow] duration-[var(--dur-base)] hover:-translate-y-0.5 hover:bg-[var(--ink-800)] hover:shadow-[var(--shadow-lg)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--border-focus)]"
         &gt;
           {isOpen ? &lt;X className="h-5 w-5" /&gt; : &lt;MessageSquare className="h-5 w-5" /&gt;}
         &lt;/button&gt;
@@ -316,7 +304,7 @@ export function FloatingContactWidget({ businessId }: { businessId: string }) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T22:23:46.087Z
+                at 2026-05-21T00:49:43.333Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
