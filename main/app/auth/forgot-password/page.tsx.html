@@ -137,30 +137,15 @@
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
 <a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a>
-<a name='L88'></a><a href='#L88'>88</a>
-<a name='L89'></a><a href='#L89'>89</a>
-<a name='L90'></a><a href='#L90'>90</a>
-<a name='L91'></a><a href='#L91'>91</a>
-<a name='L92'></a><a href='#L92'>92</a>
-<a name='L93'></a><a href='#L93'>93</a>
-<a name='L94'></a><a href='#L94'>94</a>
-<a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a>
-<a name='L97'></a><a href='#L97'>97</a>
-<a name='L98'></a><a href='#L98'>98</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -205,38 +190,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -262,7 +216,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-import { Zap } from "lucide-react";
+import { KundioButton } from "@/components/landing/button";
+import {
+  KundioAuthHeader,
+  KundioAuthShell,
+  KundioField,
+  KundioInput,
+  KundioNotice,
+  kundioTextLinkClassName,
+} from "@/components/landing/public-ui";
 &nbsp;
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -286,72 +248,41 @@ export default function ForgotPasswordPage() {
   }
 &nbsp;
   return (
-    &lt;div className="min-h-screen flex items-center justify-center bg-[#F8FAFC]"&gt;
-      &lt;div className="w-full max-w-md px-4"&gt;
-        &lt;div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8"&gt;
-          &lt;div className="flex items-center gap-2.5 mb-8"&gt;
-            &lt;div className="flex items-center justify-center w-8 h-8 rounded-xl bg-[#0369A1] shadow-sm"&gt;
-              &lt;Zap className="w-4 h-4 text-white" strokeWidth={2.5} /&gt;
-            &lt;/div&gt;
-            &lt;span className="font-bold text-[#0F172A] tracking-tight"&gt;Kundio&lt;/span&gt;
-          &lt;/div&gt;
+    &lt;KundioAuthShell&gt;
+      &lt;KundioAuthHeader title="Nulstil adgangskode"&gt;
+        Indtast din e-mail, så sender vi et link til at nulstille din adgangskode.
+      &lt;/KundioAuthHeader&gt;
 &nbsp;
-          &lt;div className="mb-7"&gt;
-            &lt;h1 className="text-xl font-bold text-[#0F172A]"&gt;Nulstil adgangskode&lt;/h1&gt;
-            &lt;p className="mt-1 text-sm text-slate-500"&gt;
-              Indtast din e-mail, og vi sender dig et link til at nulstille din adgangskode.
-            &lt;/p&gt;
-          &lt;/div&gt;
+      {submitted ? (
+        &lt;KundioNotice tone="success" title="Tjek din indbakke"&gt;
+          Hvis der findes en konto med denne e-mail, har vi sendt et link til at nulstille din adgangskode.
+        &lt;/KundioNotice&gt;
+      ) : (
+        &lt;form onSubmit={handleSubmit} className="space-y-4"&gt;
+          &lt;KundioField htmlFor="email" label="E-mail"&gt;
+            &lt;KundioInput
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) =&gt; setEmail(e.target.value)}
+              required
+              autoComplete="email"
+              placeholder="din@email.dk"
+            /&gt;
+          &lt;/KundioField&gt;
 &nbsp;
-          {submitted ? (
-            &lt;div className="rounded-xl bg-emerald-50 border border-emerald-100 p-4 text-sm text-emerald-700"&gt;
-              &lt;p className="font-medium mb-1"&gt;Tjek din indbakke&lt;/p&gt;
-              &lt;p&gt;
-                Hvis der findes en konto med denne e-mail, har vi sendt et link til at nulstille din adgangskode.
-              &lt;/p&gt;
-            &lt;/div&gt;
-          ) : (
-            &lt;form onSubmit={handleSubmit} className="space-y-4"&gt;
-              &lt;div&gt;
-                &lt;label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-[#0F172A] mb-1.5"
-                &gt;
-                  E-mail
-                &lt;/label&gt;
-                &lt;input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) =&gt; setEmail(e.target.value)}
-                  required
-                  autoComplete="email"
-                  placeholder="din@email.dk"
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm text-[#0F172A] placeholder:text-slate-400 outline-none focus:border-[#0369A1] focus:bg-white focus:ring-2 focus:ring-[#0369A1]/15 transition"
-                /&gt;
-              &lt;/div&gt;
+          &lt;KundioButton type="submit" disabled={loading} className="w-full" variant="ink"&gt;
+            {loading ? "Sender..." : "Send nulstillingslink"}
+          &lt;/KundioButton&gt;
+        &lt;/form&gt;
+      )}
 &nbsp;
-              &lt;button
-                type="submit"
-                disabled={loading}
-                className="w-full rounded-xl bg-[#0369A1] hover:bg-[#0284C7] disabled:opacity-60 px-4 py-2.5 text-sm font-semibold text-white transition-colors shadow-sm cursor-pointer"
-              &gt;
-                {loading ? "Sender..." : "Send nulstillingslink"}
-              &lt;/button&gt;
-            &lt;/form&gt;
-          )}
-&nbsp;
-          &lt;p className="mt-6 text-center text-xs text-slate-500"&gt;
-            &lt;Link
-              href="/auth/login"
-              className="text-[#0369A1] hover:text-[#0284C7] font-semibold transition-colors"
-            &gt;
-              Tilbage til log ind
-            &lt;/Link&gt;
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+      &lt;p className="mt-6 text-center text-xs text-[var(--fg-muted)]"&gt;
+        &lt;Link href="/auth/login" className={kundioTextLinkClassName}&gt;
+          Tilbage til log ind
+        &lt;/Link&gt;
+      &lt;/p&gt;
+    &lt;/KundioAuthShell&gt;
   );
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -361,7 +292,7 @@ export default function ForgotPasswordPage() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T22:25:41.440Z
+                at 2026-05-21T13:43:25.270Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

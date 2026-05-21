@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -174,37 +174,23 @@
 <a name='L109'></a><a href='#L109'>109</a>
 <a name='L110'></a><a href='#L110'>110</a>
 <a name='L111'></a><a href='#L111'>111</a>
-<a name='L112'></a><a href='#L112'>112</a>
-<a name='L113'></a><a href='#L113'>113</a>
-<a name='L114'></a><a href='#L114'>114</a>
-<a name='L115'></a><a href='#L115'>115</a>
-<a name='L116'></a><a href='#L116'>116</a>
-<a name='L117'></a><a href='#L117'>117</a>
-<a name='L118'></a><a href='#L118'>118</a>
-<a name='L119'></a><a href='#L119'>119</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L112'></a><a href='#L112'>112</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -301,102 +287,98 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import type { Metadata } from "next";
 import { MarketingLayout } from "@/components/landing/marketing-layout";
-import { PageHero } from "@/components/landing/sections/page-hero";
 import { ContactForm } from "@/components/landing/contact-form";
+import { KundioButtonAnchor } from "@/components/landing/button";
 import { COMPANY } from "@/lib/marketing/nav";
 import { getSelfBusinessId } from "@/lib/marketing/self-business-id";
 &nbsp;
-export const metadata: Metadata = {
+export const metadata: Metadata = <span class="cstat-no" title="statement not covered" >{</span>
   title: "Kontakt — Kundio",
   description:
     "Skriv til Kundio, book en demo, eller spørg løs. Vi svarer samme dag på hverdage.",
 };
 &nbsp;
-export default async function ContactPage() {
-  const businessId = await getSelfBusinessId();
+export default async function <span class="fstat-no" title="function not covered" >ContactPage() {</span>
+  const businessId = <span class="cstat-no" title="statement not covered" >await getSelfBusinessId();</span>
 &nbsp;
-  return (
+<span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;MarketingLayout&gt;
-      &lt;PageHero
-        kicker="Kontakt"
-        title="Lad os tage en"
-        accent="kort snak."
-        sub="Fortæl os lidt om jeres virksomhed, så vender vi tilbage med et uforpligtende oplæg eller et bookingsforslag."
-      /&gt;
+      &lt;section className="kl-centered-hero"&gt;
+        &lt;div className="kl-centered-hero-copy"&gt;
+          &lt;h1 className="kl-centered-hero-title kl-hero-title mx-auto! mt-[16px]! text-center min-[481px]:mt-[22px]!"&gt;
+            Lad os tage en kort snak.
+          &lt;/h1&gt;
+          &lt;p className="kl-hero-sub mx-auto! text-center"&gt;
+            Fortæl os lidt om jeres virksomhed, så vender vi tilbage typisk indenfor 24 timer.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
 &nbsp;
-      &lt;section className="kl-section" id="book"&gt;
+      &lt;section className="kl-section kl-section--tight" id="book"&gt;
         &lt;div className="kl-container"&gt;
-          &lt;div className="kl-contact-layout"&gt;
-            &lt;div
-              style={{
-                background: "var(--kl-bg-elev)",
-                border: "1px solid var(--kl-line)",
-                borderRadius: "var(--kl-radius)",
-                padding: "32px",
-                boxShadow: "var(--kl-shadow-md)",
-              }}
-            &gt;
+          &lt;div className="grid grid-cols-1 items-start gap-[clamp(28px,4vw,56px)] lg:grid-cols-[1.5fr_1fr]"&gt;
+            &lt;div className="rounded-brand border border-brand-line bg-brand-bg p-8 shadow-brand-md"&gt;
               {businessId ? (
                 &lt;ContactForm businessId={businessId} /&gt;
               ) : (
                 &lt;div&gt;
-                  &lt;h2
-                    style={{
-                      fontSize: 22,
-                      fontWeight: 500,
-                      marginBottom: 12,
-                      letterSpacing: "-0.015em",
-                    }}
-                  &gt;
+                  &lt;h2 className="kl-card-title mb-3!"&gt;
                     Skriv direkte til os
                   &lt;/h2&gt;
-                  &lt;p
-                    style={{
-                      fontSize: 15,
-                      color: "var(--kl-ink-2)",
-                      marginBottom: 20,
-                      lineHeight: 1.55,
-                    }}
-                  &gt;
+                  &lt;p className="mb-5! text-[15px] leading-[1.55] text-brand-ink"&gt;
                     Kontaktformularen er midlertidigt utilgængelig. Send os en
                     e-mail, og vi vender tilbage samme dag på hverdage.
                   &lt;/p&gt;
-                  &lt;a
+                  &lt;KundioButtonAnchor
                     href={`mailto:${COMPANY.email}`}
-                    className="kl-btn kl-btn-primary kl-btn-lg"
+                    size="lg"
                   &gt;
                     Skriv til {COMPANY.email}
-                  &lt;/a&gt;
+                  &lt;/KundioButtonAnchor&gt;
                 &lt;/div&gt;
               )}
             &lt;/div&gt;
 &nbsp;
-            &lt;aside className="kl-contact-side"&gt;
-              &lt;h3&gt;Andre måder at få fat på os&lt;/h3&gt;
+            &lt;aside className="rounded-brand border border-brand-line bg-brand-bg p-[var(--s-6)]"&gt;
+              &lt;h3 className="mb-[var(--s-3)]! text-[length:var(--fs-sm)] font-[number:var(--fw-semi)] tracking-[var(--tracking-normal)] text-brand-ink"&gt;
+                Andre måder at få fat på os
+              &lt;/h3&gt;
 &nbsp;
-              &lt;div className="kl-contact-side-row"&gt;
-                &lt;span className="kl-contact-side-label"&gt;Salg &amp; demo&lt;/span&gt;
-                &lt;a href={`mailto:${COMPANY.salesEmail}`}&gt;{COMPANY.salesEmail}&lt;/a&gt;
+              &lt;div className="mb-[var(--s-5)] text-[length:var(--fs-sm)] leading-[var(--lh-relaxed)] text-brand-ink"&gt;
+                &lt;span className="mb-[var(--s-1)] block font-mono text-[length:var(--fs-xs)] font-[number:var(--fw-bold)] uppercase tracking-[var(--tracking-caps)] text-[var(--fg-muted)]"&gt;
+                  Salg &amp; demo
+                &lt;/span&gt;
+                &lt;a
+                  href={`mailto:${COMPANY.salesEmail}`}
+                  className="text-brand-accent underline underline-offset-2 transition-colors duration-[var(--dur-fast)] hover:text-brand-accent-hover"
+                &gt;
+                  {COMPANY.salesEmail}
+                &lt;/a&gt;
                 &lt;br /&gt;
-                {COMPANY.phone}
+                &lt;a
+                  href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
+                  className="transition-colors duration-[var(--dur-fast)] hover:text-brand-accent"
+                &gt;
+                  {COMPANY.phone}
+                &lt;/a&gt;
               &lt;/div&gt;
 &nbsp;
-              &lt;div className="kl-contact-side-row"&gt;
-                &lt;span className="kl-contact-side-label"&gt;Support&lt;/span&gt;
-                &lt;a href={`mailto:${COMPANY.email}`}&gt;{COMPANY.email}&lt;/a&gt;
-                &lt;br /&gt;
-                Hverdage 9-17
+              &lt;div className="mb-[var(--s-5)] text-[length:var(--fs-sm)] leading-[var(--lh-relaxed)] text-brand-ink"&gt;
+                &lt;span className="mb-[var(--s-1)] block font-mono text-[length:var(--fs-xs)] font-[number:var(--fw-bold)] uppercase tracking-[var(--tracking-caps)] text-[var(--fg-muted)]"&gt;
+                  Support
+                &lt;/span&gt;
+                &lt;a
+                  href={`mailto:${COMPANY.email}`}
+                  className="text-brand-accent underline underline-offset-2 transition-colors duration-[var(--dur-fast)] hover:text-brand-accent-hover"
+                &gt;
+                  {COMPANY.email}
+                &lt;/a&gt;
               &lt;/div&gt;
 &nbsp;
-              &lt;div className="kl-contact-side-row"&gt;
-                &lt;span className="kl-contact-side-label"&gt;Sikkerhed&lt;/span&gt;
-                &lt;a href="mailto:sikkerhed@kundio.dk"&gt;sikkerhed@kundio.dk&lt;/a&gt;
-                &lt;br /&gt;
-                IT-spørgsmål, DPA, sårbarheder
-              &lt;/div&gt;
-&nbsp;
-              &lt;div className="kl-contact-side-row"&gt;
-                &lt;span className="kl-contact-side-label"&gt;Adresse&lt;/span&gt;
+              &lt;div className="mb-[var(--s-5)] text-[length:var(--fs-sm)] leading-[var(--lh-relaxed)] text-brand-ink"&gt;
+                &lt;span className="mb-[var(--s-1)] block font-mono text-[length:var(--fs-xs)] font-[number:var(--fw-bold)] uppercase tracking-[var(--tracking-caps)] text-[var(--fg-muted)]"&gt;
+                  Adresse
+                &lt;/span&gt;
                 {COMPANY.legalName}
                 &lt;br /&gt;
                 {COMPANY.addressLine1}
@@ -404,10 +386,7 @@ export default async function ContactPage() {
                 {COMPANY.addressLine2}
               &lt;/div&gt;
 &nbsp;
-              &lt;div
-                className="kl-contact-side-row"
-                style={{ marginBottom: 0, color: "var(--kl-ink-3)", fontSize: 12 }}
-              &gt;
+              &lt;div className="font-mono text-[length:var(--fs-xs)] leading-[var(--lh-relaxed)] text-[var(--fg-muted)]"&gt;
                 CVR {COMPANY.cvr}
               &lt;/div&gt;
             &lt;/aside&gt;
@@ -424,7 +403,7 @@ export default async function ContactPage() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T22:25:41.440Z
+                at 2026-05-21T13:43:25.270Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

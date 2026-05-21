@@ -390,7 +390,7 @@ interface Props {
 }
 &nbsp;
 const navBtn =
-  "inline-flex items-center gap-2 rounded-[10px] border border-white/10 bg-transparent px-3.5 py-2 text-[13px] font-semibold text-white/90 outline-none transition-colors hover:bg-white/5 hover:border-white/20 focus-visible:ring-2 focus-visible:ring-white/40 disabled:cursor-not-allowed disabled:opacity-35";
+  "inline-flex items-center gap-2 rounded-[10px] border border-[var(--ink-700)] bg-transparent px-3.5 py-2 text-[13px] font-semibold text-[var(--ink-50)] outline-none transition-colors hover:border-[var(--ink-600)] hover:bg-[var(--ink-800)] focus-visible:ring-2 focus-visible:ring-[var(--lime-500)] disabled:cursor-not-allowed disabled:opacity-35";
 &nbsp;
 export function DemoBottomNav({
   step,
@@ -410,7 +410,7 @@ export function DemoBottomNav({
   return (
     &lt;nav
       aria-label="Demo trin-navigation"
-      className="fixed bottom-5 left-1/2 z-30 w-[calc(100%-40px)] max-w-[1176px] -translate-x-1/2 rounded-2xl border border-white/10 bg-[var(--el-ink,#1a1410)] shadow-[0_16px_48px_rgba(0,0,0,0.4)]"
+      className="fixed bottom-5 left-1/2 z-30 w-[calc(100%-40px)] max-w-[1176px] -translate-x-1/2 rounded-2xl border border-[var(--ink-700)] bg-[var(--ink-900)] shadow-[var(--shadow-xl)]"
     &gt;
       &lt;div className="flex min-h-[56px] items-center gap-3 px-3 py-2.5 sm:px-5"&gt;
         &lt;div className="inline-flex items-center gap-2"&gt;
@@ -432,7 +432,7 @@ export function DemoBottomNav({
               aria-label="Næste trin"
               className={cn(
                 navBtn,
-                "border-[var(--el-brand,#b96a3a)] bg-[var(--el-brand,#b96a3a)] text-white hover:border-[#a45a30] hover:bg-[#a45a30]",
+                "border-[var(--lime-500)] bg-[var(--lime-500)] text-[var(--ink-900)] hover:border-[var(--lime-400)] hover:bg-[var(--lime-400)]",
               )}
             &gt;
               &lt;span className="hidden sm:inline"&gt;Næste&lt;/span&gt;
@@ -441,14 +441,14 @@ export function DemoBottomNav({
           ) : null}
         &lt;/div&gt;
 &nbsp;
-        &lt;div className="flex min-w-0 flex-1 items-center justify-center gap-2 text-[13px] text-white/80"&gt;
-          &lt;span className="font-mono text-[11.5px] uppercase tracking-[0.04em] text-white/55"&gt;
+        &lt;div className="flex min-w-0 flex-1 items-center justify-center gap-2 text-[13px] text-[var(--ink-200)]"&gt;
+          &lt;span className="font-mono text-[11.5px] uppercase tracking-[0.04em] text-[var(--ink-300)]"&gt;
             Trin {step} af {TOTAL_DEMO_STEPS}
           &lt;/span&gt;
-          &lt;span className="hidden text-white/30 sm:inline" aria-hidden="true"&gt;
+          &lt;span className="hidden text-[var(--ink-600)] sm:inline" aria-hidden="true"&gt;
             ·
           &lt;/span&gt;
-          &lt;span className="hidden truncate font-semibold text-white sm:inline"&gt;
+          &lt;span className="hidden truncate font-semibold text-[var(--ink-50)] sm:inline"&gt;
             {sectionLabel}
           &lt;/span&gt;
         &lt;/div&gt;
@@ -467,9 +467,9 @@ export function DemoBottomNav({
           &lt;PopoverContent
             align="end"
             sideOffset={10}
-            className="w-64 border border-white/10 bg-[#262521] p-2.5 text-popover-foreground ring-0 shadow-[0_16px_48px_rgba(0,0,0,0.5)]"
+            className="kl-demo w-64 border border-[var(--ink-700)] bg-[var(--ink-800)] p-2.5 text-[var(--ink-50)] ring-0 shadow-[var(--shadow-xl)]"
           &gt;
-            &lt;p className="px-2 pt-1 pb-2 font-mono text-[10.5px] uppercase tracking-[0.08em] text-white/45"&gt;
+            &lt;p className="px-2 pt-1 pb-2 font-mono text-[10.5px] uppercase tracking-[0.08em] text-[var(--ink-300)]"&gt;
               Spring til
             &lt;/p&gt;
             &lt;ul className="flex flex-col gap-0.5"&gt;
@@ -490,16 +490,16 @@ export function DemoBottomNav({
 <span class="cstat-no" title="statement not covered" >                        onJump(s.id);</span>
                       }}
                       className={cn(
-                        "flex w-full items-center gap-2.5 rounded-md border-0 bg-transparent px-2.5 py-2 text-left text-[13px] font-medium text-white/85 transition-colors outline-none hover:bg-white/5 hover:text-white focus-visible:ring-2 focus-visible:ring-white/40 disabled:cursor-not-allowed",
-                        isCurrent &amp;&amp; "bg-white/10 text-white",
+                        "flex w-full items-center gap-2.5 rounded-md border-0 bg-transparent px-2.5 py-2 text-left text-[13px] font-medium text-[var(--ink-100)] transition-colors outline-none hover:bg-[var(--ink-700)] hover:text-[var(--ink-50)] focus-visible:ring-2 focus-visible:ring-[var(--lime-500)] disabled:cursor-not-allowed",
+                        isCurrent &amp;&amp; "bg-[var(--ink-700)] text-[var(--ink-50)]",
                         locked &amp;&amp; "opacity-40",
                       )}
                     &gt;
                       &lt;span
                         className={cn(
-                          "min-w-[22px] font-mono text-[11px] text-white/45",
+                          "min-w-[22px] font-mono text-[11px] text-[var(--ink-300)]",
                           (isCurrent || isPast) &amp;&amp;
-                            "text-[var(--el-brand,#b96a3a)]",
+                            "text-[var(--lime-500)]",
                         )}
                       &gt;
                         {String(s.id).padStart(2, "0")}
@@ -507,7 +507,7 @@ export function DemoBottomNav({
                       &lt;span className="flex-1"&gt;{s.label}&lt;/span&gt;
                       {locked ? (
                         &lt;Lock
-                          className="size-3 text-white/35"
+                          className="size-3 text-[var(--ink-400)]"
                           aria-hidden="true"
                         /&gt;
                       ) : null}
@@ -529,7 +529,7 @@ export function DemoBottomNav({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-20T22:25:41.440Z
+                at 2026-05-21T13:43:25.270Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
