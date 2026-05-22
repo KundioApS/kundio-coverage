@@ -113,7 +113,33 @@
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
-<a name='L51'></a><a href='#L51'>51</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -145,7 +171,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -168,11 +220,11 @@
 export default function InboxLoading() {
   return (
     &lt;div
-      className="grid h-full min-h-0"
+      className="h-full min-h-0 overflow-hidden min-[1440px]:grid"
       style={{ gridTemplateColumns: "minmax(220px, 260px) minmax(0, 1fr)" }}
     &gt;
       &lt;aside
-        className="h-full px-3 py-4 flex flex-col gap-1"
+        className="hidden h-full flex-col gap-1 px-3 py-4 min-[1440px]:flex"
         style={{ background: "var(--el-surface-warm)", borderRight: "1px solid var(--el-line)" }}
       &gt;
         &lt;Bone className="mx-2 mb-2 h-3 w-16" /&gt;
@@ -185,17 +237,43 @@ export default function InboxLoading() {
         ))}
       &lt;/aside&gt;
 &nbsp;
-      &lt;section style={{ background: "var(--el-surface-raised)" }}&gt;
+      &lt;section className="h-full min-h-0 overflow-y-auto" style={{ background: "var(--el-surface-raised)" }}&gt;
         &lt;div
-          className="flex items-center justify-between px-[18px] py-3.5"
+          className="sticky top-0 z-10 min-[1440px]:hidden"
+          style={{
+            background: "color-mix(in srgb, var(--el-surface-raised) 92%, transparent)",
+            backdropFilter: "blur(8px)",
+          }}
+        &gt;
+          &lt;div
+            className="flex items-center justify-between gap-3 px-4 py-3"
+            style={{ borderBottom: "1px solid var(--el-line)" }}
+          &gt;
+            &lt;div className="flex items-baseline gap-2"&gt;
+              &lt;Bone className="h-5 w-32" /&gt;
+              &lt;Bone className="h-2.5 w-20" /&gt;
+            &lt;/div&gt;
+            &lt;Bone className="h-4 w-4" /&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+&nbsp;
+        &lt;div
+          className="hidden items-center justify-between px-[18px] py-3.5 min-[1440px]:flex"
           style={{ borderBottom: "1px solid var(--el-line)" }}
         &gt;
           &lt;Bone className="h-4 w-24" /&gt;
           &lt;Bone className="h-3 w-14" /&gt;
         &lt;/div&gt;
-        &lt;ul className="divide-y" style={{ borderColor: "var(--el-line)" }}&gt;
+        &lt;ul className="space-y-3 p-3 min-[1440px]:divide-y min-[1440px]:space-y-0 min-[1440px]:p-0" style={{ borderColor: "var(--el-line)" }}&gt;
           {Array.from({ length: 10 }).map((_, i) =&gt; (
-            &lt;li key={i} className="px-[18px] py-3.5 flex flex-col gap-2"&gt;
+            &lt;li
+              key={i}
+              className="flex flex-col gap-2 rounded-2xl border px-4 py-4 min-[1440px]:rounded-none min-[1440px]:border-0 min-[1440px]:px-[18px] min-[1440px]:py-3.5"
+              style={{
+                background: "var(--el-surface)",
+                borderColor: "var(--el-line)",
+              }}
+            &gt;
               &lt;div className="flex justify-between"&gt;
                 &lt;Bone className="h-3.5 w-36" /&gt;
                 &lt;Bone className="h-3 w-10" /&gt;
@@ -220,7 +298,7 @@ export default function InboxLoading() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-21T00:49:43.333Z
+                at 2026-05-22T01:55:33.256Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

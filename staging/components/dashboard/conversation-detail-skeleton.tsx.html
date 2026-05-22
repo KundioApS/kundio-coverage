@@ -278,29 +278,7 @@
 <a name='L213'></a><a href='#L213'>213</a>
 <a name='L214'></a><a href='#L214'>214</a>
 <a name='L215'></a><a href='#L215'>215</a>
-<a name='L216'></a><a href='#L216'>216</a>
-<a name='L217'></a><a href='#L217'>217</a>
-<a name='L218'></a><a href='#L218'>218</a>
-<a name='L219'></a><a href='#L219'>219</a>
-<a name='L220'></a><a href='#L220'>220</a>
-<a name='L221'></a><a href='#L221'>221</a>
-<a name='L222'></a><a href='#L222'>222</a>
-<a name='L223'></a><a href='#L223'>223</a>
-<a name='L224'></a><a href='#L224'>224</a>
-<a name='L225'></a><a href='#L225'>225</a>
-<a name='L226'></a><a href='#L226'>226</a>
-<a name='L227'></a><a href='#L227'>227</a>
-<a name='L228'></a><a href='#L228'>228</a>
-<a name='L229'></a><a href='#L229'>229</a>
-<a name='L230'></a><a href='#L230'>230</a>
-<a name='L231'></a><a href='#L231'>231</a>
-<a name='L232'></a><a href='#L232'>232</a>
-<a name='L233'></a><a href='#L233'>233</a>
-<a name='L234'></a><a href='#L234'>234</a>
-<a name='L235'></a><a href='#L235'>235</a>
-<a name='L236'></a><a href='#L236'>236</a>
-<a name='L237'></a><a href='#L237'>237</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L216'></a><a href='#L216'>216</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -373,26 +351,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -535,8 +493,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { PanelRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { cn } from "@/lib/utils";
 &nbsp;
 function SkeletonBone({
   className,
@@ -609,27 +566,7 @@ function ChatBubbleSkeleton({
 &nbsp;
 export function ConversationChatSkeleton() {
   return (
-    &lt;div className="grid min-h-0 grid-rows-[auto_1fr_auto] xl:grid-rows-[1fr_auto]"&gt;
-      &lt;div
-        className="flex items-center justify-end px-4 py-2 xl:hidden"
-        style={{
-          background: "var(--el-surface)",
-          borderBottom: "1px solid var(--el-line)",
-        }}
-      &gt;
-        &lt;div
-          className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[12px] font-medium"
-          style={{
-            color: "var(--el-ink-soft)",
-            border: "1px solid var(--el-line)",
-            background: "var(--el-surface-raised)",
-          }}
-        &gt;
-          &lt;PanelRight className="h-3.5 w-3.5" /&gt;
-          Detaljer
-        &lt;/div&gt;
-      &lt;/div&gt;
-&nbsp;
+    &lt;div className="grid min-h-0 grid-rows-[1fr_auto]"&gt;
       &lt;div
         className="min-h-0 overflow-hidden px-5 py-5"
         style={{ background: "var(--el-surface-raised)" }}
@@ -750,7 +687,7 @@ export function ConversationSidebarSkeleton() {
 export function ConversationDetailSkeleton() {
   return (
     &lt;div
-      className="grid h-full min-h-0 xl:grid-cols-[minmax(0,1fr)_320px]"
+      className="grid h-full min-h-0 min-[1440px]:grid-cols-[minmax(0,1fr)_320px]"
       role="status"
       aria-label="Indlæser samtale"
       style={{ background: "var(--el-surface-raised)" }}
@@ -758,7 +695,7 @@ export function ConversationDetailSkeleton() {
       &lt;ConversationChatSkeleton /&gt;
 &nbsp;
       &lt;aside
-        className="hidden min-h-0 overflow-y-auto border-l xl:block"
+        className="hidden min-h-0 overflow-y-auto border-l min-[1440px]:block"
         style={{
           background: "var(--el-surface)",
           borderColor: "var(--el-line)",
@@ -778,7 +715,7 @@ export function ConversationDetailSkeleton() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-21T00:49:43.333Z
+                at 2026-05-22T01:55:33.256Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
