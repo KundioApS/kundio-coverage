@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.52% </span>
+                <span class="strong">78.82% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>69/89</span>
+                <span class='fraction'>67/85</span>
             </div>
         
             
@@ -699,22 +699,7 @@
 <a name='L634'></a><a href='#L634'>634</a>
 <a name='L635'></a><a href='#L635'>635</a>
 <a name='L636'></a><a href='#L636'>636</a>
-<a name='L637'></a><a href='#L637'>637</a>
-<a name='L638'></a><a href='#L638'>638</a>
-<a name='L639'></a><a href='#L639'>639</a>
-<a name='L640'></a><a href='#L640'>640</a>
-<a name='L641'></a><a href='#L641'>641</a>
-<a name='L642'></a><a href='#L642'>642</a>
-<a name='L643'></a><a href='#L643'>643</a>
-<a name='L644'></a><a href='#L644'>644</a>
-<a name='L645'></a><a href='#L645'>645</a>
-<a name='L646'></a><a href='#L646'>646</a>
-<a name='L647'></a><a href='#L647'>647</a>
-<a name='L648'></a><a href='#L648'>648</a>
-<a name='L649'></a><a href='#L649'>649</a>
-<a name='L650'></a><a href='#L650'>650</a>
-<a name='L651'></a><a href='#L651'>651</a>
-<a name='L652'></a><a href='#L652'>652</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L637'></a><a href='#L637'>637</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -808,9 +793,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -876,7 +858,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -977,16 +958,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1155,7 +1127,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1224,7 +1195,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1475,8 +1445,6 @@ type WidgetConfig = Pick&lt;
   | "position"
   | "is_active"
 &gt;;
-type WidgetAllowedOrigin =
-  Database["public"]["Tables"]["widget_allowed_origins"]["Row"];
 type Faq = Pick&lt;
   Database["public"]["Tables"]["faqs"]["Row"],
   "id" | "question" | "answer" | "is_active" | "sort_order" | "source"
@@ -1509,7 +1477,6 @@ type SetupCounts = {
 type ActiveSettingsTabData = {
   seatLimit: number | null;
   widgetConfig: WidgetConfig | null;
-  widgetOrigins: WidgetAllowedOrigin[];
   faqs: Faq[];
   services: Service[];
   serviceAreas: ServiceArea[];
@@ -1529,7 +1496,6 @@ function emptyActiveSettingsTabData(): ActiveSettingsTabData {
   return {
     seatLimit: null,
     widgetConfig: null,
-    widgetOrigins: [],
     faqs: [],
     services: [],
     serviceAreas: [],
@@ -1620,26 +1586,17 @@ async function fetchActiveSettingsTabData(
       };
     }
     case "widget": {
-      const [{ data: widgetConfig }, { data: widgetOrigins }] = await Promise.all([
-        admin
-          .from("widget_configs")
-          .select(
-            "primary_color, heading_text, subheading_text, submit_text, success_text, sms_notice_text, fallback_phone, show_marketing, marketing_text, position, is_active",
-          )
-          .eq("business_id", businessId)
-          .single(),
-        admin
-          .from("widget_allowed_origins")
-          .select("*")
-          .eq("business_id", businessId)
-          .order("environment", { ascending: true })
-          .order("hostname", { ascending: true }),
-      ]);
+      const { data: widgetConfig } = await admin
+        .from("widget_configs")
+        .select(
+          "primary_color, heading_text, subheading_text, submit_text, success_text, sms_notice_text, fallback_phone, show_marketing, marketing_text, position, is_active",
+        )
+        .eq("business_id", businessId)
+        .single();
 &nbsp;
       return {
         ...emptyActiveSettingsTabData(),
         widgetConfig: widgetConfig as WidgetConfig | null,
-        widgetOrigins: (widgetOrigins ?? <span class="branch-1 cbranch-no" title="branch not covered" >[]) as WidgetAllowedOrigin[],</span>
       };
     }
     case "faqs": {
@@ -1783,7 +1740,7 @@ export default async function SettingsPage({
   ] = await Promise.all([
     admin
       .from("business_profiles")
-      .select("id, name, description, phone_number, address, website_url, ai_enabled")
+      .select("id, name, description, phone_number, address, ai_enabled")
       .eq("id", ctx.businessId)
       .single(),
     fetchSetupCounts(admin, ctx.businessId, visibleTabValues),
@@ -1801,7 +1758,6 @@ export default async function SettingsPage({
   const {
     seatLimit,
     widgetConfig,
-    widgetOrigins,
     faqs,
     services,
     serviceAreas,
@@ -1904,7 +1860,6 @@ export default async function SettingsPage({
               key={business.id}
               config={widgetConfig}
               businessId={business.id}
-              origins={widgetOrigins ?? <span class="branch-1 cbranch-no" title="branch not covered" >[]}</span>
             /&gt;
           &lt;/SettingsSection&gt;
         )}
@@ -2023,7 +1978,7 @@ export default async function SettingsPage({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-21T13:43:25.270Z
+                at 2026-05-22T02:38:39.596Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

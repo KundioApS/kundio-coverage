@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/11</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -120,22 +120,16 @@
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -144,6 +138,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -156,6 +165,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,8 +188,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { z } from "zod";
+import { CUSTOMER_EMAIL_TEMPLATE_KEYS } from "@/lib/email/customer-templates/registry";
 &nbsp;
 export const templateTypeSchema = z.enum(["admin_email", "newsletter"]);
+export const customerEmailSystemKeySchema = z.enum(CUSTOMER_EMAIL_TEMPLATE_KEYS);
 &nbsp;
 const slugSchema = z
   .string()
@@ -194,17 +206,19 @@ const variablesSchemaSchema = z
   .array(z.string().trim().regex(/^[a-zA-Z_][a-zA-Z0-9_]*$/))
   .max(40);
 &nbsp;
-export const templateCreateSchema = z.object({
-  templateType: templateTypeSchema,
-  slug: slugSchema,
-  name: z.string().trim().min(1).max(120),
-  description: z.string().trim().max(500).nullish(),
-  category: z.string().trim().max(80).nullish(),
-  subject: subjectSchema,
-  bodyMarkdown: bodyMarkdownSchema,
-  variablesSchema: variablesSchemaSchema.optional(),
-  isActive: z.boolean().optional(),
-});
+export const templateCreateSchema = z
+  .object({
+    templateType: templateTypeSchema,
+    slug: slugSchema,
+    name: z.string().trim().min(1).max(120),
+    description: z.string().trim().max(500).nullish(),
+    category: z.string().trim().max(80).nullish(),
+    subject: subjectSchema,
+    bodyMarkdown: bodyMarkdownSchema,
+    variablesSchema: variablesSchemaSchema.optional(),
+    isActive: z.boolean().optional(),
+  })
+  .strict();
 &nbsp;
 export const templatePatchSchema = templateCreateSchema.partial();
 &nbsp;
@@ -215,6 +229,7 @@ const variablesValuesSchema = z
 export const previewSchema = z.object({
   templateId: z.uuid().nullish(),
   templateType: templateTypeSchema.optional(),
+  systemKey: customerEmailSystemKeySchema.optional(),
   subject: subjectSchema.optional(),
   bodyMarkdown: bodyMarkdownSchema.optional(),
   variables: variablesValuesSchema,
@@ -241,7 +256,7 @@ export const sendTestSchema = sendSchema.omit({ recipientEmail: true });
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-21T13:43:25.270Z
+                at 2026-05-22T02:38:39.596Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
