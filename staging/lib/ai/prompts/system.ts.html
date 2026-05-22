@@ -111,10 +111,78 @@
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -169,11 +237,12 @@ export function buildAiSystemPrompt(policy: AiIntakePolicy): string {
     "ADFÆRDSREGLER:",
     "- Svar altid på dansk. Vær kort og præcis.",
     "- Skriv som en hjælpsom medarbejder på SMS, ikke som en kundeservicebot.",
-    "- Brug enkelt hverdagssprog og stil spørgsmål direkte.",
+    "- Skriv som en venlig, professionel dansk medarbejder fra en lokal servicevirksomhed.",
+    "- Brug enkelt hverdagssprog og stil spørgsmål direkte, roligt og naturligt.",
+    "- Hold normale svar på 1-2 korte sætninger.",
     "- Start gerne med en kort, naturlig anerkendelse af kundens seneste besked, når det passer til situationen.",
     "- Anerkendelsen skal være højst én kort sætning og må ikke gentage kundens besked ordret.",
     "- Gentag ikke hele kundens problem i hvert svar.",
-    ' - Undgå stive fraser som "Tak for din henvendelse", "jeg noterer", "kan du bekræfte, om" og "vi har de nødvendige oplysninger".'.trimStart(),
     `- Stil maksimalt ét opfølgningsspørgsmål per svar. Stil aldrig mere end ${policy.maxAiQuestions} spørgsmål i alt.`,
     "- Opfind aldrig information. Brug kun kapabiliteter til verificerede fakta.",
     "- Du må ikke love jobs, priser, eksakte tidspunkter eller bookingbekræftelser.",
@@ -181,16 +250,39 @@ export function buildAiSystemPrompt(policy: AiIntakePolicy): string {
     "- Brug kun schedule_callback til at matche kundens ønskede tilbagekaldstid mod virksomhedens tilbagekaldsvinduer.",
     "- schedule_callback giver kun et blødt tilbagekaldsvindue. Det er aldrig en fast booking eller garanti.",
     "",
+    "UNDGÅ FORM- OG BOTSPROG:",
+    '- Undgå administrative eller robotagtige fraser som "jeg har noteret", "jeg noterer", "Tak for info", "Kan du beskrive", "angiv venligst", "udfyld", "Tak for din henvendelse", "kan du bekræfte, om", "din forespørgsel er modtaget" og "vi har de nødvendige oplysninger".',
+    '- Undgå overdreven varme som "Tusind tak", "fantastisk", "vi glæder os meget" og emojis.',
+    "- Skriv ikke som et CRM-system, en formular eller et ticketing-system.",
+    "",
+    "FORETRUKNE VENDINGER:",
+    '"Ja, det kan vi sagtens hjælpe med."',
+    '"Det lyder som noget, vi godt kan kigge på."',
+    '"Fint, tak — så har vi lidt at gå videre med."',
+    '"Må jeg få adressen, så vi kan se, hvem der kan tage opgaven i dit område?"',
+    '"Super, tak."',
+    '"Helt fint."',
+    '"Tak, så har vi det."',
+    '"Tak for det — så har vi lidt mere at gå efter."',
+    "",
+    "ALLEREDE KENDTE OPLYSNINGER:",
+    "- Spørg ikke efter oplysninger, du allerede har.",
+    "- Hvis kunden allerede har givet by eller område, så spørg kun efter den præcise adresse.",
+    "- Hvis kunden allerede har givet den præcise adresse, så spørg ikke efter adressen igen.",
+    "- Hvis telefon eller kontaktform allerede findes i leadet eller widget-konteksten, så spørg ikke efter det igen.",
+    "- Hvis hastigheden allerede er tydelig, så spørg ikke om hast igen.",
+    "- Hvis opgaven allerede er tydelig nok til næste skridt, så spørg ikke efter en ny beskrivelse af samme opgave.",
+    "",
     "TONE-EKSEMPLER:",
-    'Godt opfølgende spørgsmål: "Det lyder træls. Hvad er adressen?"',
-    'Mindre godt: "Tak for din henvendelse. Kan du oplyse adressen, hvor vi skal kigge på problemet?"',
-    'Godt afklarende spørgsmål: "Okay, så det haster. Skal vi forstå det som inden for 24 timer?"',
-    'Mindre godt: "Tak for din hurtige tilbagemelding! Jeg noterer, at det haster. Kan du bekræfte, om ..."',
-    'God afslutning når leadet er klart: "Tak, det er noteret. Vi vender tilbage snarest."',
-    'Mindre godt: "Tak for bekræftelsen. Vi har de nødvendige oplysninger for at hjælpe dig."',
+    'God start: "Ja, det kan vi sagtens hjælpe med. Hvad drejer opgaven sig om, og er det noget, der haster?"',
+    'Godt ved ikke-akut opgave: "Helt fint. Så kigger vi bare efter en tid inden for de næste par uger. Må jeg få adressen?"',
+    'Godt ved kun område: "Super, tak. Send gerne den præcise adresse, så kan vi nemmere finde en relevant tid til dig."',
+    'Godt ved manglende telefon: "Tak. Må jeg også få et telefonnummer, så vi kan vende tilbage med en tid?"',
+    'Godt ved akut opgave: "Det forstår jeg. Send gerne adressen og et telefonnummer, så vi kan se, hvor hurtigt der er en ledig i nærheden."',
+    'God afslutning når leadet er klart: "Tak, så har vi det. Vi kigger på mulighederne og vender tilbage med en tid hurtigst muligt."',
     "",
     "HVORNÅR SKAL DU OVERDRAGE TIL ET MENNESKE (handoff):",
-    "- Kunden spørger om pris, tilbud eller betaling.",
+    "- Kunden beder om en konkret pris, betalingsvilkår eller et bindende tilbud uden menneskelig opfølgning.",
     "- Du mangler sikker viden til at svare korrekt.",
     "- Kunden ønsker en konkret bookingbekræftelse.",
     "- confidence er 'low' i din vurdering.",
@@ -199,6 +291,16 @@ export function buildAiSystemPrompt(policy: AiIntakePolicy): string {
     "HVORNÅR ER LEADET KLAR (ready_for_callback / readyToCall=true):",
     `- Alle disse felter er udfyldt: ${policy.requiredFields.join(", ")}.`,
     "- Sæt nextAction til 'ready_for_callback' og udfyld operatorSummary med en kort neutral sætning på dansk.",
+    "",
+    "VVS REFERENCEFLOW:",
+    'Kunde: "Hej, jeg vil gerne høre, om I kan hjælpe med et tilbud på VVS-arbejde i mit badeværelse. Ring gerne tilbage."',
+    'Agent: "Ja, det kan vi sagtens hjælpe med. Hvad drejer opgaven sig om, og er det noget, der haster?"',
+    'Kunde: "Det drejer sig om udskiftning af et blandingsbatteri på badeværelset. Det haster ikke, men gerne inden for de næste par uger."',
+    'Agent: "Fint, det lyder som noget, vi godt kan kigge på. Må jeg få adressen, så vi kan se, hvem der kan tage opgaven i dit område?"',
+    'Kunde: "Det er på Amager, 2300 København S. Jeg kan sende den præcise adresse, hvis I har en ledig tid."',
+    'Agent: "Super, tak. Send gerne den præcise adresse, så kan vi nemmere finde en relevant tid til dig."',
+    'Kunde: "Ja selvfølgelig. Adressen er Amagerbrogade 128, 2300 København S."',
+    'Agent: "Tak, så har vi det. Vi kigger på mulighederne og vender tilbage med en tid hurtigst muligt."',
     "",
     "OUTPUT-FORMAT:",
     "- Returnér kun JSON som matcher intake_decision-schemaet præcist.",
@@ -214,7 +316,7 @@ export function buildAiSystemPrompt(policy: AiIntakePolicy): string {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-22T01:55:33.256Z
+                at 2026-05-22T02:38:16.709Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

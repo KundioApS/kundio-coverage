@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
@@ -146,7 +146,10 @@
 <a name='L81'></a><a href='#L81'>81</a>
 <a name='L82'></a><a href='#L82'>82</a>
 <a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,8 +165,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -244,43 +250,46 @@ export const DEMO_LEAD = {
   businessName: "Hansen VVS",
 } as const;
 &nbsp;
-export function buildDemoScript(name: string, service: string): DemoMsg[] {
-  const firstName = name.split(" ")[0] ?? <span class="branch-1 cbranch-no" title="branch not covered" >name;</span>
+export function buildDemoScript(_name: string, service: string): DemoMsg[] {
   return [
     {
       role: "them",
-      text: `Hej — vi overvejer at renovere vores ${service.toLowerCase()} og vil gerne have et tilbud.`,
+      text: `Hej, jeg vil gerne høre, om I kan hjælpe med et tilbud på ${service.toLowerCase()}. Ring gerne tilbage.`,
       t: "14:14",
     },
     {
       role: "ai",
-      text: `Hej ${firstName}, det er ${DEMO_LEAD.businessName}. Det lyder som en spændende opgave — må jeg stille et par hurtige spørgsmål, så vi kan lave et godt tilbud?`,
+      text: "Ja, det kan vi sagtens hjælpe med. Hvad drejer opgaven sig om, og er det noget, der haster?",
       t: "14:14",
     },
-    { role: "them", text: "Ja, helt i orden", t: "14:15" },
-    {
-      role: "ai",
-      text: "Tak. Hvor stort er arealet cirka, og hvad skal skiftes?",
-      t: "14:15",
-    },
     {
       role: "them",
-      text: "Ca. 6 m². Alt skal skiftes — nyt bad, toilet, vask og fliser på gulv og vægge.",
+      text: "Det drejer sig om udskiftning af et blandingsbatteri på badeværelset. Det haster ikke, men gerne inden for de næste par uger.",
       t: "14:15",
     },
     {
       role: "ai",
-      text: "Super. Hvad er adressen, og hvornår kan vi ringe og aftale nærmere?",
+      text: "Fint, det lyder som noget, vi godt kan kigge på. Må jeg få adressen, så vi kan se, hvem der kan tage opgaven i dit område?",
+      t: "14:15",
+    },
+    {
+      role: "them",
+      text: "Det er på Nørrebro, 2200 København N. Jeg kan sende den præcise adresse, hvis I har en ledig tid.",
+      t: "14:15",
+    },
+    {
+      role: "ai",
+      text: "Super, tak. Send gerne den præcise adresse, så kan vi nemmere finde en relevant tid til dig.",
       t: "14:16",
     },
     {
       role: "them",
-      text: `${DEMO_LEAD.address}, ${DEMO_LEAD.postcode} ${DEMO_LEAD.city}. Torsdag formiddag ville være perfekt.`,
+      text: `${DEMO_LEAD.address}, ${DEMO_LEAD.postcode} ${DEMO_LEAD.city}. Torsdag formiddag ville være fint.`,
       t: "14:16",
     },
     {
       role: "ai",
-      text: "Modtaget — vi ringer til jer torsdag mellem 10:00 - 12:00.",
+      text: "Tak, så har vi det. Vi kigger på mulighederne og vender tilbage med en tid hurtigst muligt.",
       t: "14:17",
     },
   ];
@@ -319,7 +328,7 @@ export const TOTAL_DEMO_STEPS = DEMO_STEPS.length;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-22T01:55:33.256Z
+                at 2026-05-22T02:38:16.709Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
