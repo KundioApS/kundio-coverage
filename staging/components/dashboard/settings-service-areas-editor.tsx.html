@@ -338,7 +338,10 @@
 <a name='L273'></a><a href='#L273'>273</a>
 <a name='L274'></a><a href='#L274'>274</a>
 <a name='L275'></a><a href='#L275'>275</a>
-<a name='L276'></a><a href='#L276'>276</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -517,19 +520,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -750,7 +756,7 @@ export function SettingsServiceAreasEditor({
               animate={reduceMotion ? <span class="branch-0 cbranch-no" title="branch not covered" >{ opacity: 1 } </span>: { opacity: 1, y: 0 }}
               exit={reduceMotion ? <span class="branch-0 cbranch-no" title="branch not covered" >{ opacity: 0 } </span>: { opacity: 0, y: -6 }}
               transition={{ duration: 0.16, ease: "easeOut" }}
-              className={`rounded-[16px] border p-4 transition-[background-color,border-color,box-shadow,transform] duration-150 hover:-translate-y-0.5 hover:shadow-sm ${
+              className={`app-editable-row rounded-[16px] border p-4 ${
                 area.is_active
                   ? "border-slate-200 bg-white"
                   : "border-gray-100 bg-slate-50 opacity-60"
@@ -791,7 +797,8 @@ export function SettingsServiceAreasEditor({
                 &lt;GripVertical className="hidden h-4 w-4 flex-shrink-0 text-slate-300 sm:block" /&gt;
                 &lt;div className="flex-1 min-w-0 flex items-center gap-2 flex-wrap"&gt;
                   &lt;button
-                    className="text-sm font-medium text-[#0F172A] text-left hover:text-[#0369A1] transition-colors"
+                    type="button"
+                    className="app-inline-action text-left text-sm font-medium text-[#0F172A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--el-brand)]"
                     onClick={() =&gt; startEdit(area)}
                   &gt;
                     {area.name}
@@ -804,8 +811,9 @@ export function SettingsServiceAreasEditor({
                 &lt;/div&gt;
                 &lt;div className="flex flex-shrink-0 items-center gap-1 self-start sm:self-auto"&gt;
                   &lt;button
+                    type="button"
                     onClick={() =&gt; void handleToggleActive(area)}
-                    className={`text-xs px-2 py-0.5 rounded-full transition-colors ${
+                    className={`app-status-toggle rounded-full px-2 py-0.5 text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--el-brand)] ${
                       area.is_active
                         ? "bg-green-100 text-green-700"
                         : "bg-slate-100 text-slate-400"
@@ -814,8 +822,9 @@ export function SettingsServiceAreasEditor({
                     {area.is_active ? "Aktiv" : "Inaktiv"}
                   &lt;/button&gt;
                   &lt;button
+                    type="button"
                     onClick={() =&gt; void handleDelete(area.id)}
-                    className="p-1 text-slate-400 hover:text-red-600 transition-colors"
+                    className="app-icon-action app-danger-action p-1 text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--el-brand)]"
                     aria-label="Slet serviceområde"
                   &gt;
                     &lt;Trash2 className="w-3.5 h-3.5" /&gt;
@@ -895,7 +904,7 @@ export function SettingsServiceAreasEditor({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-22T02:38:16.709Z
+                at 2026-05-29T17:12:05.176Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

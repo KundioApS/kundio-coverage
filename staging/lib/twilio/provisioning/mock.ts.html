@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>20/20</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>20/20</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
@@ -130,7 +130,23 @@
 <a name='L65'></a><a href='#L65'>65</a>
 <a name='L66'></a><a href='#L66'>66</a>
 <a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -147,17 +163,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -184,6 +214,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -198,7 +230,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { v4 as uuid } from "uuid";
-import type { TwilioProvisioner } from "./types";
+import type { PhoneNumberAddressInput, TwilioProvisioner } from "./types";
 &nbsp;
 /**
  * Mock provisioner — never calls Twilio.
@@ -213,6 +245,18 @@ export class MockTwilioProvisioner implements TwilioProvisioner {
     return sid;
   }
 &nbsp;
+  async createPhoneNumberAddress(
+    subaccountSid: string,
+    businessName: string,
+    address: PhoneNumberAddressInput,
+  ): Promise&lt;string&gt; {
+    void subaccountSid;
+    void address;
+    const sid = `AD_mock_${uuid().replace(/-/g, "").slice(0, 32)}`;
+    console.log(`[twilio:mock] createPhoneNumberAddress("${businessName}") → ${sid}`);
+    return sid;
+  }
+&nbsp;
   async searchAvailableNumber(country: string): Promise&lt;string&gt; {
     void country;
     // Mock/test mode uses US numbers — Twilio test credentials only support US region
@@ -224,7 +268,9 @@ export class MockTwilioProvisioner implements TwilioProvisioner {
   async buyNumber(
     _subaccountSid: string,
     phoneNumber: string,
+    addressSid: string,
   ): Promise&lt;{ sid: string; number: string }&gt; {
+    void addressSid;
     const sid = `PN_mock_${uuid().replace(/-/g, "").slice(0, 32)}`;
     console.log(`[twilio:mock] buyNumber(${phoneNumber}) → ${sid}`);
     return { sid, number: phoneNumber };
@@ -247,9 +293,11 @@ export class MockTwilioProvisioner implements TwilioProvisioner {
   }
 &nbsp;
   async messagingServiceExists(
-    _subaccountSid: string,
-    _messagingServiceSid: string,
+    subaccountSid: string,
+    messagingServiceSid: string,
   ): Promise&lt;boolean&gt; {
+    void subaccountSid;
+    void messagingServiceSid;
     return true;
   }
 &nbsp;
@@ -271,7 +319,7 @@ export class MockTwilioProvisioner implements TwilioProvisioner {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-22T02:38:16.709Z
+                at 2026-05-29T17:12:05.176Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

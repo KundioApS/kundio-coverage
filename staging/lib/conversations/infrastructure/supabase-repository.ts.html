@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.77% </span>
+                <span class="strong">96.84% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>90/93</span>
+                <span class='fraction'>92/95</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.46% </span>
+                <span class="strong">87.73% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>92/104</span>
+                <span class='fraction'>93/106</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>26/26</span>
+                <span class='fraction'>27/27</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.77% </span>
+                <span class="strong">96.84% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>90/93</span>
+                <span class='fraction'>92/95</span>
             </div>
         
             
@@ -658,7 +658,26 @@
 <a name='L593'></a><a href='#L593'>593</a>
 <a name='L594'></a><a href='#L594'>594</a>
 <a name='L595'></a><a href='#L595'>595</a>
-<a name='L596'></a><a href='#L596'>596</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L596'></a><a href='#L596'>596</a>
+<a name='L597'></a><a href='#L597'>597</a>
+<a name='L598'></a><a href='#L598'>598</a>
+<a name='L599'></a><a href='#L599'>599</a>
+<a name='L600'></a><a href='#L600'>600</a>
+<a name='L601'></a><a href='#L601'>601</a>
+<a name='L602'></a><a href='#L602'>602</a>
+<a name='L603'></a><a href='#L603'>603</a>
+<a name='L604'></a><a href='#L604'>604</a>
+<a name='L605'></a><a href='#L605'>605</a>
+<a name='L606'></a><a href='#L606'>606</a>
+<a name='L607'></a><a href='#L607'>607</a>
+<a name='L608'></a><a href='#L608'>608</a>
+<a name='L609'></a><a href='#L609'>609</a>
+<a name='L610'></a><a href='#L610'>610</a>
+<a name='L611'></a><a href='#L611'>611</a>
+<a name='L612'></a><a href='#L612'>612</a>
+<a name='L613'></a><a href='#L613'>613</a>
+<a name='L614'></a><a href='#L614'>614</a>
+<a name='L615'></a><a href='#L615'>615</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -738,7 +757,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -978,6 +997,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1229,7 +1266,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1583,6 +1621,24 @@ export function createSupabaseConversationRepository(
     return (data ?? <span class="branch-1 cbranch-no" title="branch not covered" >[])</span>.map(mapMessage);
   }
 &nbsp;
+  async function getLatestInboundMessage(
+    conversationId: string
+  ): Promise&lt;MessageRecord | null&gt; {
+    const { data } = await admin
+      .from("messages")
+      .select(
+        "id, conversation_id, direction, origin, channel, body, delivery_status, provider_kind, provider_ref, error_code, created_at"
+      )
+      .eq("conversation_id", conversationId)
+      .eq("direction", "inbound")
+      .order("created_at", { ascending: false })
+      .order("id", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+&nbsp;
+    return data ? mapMessage(data) : <span class="branch-1 cbranch-no" title="branch not covered" >null;</span>
+  }
+&nbsp;
   async function appendConversationEvent(
     input: AppendConversationEventInput
   ): Promise&lt;void&gt; {
@@ -1834,6 +1890,7 @@ export function createSupabaseConversationRepository(
     findMessageByProviderIdentity,
     getConversationDeliveryContext,
     listConversationMessages,
+    getLatestInboundMessage,
     appendConversationEvent,
     enqueueOutbox,
     markOutboxDelivered,
@@ -1855,7 +1912,7 @@ export function createSupabaseConversationRepository(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-22T02:38:16.709Z
+                at 2026-05-29T17:12:05.176Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

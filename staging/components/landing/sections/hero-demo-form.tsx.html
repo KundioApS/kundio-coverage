@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/22</span>
+                <span class='fraction'>0/24</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/22</span>
+                <span class='fraction'>0/24</span>
             </div>
         
             
@@ -152,7 +152,14 @@
 <a name='L87'></a><a href='#L87'>87</a>
 <a name='L88'></a><a href='#L88'>88</a>
 <a name='L89'></a><a href='#L89'>89</a>
-<a name='L90'></a><a href='#L90'>90</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,16 +169,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,13 +178,29 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -249,6 +263,7 @@ import { useRouter } from "next/navigation";
 import { KundioButton } from "@/components/landing/button";
 import { KundioInput } from "@/components/landing/public-ui";
 import { storePassedDemoGate } from "@/lib/demo/session";
+import { newEventId, trackLead } from "@/lib/meta/track-client";
 import { KlArrow, KlTickLg } from "./icons";
 &nbsp;
 const EMAIL_PATTERN = <span class="cstat-no" title="statement not covered" >/\S+@\S+\.\S+/;</span>
@@ -273,13 +288,19 @@ export function <span class="fstat-no" title="function not covered" >HeroDemoFor
 <span class="cstat-no" title="statement not covered" >    setSubmitting(true);</span>
 <span class="cstat-no" title="statement not covered" >    storePassedDemoGate({ email: normalizedEmail });</span>
 &nbsp;
+    // TODO(consent): only fire pixel/CAPI tracking when marketing consent is granted.
+    const <span class="cstat-no" title="statement not covered" >eventId = newEventId();</span>
 <span class="cstat-no" title="statement not covered" >    void fetch("/api/marketing/demo-lead", {</span>
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: normalizedEmail }),
-    }).<span class="fstat-no" title="function not covered" >catch((e</span>rr) =&gt; {
-<span class="cstat-no" title="statement not covered" >      console.warn("[hero] demo lead submission failed", err);</span>
-    });
+      body: JSON.stringify({ email: normalizedEmail, eventId }),
+    })
+      .<span class="fstat-no" title="function not covered" >then(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        trackLead(eventId, { content_name: "Interactive Demo" });</span>
+      })
+      .<span class="fstat-no" title="function not covered" >catch((e</span>rr) =&gt; {
+<span class="cstat-no" title="statement not covered" >        console.warn("[hero] demo lead submission failed", err);</span>
+      });
 &nbsp;
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >    startTransition(() =&gt; {</span></span>
 <span class="cstat-no" title="statement not covered" >      router.push("/demo?step=2");</span>
@@ -337,7 +358,7 @@ export function <span class="fstat-no" title="function not covered" >HeroDemoFor
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-22T02:38:16.709Z
+                at 2026-05-29T17:12:05.176Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

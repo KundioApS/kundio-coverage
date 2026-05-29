@@ -336,15 +336,7 @@
 <a name='L271'></a><a href='#L271'>271</a>
 <a name='L272'></a><a href='#L272'>272</a>
 <a name='L273'></a><a href='#L273'>273</a>
-<a name='L274'></a><a href='#L274'>274</a>
-<a name='L275'></a><a href='#L275'>275</a>
-<a name='L276'></a><a href='#L276'>276</a>
-<a name='L277'></a><a href='#L277'>277</a>
-<a name='L278'></a><a href='#L278'>278</a>
-<a name='L279'></a><a href='#L279'>279</a>
-<a name='L280'></a><a href='#L280'>280</a>
-<a name='L281'></a><a href='#L281'>281</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L274'></a><a href='#L274'>274</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -617,12 +609,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { LEGAL_COMPANY, type LegalDocumentKey } from "@/lib/legal/current";
 &nbsp;
 export interface LegalSection {
@@ -633,22 +619,19 @@ export interface LegalSection {
 &nbsp;
 export interface LegalDocumentContent {
   summary: string;
-  placeholderNotice: string;
   sections: LegalSection[];
 }
 &nbsp;
 export const LEGAL_CONTENT: Record&lt;LegalDocumentKey, LegalDocumentContent&gt; = {
   terms: {
     summary:
-      "Disse betingelser regulerer Kundio' levering af software og tilhørende ydelser til erhvervskunder. Teksten er skrevet som et praktisk B2B-udkast til launch og skal endeligt gennemgås og godkendes juridisk før brug som bindende aftale.",
-    placeholderNotice:
-      "Før launch skal CVR-nummer og registreret adresse indsættes. Dokumentet bør desuden gennemgås juridisk, før det bruges som bindende aftalegrundlag.",
+      "Disse betingelser regulerer Kundios levering af software og tilhørende ydelser til erhvervskunder.",
     sections: [
       {
         title: "1. Om aftalen",
         paragraphs: [
-          "Disse betingelser gælder for Kundio' levering af software, hosting, support, onboarding og relaterede ydelser til erhvervskunder.",
-          `Aftalen indgås mellem kunden og ${LEGAL_COMPANY.legalName}, CVR-nr. [CVR-NR. INDSÆTTES FØR LAUNCH], med adresse på [REGISTERET ADRESSE INDSÆTTES FØR LAUNCH] ("Kundio" eller "leverandøren").`,
+          "Disse betingelser gælder for Kundios levering af software, hosting, support, onboarding og relaterede ydelser til erhvervskunder.",
+          `Aftalen indgås mellem kunden og ${LEGAL_COMPANY.legalName} ("Kundio" eller "leverandøren").`,
           "Hvis kunden og Kundio har indgået en særskilt ordreformular, et tilbud eller en anden skriftlig aftale, går den konkrete aftale forud for disse betingelser i det omfang, der er uoverensstemmelser.",
         ],
       },
@@ -694,21 +677,21 @@ export const LEGAL_CONTENT: Record&lt;LegalDocumentKey, LegalDocumentContent&gt;
         paragraphs: [
           "Kundio tilstræber stabil drift og rimelig support, men leverer ikke en særskilt service level agreement eller garanteret svartid, medmindre det er udtrykkeligt aftalt skriftligt.",
           "Kundio kan planlægge vedligeholdelse, sikkerhedsopdateringer og tekniske ændringer. I det omfang det er praktisk muligt, varsles planlagt vedligeholdelse, som forventes at have væsentlig betydning for kundens brug.",
-          "Kundio er ikke ansvarlig for nedetid eller funktionsbegrænsninger, der skyldes kundens egne forhold, tredjepartsleverandører, internetforbindelser, force majeure eller andre forhold uden for Kundio' rimelige kontrol.",
+          "Kundio er ikke ansvarlig for nedetid eller funktionsbegrænsninger, der skyldes kundens egne forhold, tredjepartsleverandører, internetforbindelser, force majeure eller andre forhold uden for Kundios rimelige kontrol.",
         ],
       },
       {
         title: "7. Kundedata, personoplysninger og fortrolighed",
         paragraphs: [
           "Kunden ejer og er ansvarlig for egne data, instrukser, indhold og den lovlige brug af tjenesten. Kunden garanterer, at kunden har et gyldigt grundlag for de personoplysninger og øvrige data, som kunden eller kundens brugere gør tilgængelige i tjenesten.",
-          "I det omfang Kundio behandler personoplysninger på kundens vegne, sker dette i henhold til den gældende databehandleraftale mellem parterne. Kundio' egen behandling af personoplysninger som dataansvarlig, herunder om kundens kontaktpersoner og administratorbrugere, er beskrevet i privatlivspolitikken.",
+          "I det omfang Kundio behandler personoplysninger på kundens vegne, sker dette i henhold til den gældende databehandleraftale mellem parterne. Kundios egen behandling af personoplysninger som dataansvarlig, herunder om kundens kontaktpersoner og administratorbrugere, er beskrevet i privatlivspolitikken.",
           "Begge parter skal behandle den anden parts fortrolige oplysninger fortroligt og kun bruge dem i det omfang, det er nødvendigt for at opfylde aftalen. Denne forpligtelse gælder også efter aftalens ophør.",
         ],
       },
       {
         title: "8. Immaterielle rettigheder",
         paragraphs: [
-          "Alle immaterielle rettigheder til tjenesten, herunder software, dokumentation, design, indhold skabt af Kundio og generelle forbedringer, tilhører Kundio eller Kundio' licensgivere.",
+          "Alle immaterielle rettigheder til tjenesten, herunder software, dokumentation, design, indhold skabt af Kundio og generelle forbedringer, tilhører Kundio eller Kundios licensgivere.",
           "Kunden får alene en ikke-eksklusiv, ikke-overdragelig og tidsbegrænset ret til at bruge tjenesten i overensstemmelse med aftalen. Kunden må ikke kopiere, videresælge, reverse engineere eller forsøge at få adgang til kildekode, medmindre dette udtrykkeligt følger af ufravigelig lovgivning.",
         ],
       },
@@ -716,7 +699,7 @@ export const LEGAL_CONTENT: Record&lt;LegalDocumentKey, LegalDocumentContent&gt;
         title: "9. Ansvar og ansvarsbegrænsning",
         paragraphs: [
           "Kundio er ikke ansvarlig for indirekte tab, driftstab, tabt avance, tabte besparelser, tab af goodwill, tabte data eller følgeskader, medmindre andet følger af ufravigelig lovgivning.",
-          "Kundio' samlede ansvar i enhver 12-måneders periode er begrænset til det beløb, kunden faktisk har betalt til Kundio i de seneste 12 måneder forud for den ansvarspådragende begivenhed.",
+          "Kundios samlede ansvar i enhver 12-måneders periode er begrænset til det beløb, kunden faktisk har betalt til Kundio i de seneste 12 måneder forud for den ansvarspådragende begivenhed.",
           "Ansvarsbegrænsningerne gælder ikke ved grov uagtsomhed, forsæt eller i det omfang, ansvarsbegrænsning ikke kan gøres gældende efter ufravigelig lovgivning.",
         ],
       },
@@ -739,15 +722,13 @@ export const LEGAL_CONTENT: Record&lt;LegalDocumentKey, LegalDocumentContent&gt;
   },
   privacy: {
     summary:
-      "Denne privatlivspolitik beskriver, hvordan Kundio behandler personoplysninger om besøgende, kontaktpersoner, kunder og brugere i forbindelse med website, salg, kundeadministration og drift af tjenesten. Teksten er et praktisk udkast og skal endeligt gennemgås juridisk før launch.",
-    placeholderNotice:
-      "Før launch skal CVR-nummer og registreret adresse indsættes. Dokumentet bør desuden juridisk og praktisk gennemgås, når leverandørkortlægningen er endeligt på plads.",
+      "Denne privatlivspolitik beskriver, hvordan Kundio behandler personoplysninger om besøgende, kontaktpersoner, kunder og brugere i forbindelse med website, salg, kundeadministration og drift af tjenesten.",
     sections: [
       {
         title: "1. Dataansvarlig",
         paragraphs: [
           "Kundio er dataansvarlig for de personoplysninger, som behandles om besøgende, leads, kundeemner, kontaktpersoner hos kunder og brugere i forbindelse med salg, markedsføring, website og administration af kundeforhold.",
-          `${LEGAL_COMPANY.legalName} er dataansvarlig og har CVR-nr. [CVR-NR. INDSÆTTES FØR LAUNCH] samt adresse på [REGISTERET ADRESSE INDSÆTTES FØR LAUNCH]. Henvendelser om persondata kan sendes til ${LEGAL_COMPANY.contactEmail}.`,
+          `${LEGAL_COMPANY.legalName} er dataansvarlig. Henvendelser om persondata kan sendes til ${LEGAL_COMPANY.contactEmail} eller ${LEGAL_COMPANY.contactPhone}.`,
           "Når Kundio behandler personoplysninger på vegne af en kunde som led i selve SaaS-løsningen, sker behandlingen som databehandler efter den gældende databehandleraftale og ikke som dataansvarlig efter denne privatlivspolitik.",
         ],
       },
@@ -807,23 +788,21 @@ export const LEGAL_CONTENT: Record&lt;LegalDocumentKey, LegalDocumentContent&gt;
         title: "8. Rettigheder og klage",
         paragraphs: [
           "Registrerede kan efter omstændighederne have ret til indsigt, berigtigelse, sletning, begrænsning af behandling, dataportabilitet og til at gøre indsigelse mod vores behandling. Rettighederne afhænger af den konkrete behandling og gældende lovgivning.",
-          `Hvis du ønsker at gøre brug af dine rettigheder eller har spørgsmål til vores behandling af personoplysninger, kan du kontakte os på ${LEGAL_COMPANY.contactEmail}. Hvis du er utilfreds med vores behandling, har du også ret til at klage til Datatilsynet.`,
+          `Hvis du ønsker at gøre brug af dine rettigheder eller har spørgsmål til vores behandling af personoplysninger, kan du kontakte os på ${LEGAL_COMPANY.contactEmail} eller ${LEGAL_COMPANY.contactPhone}. Hvis du er utilfreds med vores behandling, har du også ret til at klage til Datatilsynet.`,
         ],
       },
     ],
   },
   dpa: {
     summary:
-      "Denne databehandleraftale regulerer Kundio' behandling af personoplysninger på vegne af kunden i forbindelse med levering af SaaS-tjenesten. Teksten er et praktisk B2B-udkast og skal endeligt gennemgås juridisk før launch og før den bruges som gældende databehandleraftale.",
-    placeholderNotice:
-      "Før launch skal CVR-nummer og registreret adresse indsættes. Den downloadbare DPA-PDF svarer til denne tekst og samme versionsangivelse, men dokumentet bør fortsat juridisk gennemgås før launch.",
+      "Denne databehandleraftale regulerer Kundios behandling af personoplysninger på vegne af kunden i forbindelse med levering af SaaS-tjenesten.",
     sections: [
       {
         title: "1. Parter og forhold til hovedaftalen",
         paragraphs: [
-          "Denne databehandleraftale supplerer parternes hovedaftale om levering af Kundio' tjenester. I tilfælde af modstrid mellem hovedaftalen og denne databehandleraftale har databehandleraftalen forrang i relation til behandling af personoplysninger på kundens vegne.",
+          "Denne databehandleraftale supplerer parternes hovedaftale om levering af Kundios tjenester. I tilfælde af modstrid mellem hovedaftalen og denne databehandleraftale har databehandleraftalen forrang i relation til behandling af personoplysninger på kundens vegne.",
           "Kunden er dataansvarlig for de personoplysninger, som kunden eller kundens brugere gør tilgængelige i tjenesten, og Kundio er databehandler for sådanne oplysninger i det omfang Kundio behandler dem på kundens vegne som led i leveringen af tjenesten.",
-          `${LEGAL_COMPANY.legalName} er databehandler og har CVR-nr. [CVR-NR. INDSÆTTES FØR LAUNCH] samt adresse på [REGISTERET ADRESSE INDSÆTTES FØR LAUNCH].`,
+          `${LEGAL_COMPANY.legalName} er databehandler.`,
         ],
       },
       {
@@ -851,7 +830,7 @@ export const LEGAL_CONTENT: Record&lt;LegalDocumentKey, LegalDocumentContent&gt;
         ],
       },
       {
-        title: "5. Kundio' forpligtelser",
+        title: "5. Kundios forpligtelser",
         paragraphs: [
           "Kundio skal sikre, at personer, som er autoriseret til at behandle personoplysninger på kundens vegne, er underlagt fortrolighedsforpligtelser eller passende lovbestemt tavshedspligt.",
           "Kundio skal gennemføre passende tekniske og organisatoriske sikkerhedsforanstaltninger under hensyntagen til det aktuelle tekniske niveau, implementeringsomkostningerne, behandlingens karakter, omfang, sammenhæng og formål samt de risici, behandlingen indebærer.",
@@ -883,7 +862,7 @@ export const LEGAL_CONTENT: Record&lt;LegalDocumentKey, LegalDocumentContent&gt;
         title: "8. Kontrol og audit",
         paragraphs: [
           "Kundio skal på anmodning stille rimelig dokumentation til rådighed, som er nødvendig for at påvise overholdelse af denne databehandleraftale.",
-          "Hvis kunden har et sagligt behov for yderligere kontrol, kan kunden eller en uafhængig tredjepart gennemføre audit med rimeligt varsel, i normal arbejdstid og på en måde, der begrænser forstyrrelser af Kundio' drift og andre kunders fortrolighed. Audit skal som udgangspunkt ske dokumentbaseret først. Kunden bærer egne omkostninger og skal dække Kundio' rimelige interne omkostninger ved audits, som går ud over almindelig dokumentation.",
+          "Hvis kunden har et sagligt behov for yderligere kontrol, kan kunden eller en uafhængig tredjepart gennemføre audit med rimeligt varsel, i normal arbejdstid og på en måde, der begrænser forstyrrelser af Kundios drift og andre kunders fortrolighed. Audit skal som udgangspunkt ske dokumentbaseret først. Kunden bærer egne omkostninger og skal dække Kundios rimelige interne omkostninger ved audits, som går ud over almindelig dokumentation.",
         ],
       },
       {
@@ -897,7 +876,7 @@ export const LEGAL_CONTENT: Record&lt;LegalDocumentKey, LegalDocumentContent&gt;
         title: "10. Ansvar og kontakt",
         paragraphs: [
           "Parternes ansvar under denne databehandleraftale reguleres af hovedaftalen, medmindre andet følger af ufravigelig databeskyttelsesret.",
-          `Kunden kan sende henvendelser om denne databehandleraftale, sikkerhedsbrud eller databeskyttelse til ${LEGAL_COMPANY.contactEmail}.`,
+          `Kunden kan sende henvendelser om denne databehandleraftale, sikkerhedsbrud eller databeskyttelse til ${LEGAL_COMPANY.contactEmail} eller ${LEGAL_COMPANY.contactPhone}.`,
         ],
       },
     ],
@@ -910,7 +889,7 @@ export const LEGAL_CONTENT: Record&lt;LegalDocumentKey, LegalDocumentContent&gt;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-05-22T02:38:16.709Z
+                at 2026-05-29T17:12:05.176Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
